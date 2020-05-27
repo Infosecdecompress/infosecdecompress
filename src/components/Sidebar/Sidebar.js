@@ -6,7 +6,7 @@ import Copyright from './Copyright';
 import Menu from './Menu';
 import styles from './Sidebar.module.scss';
 import { useSiteMetadata } from '../../hooks';
-import Switcher from "./Switcher";
+import Switcher from './Switcher';
 
 const siteConfig = require('../../../config');
 
