@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Switcher.module.scss';
 
+
+
 const Switcher = () => {
   let isDarkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
   window.localStorage.setItem('darkMode', isDarkModeOn);
@@ -22,7 +24,7 @@ const Switcher = () => {
         <span className={`${styles['slider']}`} onClick={TurnDarkMode}/>
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default Switcher;
+export default Switcher
