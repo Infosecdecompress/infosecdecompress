@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Switcher.module.scss';
 
 const Switcher = () => {
-  let isDarkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  window.localStorage.setItem('darkMode', isDarkModeOn);
+  const [isDarkModeOn, setIsDarkModeOn] = useState(
+    !!(window.localStorage.getItem('darkMode')
+      || window.matchMedia('(prefers-color-scheme: dark)').matches)
+  );
   const bodyEl = document.getElementsByTagName('body')[0];
 
-  function TurnDarkMode() {
-    isDarkModeOn ? bodyEl.classList.remove('dark') : bodyEl.classList.add('dark');
-    isDarkModeOn = !isDarkModeOn;
+  function turnDarkMode() {
+    setIsDarkModeOn(!isDarkModeOn);
+    isDarkModeOn ? bodyEl.classList.add('dark') : bodyEl.classList.remove('dark');
     window.localStorage.setItem('darkMode', isDarkModeOn);
   }
 
@@ -16,10 +18,8 @@ const Switcher = () => {
     <div className={styles['switch__container']}>
       <span className={styles['switch__text']}>Night mode</span>
       <label className={styles['switch']}>
-        {isDarkModeOn
-          ? <input id='DarkModeSwitcher' type='checkbox' checked />
-          : <input id='DarkModeSwitcher' type='checkbox' />}
-        <span className={`${styles['slider']}`} onClick={TurnDarkMode}/>
+        <input id='DarkModeSwitcher' type='checkbox' defaultChecked={!isDarkModeOn} />
+        <span className={`${styles['slider']}`} onClick={() => turnDarkMode()}/>
       </label>
     </div>
   );
