@@ -131,6 +131,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-netlify-cms',
@@ -150,6 +151,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
+		exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`,``],
         query: `
           {
             site {
@@ -204,5 +206,40 @@ module.exports = {
     },
     'gatsby-plugin-flow',
     'gatsby-plugin-optimize-svgs',
+    {
+      resolve: 'gatsby-plugin-sri',
+      options: {
+        hash: 'sha512', // 'sha256', 'sha384' or 'sha512' ('sha512' = default)
+        crossorigin: true // Optional
+      }
+    },
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        disableOnDev: false,
+        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
+        mergeScriptHashes: false, // you can disable scripts sha256 hashes
+        mergeStyleHashes: false, // you can disable styles sha256 hashes
+        mergeDefaultDirectives: true,
+        directives: {
+          "script-src": "'self' 'unsafe-inline' www.google-analytics.com www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com",
+          "style-src": "'self' data: blob: 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
+          "img-src": "'self' data: www.google-analytics.com stats.g.doubleclick.net",
+          "font-src": "'self' fonts.gstatic.com fonts.googleapis.com",
+          "object-src": "'self' blob:",
+          "connect-src": "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net",
+          "frame-src": "'self' www.youtube-nocookie.com"
+          // you can add your directives or override defaults
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-security-txt',
+      options: {
+        contact: 'contact@infosecdecompress.com',
+        canonical: 'https://infosecdecompress.com/.well-known/security.txt',
+        languages: 'en, zh-Hant-TW'
+      }
+    }
   ]
 };

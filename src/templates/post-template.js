@@ -17,7 +17,8 @@ const PostTemplate = ({ data }: Props) => {
   const { frontmatter } = data.markdownRemark;
   const { title: postTitle, description: postDescription, socialImage } = frontmatter;
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-  const socialImageUrl = typeof socialImage !== 'undefined' ? socialImage['publicURL'] : undefined;
+  const socialImageUrl = socialImage === null || typeof socialImage === 'undefined' ? undefined : socialImage['publicURL']; 
+
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImageUrl} >
@@ -40,9 +41,7 @@ export const query = graphql`
         description
         tags
         title
-        socialImage {
-          publicURL
-        }
+        socialImage
       }
     }
   }

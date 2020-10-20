@@ -1,31 +1,83 @@
 ---
-title: "Contact me"
-template: "page"
-socialImage: "/media/image-4.jpg"
+template: page
+title: 聯絡資訊
+slug: contacts
+draft: false
 ---
+<style>
+label{
+  padding:10px;
+  margin: -5px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
 
-Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+input[type=email] {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  margin: 4px 0;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+button[type=submit] {
+  padding: 0 24px;
+  width: 100%;
+  line-height: 18px;
+  text-align: center;
+  color: #222;
+  background-color:rgba(255,255,255);
+  border: 1px solid rgba(0, 0, 0, .23);
+  border-radius: 20px;
+  padding: 14px 20px;
+  cursor: pointer;
+}
 
-Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+button[type=submit]:hover,focus {
+  color: #5d93ff ;
+  border-color:#5d93ff;
+}
+</style>
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-4.jpg)
+有任何疑問或是想法歡迎寄信到 [contact@infosecdecompress.com](mailto:contact@infosecdecompress.com) 與我們聯繫，或是利用以下社群與我們聯繫互動
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
+Facebook: [@infosecdecompress](https://www.facebook.com/infosecdecompress)
 
-## Header Level 2
+Instagram: [@infosec.zip](https://www.instagram.com/infosec.zip/)
 
-Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+Twitter: [@Infosec.zip](https://twitter.com/InfoSec_zip)
 
-+ **Lorem ipsum** dolor sit amet, consectetuer adipiscing elit.
-+ Aliquam tincidunt mauris eu risus.
-+ Vestibulum auctor dapibus neque.
+也歡迎透過下面的表單傳送訊息給我們。 <br/><br/>
 
-### Header Level 3
+[](https://twitter.com/InfoSec_zip)<h2>傳送訊息</h2>
 
-Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec **consectetuer** ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
-
-Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
-
-#### Header Level 4
-
-Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+<form name="Contact Form" method="POST" data-netlify="true" action="/pages/success">
+  <p>
+    <label>如何稱呼您？</label><input type="text" name="name"/>
+  </p>
+  <p>
+    <label>您的E-mail（方便我們回覆您的訊息，非必要）：</label><input type="email" name="email" />
+  </p>
+    <label>想說的話：</label><textarea name="message"></textarea>
+  </p>
+  <p>
+    <button type="submit">傳送</button>
+  </p>
+</form>
