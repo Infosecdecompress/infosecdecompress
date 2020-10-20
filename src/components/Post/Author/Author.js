@@ -9,16 +9,16 @@ const Author = () => {
 
   return (
     <div className={styles['author']}>
-      <p className={styles['author__bio']}>
-        對於這個節目有什麼想法歡迎到 
+      <p className={styles['author__bio']}><center>
+        對於這個節目有什麼想法，或想要聽什麼內容都歡迎到 
         <a
           href="/pages/contacts"
           rel="noopener noreferrer"
         >
           聯絡資訊
         </a>
-        聯繫我們。 有想要聽到的主題也都歡迎跟我們說。
-      </p>
+        告訴我們。
+      </center></p>
     </div>
   );
 };
