@@ -19,7 +19,7 @@ const PageTemplate = ({ data }: Props) => {
   const { frontmatter } = data.markdownRemark;
   const { title: pageTitle, description: pageDescription, socialImage } = frontmatter;
   const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
-  const socialImageUrl = typeof socialImage !== 'undefined' ? socialImage['publicURL'] : undefined;
+  const socialImageUrl = socialImage === null || typeof socialImage === 'undefined' ? undefined : socialImage['publicURL']; 
 
   return (
     <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImageUrl} >
@@ -40,9 +40,7 @@ export const query = graphql`
         title
         date
         description
-        socialImage {
-          publicURL
-        }
+        socialImage
       }
     }
   }

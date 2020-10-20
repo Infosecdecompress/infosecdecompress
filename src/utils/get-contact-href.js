@@ -9,9 +9,6 @@ const getContactHref = (name: string, contact: string) => {
     case 'github':
       href = `https://github.com/${contact}`;
       break;
-    case 'vkontakte':
-      href = `https://vk.com/${contact}`;
-      break;
     case 'telegram':
       href = `https://t.me/${contact}`;
       break;
@@ -19,22 +16,22 @@ const getContactHref = (name: string, contact: string) => {
       href = `mailto:${contact}`;
       break;
     case 'linkedin':
-      href = `https://www.linkedin.com/in/${contact}`;
+      href = `https://www.linkedin.com/${contact}`;
       break;
     case 'instagram':
       href = `https://www.instagram.com/${contact}`;
       break;
-    case 'line':
-      href = `line://ti/p/${contact}`;
-      break;
     case 'facebook':
       href = `https://www.facebook.com/${contact}`;
       break;
-    case 'gitlab':
-      href = `https://www.gitlab.com/${contact}`;
+    case 'firstory':
+      href = `https://open.firstory.me/user/${contact}`;
       break;
-    case 'weibo':
-      href = `https://www.weibo.com/${contact}`;
+    case 'spotify':
+      href = `https://open.spotify.com/show/${contact}`;
+      break;
+    case 'applepodcast':
+      href = `https://podcasts.apple.com/tw/podcast/${contact}`;
       break;
     case 'codepen':
       href = `https://www.codepen.io/${contact}`;
@@ -45,8 +42,11 @@ const getContactHref = (name: string, contact: string) => {
     case 'soundcloud':
       href = `https://soundcloud.com/${contact}`;
       break;
-    case 'medium':
-      href = `https://medium.com/${contact}`;
+    case 'googlepodcast':
+      href = `https://podcasts.google.com/?feed=${contact}`;
+      break;
+    case 'kkbox':
+      href = `https://podcast.kkbox.com/channel/${contact}`;
       break;
     default:
       href = contact;
