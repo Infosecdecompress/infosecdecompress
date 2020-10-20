@@ -10,15 +10,14 @@ const Author = () => {
   return (
     <div className={styles['author']}>
       <p className={styles['author__bio']}>
-        {author.bio}
+        對於這個節目有什麼想法歡迎到 
         <a
-          className={styles['author__bio-twitter']}
-          href={getContactHref('twitter', author.contacts.twitter)}
+          href="/pages/contacts"
           rel="noopener noreferrer"
-          target="_blank"
         >
-          <strong>{author.name}</strong> on Twitter
+          聯絡資訊
         </a>
+        聯繫我們。 有想要聽到的主題也都歡迎跟我們說。
       </p>
     </div>
   );
