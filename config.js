@@ -1,50 +1,60 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://infosecdecompress.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
+  title: '資安解壓縮',
+  subtitle: 'InfosecDecompress',
+  copyright: '©2020 資安解壓縮 InfosecDecompress',
   disqusShortname: '',
-  postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  postsPerPage: 10,
+  googleAnalyticsId: 'UA-145232119-2',
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: '文章列表',
       path: '/'
     },
     {
-      label: 'About me',
-      path: '/pages/about'
+      label: '文章分類',
+      path: '/categories'
     },
     {
-      label: 'Contact me',
+      label: '文章標籤',
+      path: '/tags'
+    },
+    
+    {
+      label: '聯絡資訊',
       path: '/pages/contacts'
+    },
+    {
+      label: '創作者工具包',
+      path: '/pages/creators_toolkit'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: '資安解壓縮',
+	  english: 'Infosec Decompress',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: '資安解壓縮是第一個以資安為主題的中文Podcast節目，希望可以用最好理解的方式幫助大家更了解資訊安全，也更懂得保護自己。',
     contacts: {
-      email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '',
-      vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
-      line: '',
-      gitlab: '',
-      weibo: '',
+      firstory: 'infosecdecompress',
+      spotify: '6bMhZ2VerzSvoDDpLaNjaH',
+      applepodcast: 'id1513276667',
+      googlepodcast: 'aHR0cHM6Ly9vcGVuLmZpcnN0b3J5Lm1lL3Jzcy91c2VyL2NrOTdhNGl5MHEwZmkwODczOXBwY2V6cTc',
+      kkbox: 'GncGPpX5JfDFrqZQiL',
+      youtube: 'UCfqZseDiubhus1Bb75p5fdg',
+      facebook: 'infosecdecompress',
+      instagram: 'infosec.zip',
+      twitter: 'InfoSec_zip',
+      linkedin: 'company/infosecdecompress',
+      rss: 'https://open.firstory.me/rss/user/ck97a4iy0q0fi08739ppcezq7',
+      email: 'contact@infosecdecompress.com',
+      github: '',
+      telegram: '',
       codepen: '',
-      youtube: '',
-      soundcloud: '',
-      medium: '',
+      soundcloud: ''
     }
   }
 };
