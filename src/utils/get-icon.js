@@ -11,6 +11,9 @@ const getIcon = (name: string) => {
     case 'github':
       icon = ICONS.GITHUB;
       break;
+    case 'vkontakte':
+      icon = ICONS.VKONTAKTE;
+      break;
     case 'telegram':
       icon = ICONS.TELEGRAM;
       break;
@@ -26,8 +29,17 @@ const getIcon = (name: string) => {
     case 'instagram':
       icon = ICONS.INSTAGRAM;
       break;
+    case 'line':
+      icon = ICONS.LINE;
+      break;
     case 'facebook':
       icon = ICONS.FACEBOOK;
+      break;
+    case 'gitlab':
+      icon = ICONS.GITLAB;
+      break;
+    case 'weibo':
+      icon = ICONS.WEIBO;
       break;
     case 'codepen':
       icon = ICONS.CODEPEN;
@@ -38,20 +50,8 @@ const getIcon = (name: string) => {
     case 'soundcloud':
       icon = ICONS.SOUNDCLOUD;
       break;
-    case 'firstory':
-      icon = ICONS.FIRSTORY;
-      break;
-    case 'spotify':
-      icon = ICONS.SPOTIFY;
-      break;
-    case 'applepodcast':
-      icon = ICONS.APPLEPODCAST;
-      break;
-    case 'googlepodcast':
-      icon = ICONS.GOOGLEPODCAST;
-      break;
-    case 'kkbox':
-      icon = ICONS.KKBOX;
+    case 'medium':
+      icon = ICONS.MEDIUM;
       break;
     default:
       icon = {};

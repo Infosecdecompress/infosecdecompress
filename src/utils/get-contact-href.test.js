@@ -17,7 +17,5 @@ test('getContactHref', () => {
   expect(getContactHref('codepen', '#')).toBe('https://www.codepen.io/#');
   expect(getContactHref('youtube', '#')).toBe('https://www.youtube.com/channel/#');
   expect(getContactHref('soundcloud', '#')).toBe('https://soundcloud.com/#');
-  expect(getContactHref('firstory', '#')).toBe('https://open.firstory.me/user/#');
-  expect(getContactHref('spotify', '#')).toBe('https://open.spotify.com/show/#');
-  expect(getContactHref('applepodcast', '#')).toBe('https://podcasts.apple.com/us/podcast/#');
+  expect(getContactHref('medium', '#')).toBe('https://medium.com/#');
 });

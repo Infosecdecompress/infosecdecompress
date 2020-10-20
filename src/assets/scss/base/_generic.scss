@@ -109,21 +109,19 @@ strong {
 }
 
 ul {
-  @include margin-bottom(0);
-  @include margin-top(0);
-  padding-inline-start: 50px;
+  list-style: square;
+  @include margin-bottom(1);
 
   & li {
     padding: 0 5px;
-    @include margin-top(0);
+    margin-bottom: 10px;
   }
 
 }
 
 p {
   @include line-height(1);
-  @include margin-bottom(0);
-  @include margin-top(0.5);
+  @include margin-bottom(1);
 }
 
 blockquote {

@@ -1,60 +1,50 @@
 'use strict';
 
 module.exports = {
-  url: 'https://infosecdecompress.com',
+  url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: '資安解壓縮',
-  subtitle: 'InfosecDecompress',
-  copyright: '©2020 資安解壓縮 InfosecDecompress',
+  title: 'Blog by John Doe',
+  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  copyright: '© All rights reserved.',
   disqusShortname: '',
-  postsPerPage: 10,
-  googleAnalyticsId: 'UA-145232119-2',
+  postsPerPage: 4,
+  googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   menu: [
     {
-      label: '文章列表',
+      label: 'Articles',
       path: '/'
     },
     {
-      label: '文章分類',
-      path: '/categories'
+      label: 'About me',
+      path: '/pages/about'
     },
     {
-      label: '文章標籤',
-      path: '/tags'
-    },
-    
-    {
-      label: '聯絡資訊',
+      label: 'Contact me',
       path: '/pages/contacts'
-    },
-    {
-      label: '創作者工具包',
-      path: '/pages/creators_toolkit'
     }
   ],
   author: {
-    name: '資安解壓縮',
-	  english: 'Infosec Decompress',
+    name: 'John Doe',
     photo: '/photo.jpg',
-    bio: '資安解壓縮是第一個以資安為主題的中文Podcast節目，希望可以用最好理解的方式幫助大家更了解資訊安全，也更懂得保護自己。',
+    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
     contacts: {
-      firstory: 'infosecdecompress',
-      spotify: '6bMhZ2VerzSvoDDpLaNjaH',
-      applepodcast: 'id1513276667',
-      googlepodcast: 'aHR0cHM6Ly9vcGVuLmZpcnN0b3J5Lm1lL3Jzcy91c2VyL2NrOTdhNGl5MHEwZmkwODczOXBwY2V6cTc',
-      kkbox: 'GncGPpX5JfDFrqZQiL',
-      youtube: 'UCfqZseDiubhus1Bb75p5fdg',
-      facebook: 'infosecdecompress',
-      instagram: 'infosec.zip',
-      twitter: 'InfoSec_zip',
-      linkedin: 'company/infosecdecompress',
-      rss: 'https://open.firstory.me/rss/user/ck97a4iy0q0fi08739ppcezq7',
-      email: 'contact@infosecdecompress.com',
-      github: '',
-      telegram: '',
+      email: '',
+      facebook: '#',
+      telegram: '#',
+      twitter: '#',
+      github: '#',
+      rss: '',
+      vkontakte: '',
+      linkedin: '#',
+      instagram: '#',
+      line: '',
+      gitlab: '',
+      weibo: '',
       codepen: '',
-      soundcloud: ''
+      youtube: '',
+      soundcloud: '',
+      medium: '',
     }
   }
 };
