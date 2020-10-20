@@ -6,14 +6,14 @@
   YARN_FLAGS = "--no-ignore-optional"
 [[plugins]]
   package = "netlify-plugin-is-website-vulnerable"
-[[plugins]]
-  package = "netlify-purge-cloudflare-on-deploy"
-[[plugins]]
-  package = "netlify-plugin-submit-sitemap"
-	[plugins.inputs]
-	baseUrl = "https://infosecdecompress.com"
-	sitemapPath = "/sitemap.xml"
-	providers = [
-		"google",
-		"bing"
-	]
+# [[plugins]]
+#  package = "netlify-purge-cloudflare-on-deploy"
+#[[plugins]]
+#  package = "netlify-plugin-submit-sitemap"
+#	[plugins.inputs]
+#	baseUrl = "https://infosecdecompress.com"
+#	sitemapPath = "/sitemap.xml"
+#	providers = [
+#		"google",
+#		"bing"
+#	]
