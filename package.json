@@ -17,7 +17,7 @@
     "test:watch": "jest --watch --config ./jest/jest-config.js",
     "preload-fonts": "gatsby-preload-fonts"
   },
-  "repository": "https://github.com/Jeffreyhung/infosecdecompress_v2",
+  "repository": "https://github.com/Infosecdecompress/infosecdecompress",
   "author": "Jeffrey Hung <jeff@infosecdecompress.com>",
   "license": "MIT",
   "keywords": [
