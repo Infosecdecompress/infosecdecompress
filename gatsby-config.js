@@ -116,6 +116,7 @@ module.exports = {
               withWebp: true,
               linkImagesToOriginal: false,
               ignoreFileExtensions: [],
+              disableBgImageOnAlpha: true,
             }
           },
           {
