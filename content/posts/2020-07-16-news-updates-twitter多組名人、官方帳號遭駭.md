@@ -2,6 +2,7 @@
 template: post
 title: Twitter多組名人、官方帳號遭駭
 slug: newsupdates_twitter_hacked_phishing_incident
+socialImage: /media/twitter_cover.jpg
 draft: false
 date: 2020-07-16T02:06:20.366Z
 description: |-

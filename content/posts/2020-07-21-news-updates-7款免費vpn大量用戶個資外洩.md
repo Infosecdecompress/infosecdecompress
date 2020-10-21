@@ -2,6 +2,7 @@
 template: post
 title: 7款免費VPN 外洩大量用戶個資
 slug: newsupdates_vpn_data_breach
+socialImage: /media/vpn_hacked_cover.jpg
 draft: false
 date: 2020-07-21T00:00:27.850Z
 description: 市面上七款免費VPN因資料外洩遭踢爆大量搜集用戶個資，總資料外洩量1.207 TB，超過2000萬用戶受到影響。

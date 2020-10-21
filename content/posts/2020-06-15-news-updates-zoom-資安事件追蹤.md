@@ -2,6 +2,7 @@
 template: post
 title: Zoom 資安事件追蹤
 slug: newsupdates_zoom
+socialImage: /media/zoom_cover.jpg
 draft: false
 date: 2020-06-15T11:04:02.777Z
 description: |-

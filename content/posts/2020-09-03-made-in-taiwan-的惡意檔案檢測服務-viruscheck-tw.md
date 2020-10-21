@@ -2,6 +2,7 @@
 template: post
 title: Made In Taiwan 的惡意檔案檢測服務 VirusCheck.tw
 slug: patches_viruscheck
+socialImage: /media/viruscheck_cover.jpg
 draft: false
 date: 2020-09-03T02:23:57.366Z
 description: |-
