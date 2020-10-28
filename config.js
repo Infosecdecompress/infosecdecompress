@@ -8,7 +8,7 @@ module.exports = {
   copyright: '©2020 資安解壓縮 InfosecDecompress',
   disqusShortname: '',
   postsPerPage: 10,
-  googleAnalyticsId: 'UA-145232119-2',
+  googleAnalyticsId: 'G-G73BYNCQRH',
   useKatex: false,
   menu: [
     {
