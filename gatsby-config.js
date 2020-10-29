@@ -2,6 +2,7 @@
 
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
+const siteUrl = `https://infosecdecompress.com`;
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -96,6 +97,35 @@ module.exports = {
           output: '/rss.xml',
           title: siteConfig.title
         }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: siteUrl,
+        graphQLQuery: `
+          {
+            allMarkdownRemark(limit: 1000) {
+              edges {
+                node {
+                  html
+                  fields { slug }
+                  frontmatter {
+                    title
+                    date
+                  }
+                }
+              }
+            }
+          }
+        `,
+        serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          id: node.fields.slug,
+          url: siteUrl + node.fields.slug,
+          title: node.frontmatter.title,
+          date_published: new Date(node.frontmatter.date).toISOString(),
+        })),
+        nodesPerFeedFile: 100,
       }
     },
     {
