@@ -16,14 +16,9 @@ module.exports = {
       path: '/'
     },
     {
-      label: '文章分類',
+      label: '分類/標籤',
       path: '/categories'
     },
-    {
-      label: '文章標籤',
-      path: '/tags'
-    },
-    
     {
       label: '聯絡資訊',
       path: '/pages/contacts'
