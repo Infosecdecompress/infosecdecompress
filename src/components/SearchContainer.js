@@ -46,26 +46,13 @@ class Search extends Component {
     const { itemList } = this.state
     const dataToSearch = new JsSearch.Search("id")
     dataToSearch.tokenizer = tokenizer
-    /**
-     *  defines a indexing strategy for the data
-     * more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
-     */
+    /** defines a indexing strategy https://github.com/bvaughn/js-search#configuring-the-index-strategy*/
     dataToSearch.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
-    /**
-     * defines the sanitizer for the search
-     * to prevent some of the words from being excluded
-     *
-     */
     dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer()
-    /**
-     * defines the search index
-     * read more in here https://github.com/bvaughn/js-search#configuring-the-search-index
-     */
-    dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("id")
-
+    /**defines the search index  https://github.com/bvaughn/js-search#configuring-the-search-index*/
+    dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("title")
     dataToSearch.addIndex("title") // sets the index attribute for the data
     dataToSearch.addIndex("content") // sets the index attribute for the data
-
     dataToSearch.addDocuments(itemList) // adds the data to be searched
     this.setState({ search: dataToSearch, isLoading: false })
   }
