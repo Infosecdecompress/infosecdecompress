@@ -85,8 +85,6 @@ module.exports = {
                       frontmatter {
                         title
                         date
-                        template
-                        draft
                         description
                       }
                     }
@@ -105,14 +103,20 @@ module.exports = {
         siteUrl: siteUrl,
         graphQLQuery: `
           {
-            allMarkdownRemark(limit: 1000) {
+            allMarkdownRemark(
+              limit: 1000,
+              sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+              ) {
               edges {
                 node {
                   html
+                  rawMarkdownBody
                   fields { slug }
                   frontmatter {
                     title
                     date
+                    description
                   }
                 }
               }
@@ -123,9 +127,11 @@ module.exports = {
           id: node.fields.slug,
           url: siteUrl + node.fields.slug,
           title: node.frontmatter.title,
+          description: node.frontmatter.description,
           date_published: new Date(node.frontmatter.date).toISOString(),
+          custom_elements: [{ 'content': node.rawMarkdownBody }]
         })),
-        nodesPerFeedFile: 100,
+        nodesPerFeedFile: 500,
       }
     },
     {
@@ -183,7 +189,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-		exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`,``],
+		    exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`,``],
         query: `
           {
             site {

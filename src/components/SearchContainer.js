@@ -4,7 +4,7 @@ import * as JsSearch from "js-search"
 
 class Search extends Component {
   state = {
-    bookList: [],
+    itemList: [],
     search: [],
     searchResults: [],
     isLoading: true,
@@ -15,10 +15,10 @@ class Search extends Component {
    * React lifecycle method to fetch the data
    */
   async componentDidMount() {
-    Axios.get("https://localhost:8000/feed-1.json")
+    Axios.get("/feed-1.json")
       .then(result => {
-        const bookData = result.data
-        this.setState({ bookList: bookData.books })
+        const feedData = result.data
+        this.setState({ itemList: feedData.items })
         this.rebuildIndex()
       })
       .catch(err => {
@@ -33,8 +33,8 @@ class Search extends Component {
    * rebuilds the overall index based on the options
    */
   rebuildIndex = () => {
-    const { bookList } = this.state
-    const dataToSearch = new JsSearch.Search("isbn")
+    const { itemList } = this.state
+    const dataToSearch = new JsSearch.Search("id")
     /**
      *  defines a indexing strategy for the data
      * more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
@@ -50,12 +50,12 @@ class Search extends Component {
      * defines the search index
      * read more in here https://github.com/bvaughn/js-search#configuring-the-search-index
      */
-    dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("isbn")
+    dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("id")
 
     dataToSearch.addIndex("title") // sets the index attribute for the data
-    dataToSearch.addIndex("author") // sets the index attribute for the data
+    dataToSearch.addIndex("custom_elements") // sets the index attribute for the data
 
-    dataToSearch.addDocuments(bookList) // adds the data to be searched
+    dataToSearch.addDocuments(itemList) // adds the data to be searched
     this.setState({ search: dataToSearch, isLoading: false })
   }
 
@@ -73,8 +73,8 @@ class Search extends Component {
   }
 
   render() {
-    const { bookList, searchResults, searchQuery } = this.state
-    const queryResults = searchQuery === "" ? bookList : searchResults
+    const { itemList, searchResults, searchQuery } = this.state
+    const queryResults = searchQuery === "" ? itemList : searchResults
     return (
       <div>
         <div style={{ margin: "0 auto" }}>
@@ -84,14 +84,12 @@ class Search extends Component {
                 id="Search"
                 value={searchQuery}
                 onChange={this.searchData}
-                placeholder="Enter your search here"
-                style={{ margin: "0 auto", width: "400px" }}
+                placeholder="搜尋文章"
+                style={{ margin: "0 auto", width: "250px" }}
               />
             </div>
           </form>
-          <div>
-            Number of items:
-            {queryResults.length}
+          <div id="result">
             <table
               style={{
                 width: "100%",
@@ -100,58 +98,10 @@ class Search extends Component {
                 border: "1px solid #d3d3d3",
               }}
             >
-              <thead style={{ border: "1px solid #808080" }}>
-                <tr>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Book ISBN
-                  </th>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Book Title
-                  </th>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Book Author
-                  </th>
-                </tr>
-              </thead>
               <tbody>
                 {queryResults.map(item => {
                   return (
-                    <tr key={`row_${item.isbn}`}>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                        {item.isbn}
-                      </td>
+                    <tr key={`row_${item.id}`}>
                       <td
                         style={{
                           fontSize: "14px",
@@ -159,14 +109,6 @@ class Search extends Component {
                         }}
                       >
                         {item.title}
-                      </td>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                        {item.author}
                       </td>
                     </tr>
                   )
