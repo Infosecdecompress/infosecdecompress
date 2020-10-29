@@ -66,7 +66,7 @@ module.exports = {
               date: edge.node.frontmatter.date,
               url: site.siteMetadata.site_url + edge.node.fields.slug,
               guid: site.siteMetadata.site_url + edge.node.fields.slug,
-              custom_elements: [{ 'content:encoded': edge.node.html }]
+              content: edge.node.html
             }))
           ),
           query: `
@@ -128,8 +128,8 @@ module.exports = {
           url: siteUrl + node.fields.slug,
           title: node.frontmatter.title,
           description: node.frontmatter.description,
-          date_published: new Date(node.frontmatter.date).toISOString(),
-          custom_elements: [{ 'content': node.rawMarkdownBody }]
+          date_published: node.frontmatter.date,
+          content: node.rawMarkdownBody
         })),
         nodesPerFeedFile: 500,
       }

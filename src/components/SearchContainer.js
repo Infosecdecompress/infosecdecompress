@@ -33,13 +33,24 @@ class Search extends Component {
    * rebuilds the overall index based on the options
    */
   rebuildIndex = () => {
+    var REGEX = /\s+/; // Split on spaces
+    const tokenizer = {
+      tokenize(text) {
+        return text
+          .split(REGEX)
+          .filter(
+            (text) => text // Filter empty tokens
+          );
+      }
+    }
     const { itemList } = this.state
     const dataToSearch = new JsSearch.Search("id")
+    dataToSearch.tokenizer = tokenizer
     /**
      *  defines a indexing strategy for the data
      * more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
      */
-    dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy()
+    dataToSearch.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
     /**
      * defines the sanitizer for the search
      * to prevent some of the words from being excluded
@@ -53,7 +64,7 @@ class Search extends Component {
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("id")
 
     dataToSearch.addIndex("title") // sets the index attribute for the data
-    dataToSearch.addIndex("custom_elements") // sets the index attribute for the data
+    dataToSearch.addIndex("content") // sets the index attribute for the data
 
     dataToSearch.addDocuments(itemList) // adds the data to be searched
     this.setState({ search: dataToSearch, isLoading: false })
@@ -67,6 +78,13 @@ class Search extends Component {
     const { search } = this.state
     const queryResult = search.search(e.target.value)
     this.setState({ searchQuery: e.target.value, searchResults: queryResult })
+    var status = document.getElementById("result");
+    if (e.target.value != "") {
+      status.style.display = "block";
+    }
+    else {
+      status.style.display = "none";
+    }
   }
   handleSubmit = e => {
     e.preventDefault()
@@ -76,7 +94,7 @@ class Search extends Component {
     const { itemList, searchResults, searchQuery } = this.state
     const queryResults = searchQuery === "" ? itemList : searchResults
     return (
-      <div>
+      <div style={{margin:"5px auto"}}>
         <div style={{ margin: "0 auto" }}>
           <form onSubmit={this.handleSubmit}>
             <div style={{ margin: "0 auto" }}>
@@ -85,17 +103,26 @@ class Search extends Component {
                 value={searchQuery}
                 onChange={this.searchData}
                 placeholder="搜尋文章"
-                style={{ margin: "0 auto", width: "250px" }}
+                style={{ 
+                  margin: "0 auto", 
+                  width: "250px",
+                  padding: "5px 5px",
+                  display: "inline-block",
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  boxSizing: "border-box",
+                }}
               />
             </div>
           </form>
-          <div id="result">
-            <table
+          <div>
+            <table id="result"
               style={{
-                width: "100%",
+                width: "250px",
                 borderCollapse: "collapse",
                 borderRadius: "4px",
-                border: "1px solid #d3d3d3",
+                border: "1px solid #ccc",
+                display: "none",
               }}
             >
               <tbody>
@@ -105,10 +132,11 @@ class Search extends Component {
                       <td
                         style={{
                           fontSize: "14px",
-                          border: "1px solid #d3d3d3",
                         }}
                       >
-                        {item.title}
+                        <a href={item.url}>
+                          {item.title}
+                        </a>
                       </td>
                     </tr>
                   )
