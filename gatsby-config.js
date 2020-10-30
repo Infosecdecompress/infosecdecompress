@@ -2,6 +2,7 @@
 
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
+const siteUrl = `https://infosecdecompress.com`;
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -65,7 +66,7 @@ module.exports = {
               date: edge.node.frontmatter.date,
               url: site.siteMetadata.site_url + edge.node.fields.slug,
               guid: site.siteMetadata.site_url + edge.node.fields.slug,
-              custom_elements: [{ 'content:encoded': edge.node.html }]
+              content: edge.node.html
             }))
           ),
           query: `
@@ -84,8 +85,6 @@ module.exports = {
                       frontmatter {
                         title
                         date
-                        template
-                        draft
                         description
                       }
                     }
@@ -96,6 +95,43 @@ module.exports = {
           output: '/rss.xml',
           title: siteConfig.title
         }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: siteUrl,
+        graphQLQuery: `
+          {
+            allMarkdownRemark(
+              limit: 1000,
+              sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+              ) {
+              edges {
+                node {
+                  html
+                  rawMarkdownBody
+                  fields { slug }
+                  frontmatter {
+                    title
+                    date
+                    description
+                  }
+                }
+              }
+            }
+          }
+        `,
+        serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          id: node.fields.slug,
+          url: siteUrl + node.fields.slug,
+          title: node.frontmatter.title,
+          description: node.frontmatter.description,
+          date_published: node.frontmatter.date,
+          content: node.rawMarkdownBody
+        })),
+        nodesPerFeedFile: 500,
       }
     },
     {
@@ -153,7 +189,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-		exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`,``],
+		    exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`,``],
         query: `
           {
             site {
