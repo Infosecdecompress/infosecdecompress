@@ -6,6 +6,7 @@ import Copyright from './Copyright';
 import Menu from './Menu';
 import styles from './Sidebar.module.scss';
 import { useSiteMetadata } from '../../hooks';
+import Search from "../SearchContainer";
 
 type Props = {
   isIndex?: boolean,
