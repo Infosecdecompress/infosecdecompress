@@ -15,7 +15,7 @@ const CategoriesListTemplate = () => {
   return (
     <Layout title={`Categories - ${title}`} description={subtitle}>
       <Sidebar />
-      <Page title="分類/標籤">
+      <Page title="分類 標籤">
         <h2>分類</h2>
         <ul>
           {categories.map((category) => (
