@@ -16,7 +16,7 @@ module.exports = {
       path: '/'
     },
     {
-      label: '分類/標籤',
+      label: '分類標籤',
       path: '/categories'
     },
     {
