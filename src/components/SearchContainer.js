@@ -88,7 +88,7 @@ class Search extends Component {
               <input
                 id="Search"
                 value={searchQuery}
-                onChange={this.searchData}
+                onChange={(evt) => this.searchData(evt)}
                 placeholder="搜尋文章"
                 style={{ 
                   margin: "0 auto", 
