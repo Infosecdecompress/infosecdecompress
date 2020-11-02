@@ -2,6 +2,7 @@
 
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
+const siteUrl = `https://infosecdecompress.com`;
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
