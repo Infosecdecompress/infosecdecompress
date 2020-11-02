@@ -99,6 +99,43 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: siteUrl,
+        graphQLQuery: `
+          {
+            allMarkdownRemark(
+              limit: 1000,
+              sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+              ) {
+              edges {
+                node {
+                  html
+                  rawMarkdownBody
+                  fields { slug }
+                  frontmatter {
+                    title
+                    date
+                    description
+                  }
+                }
+              }
+            }
+          }
+        `,
+        serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          id: node.fields.slug,
+          url: siteUrl + node.fields.slug,
+          title: node.frontmatter.title,
+          description: node.frontmatter.description,
+          date_published: node.frontmatter.date,
+          content: node.rawMarkdownBody
+        })),
+        nodesPerFeedFile: 500,
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
