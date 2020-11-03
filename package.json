@@ -42,15 +42,9 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
-<<<<<<< HEAD
-    "gatsby": "^2.25.1",
-    "gatsby-cli": "^2.12.115",
-    "codecov": "^3.8.1",
-=======
     "codecov": "^3.8.0",
     "gatsby": "^2.24.87",
     "gatsby-cli": "^2.12.113",
->>>>>>> parent of b0cc4d4... chore(deps): update gatsby
     "gatsby-link": "^2.4.16",
     "gatsby-plugin-catch-links": "^2.3.15",
     "gatsby-plugin-csp": "^1.1.3",
