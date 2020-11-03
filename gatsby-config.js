@@ -153,8 +153,8 @@ module.exports = {
               maxWidth: 960,
               withWebp: true,
               linkImagesToOriginal: false,
-              ignoreFileExtensions: [],
               disableBgImageOnAlpha: true,
+              disableBgImage: true, 
             }
           },
           {
@@ -191,7 +191,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-		exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`,``],
+		exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`],
         query: `
           {
             site {
