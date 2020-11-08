@@ -7,6 +7,9 @@ import Menu from './Menu';
 import styles from './Sidebar.module.scss';
 import { useSiteMetadata } from '../../hooks';
 import Search from "../SearchContainer";
+import Switcher from './Switcher';
+
+const siteConfig = require('../../../config');
 
 type Props = {
   isIndex?: boolean,
@@ -14,6 +17,7 @@ type Props = {
 
 const Sidebar = ({ isIndex }: Props) => {
   const { author, copyright, menu } = useSiteMetadata();
+  const { darkFunctionalityIsOn } = siteConfig;
 
   return (
     <div className={styles['sidebar']}>
@@ -22,9 +26,10 @@ const Sidebar = ({ isIndex }: Props) => {
         <Menu menu={menu} />
         <Contacts contacts={author.contacts} />
         <Search />
+        {darkFunctionalityIsOn ? <Switcher /> : null}
         <Copyright copyright={copyright} />
+        </div>
       </div>
-    </div>
   );
 };
 
