@@ -10,7 +10,6 @@ module.exports = {
   postsPerPage: 10,
   googleAnalyticsId: 'G-G73BYNCQRH',
   useKatex: false,
-  darkFunctionalityIsOn: true,
   menu: [
     {
       label: '文章列表',
