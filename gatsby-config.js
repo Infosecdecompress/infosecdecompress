@@ -191,7 +191,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-		exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`],
+		    exclude: [`/404`, `/tag/*`, `/category/*`, `/page/*`, `/admin`,`/offline-plugin-app-shell-fallback`, `/tags`, `/pages/success`],
         query: `
           {
             site {
