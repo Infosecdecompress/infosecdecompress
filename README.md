@@ -4,7 +4,7 @@
 Great thanks to Contributors of the [Lumen Theme](https://github.com/alxshelepenok/gatsby-starter-lumen/) for the awesome theme
 
 ## License
-Excepted where otherwise noted, content on [資安解壓縮 Infosec Decompress](https://infosecdecompress.com) is Copyright of Carol & Jeff 
+Except where otherwise noted, content on [資安解壓縮 Infosec Decompress](https://infosecdecompress.com) is Copyright of Carol & Jeff 
 - - -
 
 The Gatsby Lumen Theme is licensed under the following MIT License (MIT)
