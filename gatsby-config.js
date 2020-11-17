@@ -117,8 +117,6 @@ module.exports = {
                   fields { slug }
                   frontmatter {
                     title
-                    date
-                    description
                   }
                 }
               }
@@ -126,11 +124,8 @@ module.exports = {
           }
         `,
         serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
-          id: node.fields.slug,
           url: siteUrl + node.fields.slug,
           title: node.frontmatter.title,
-          description: node.frontmatter.description,
-          date_published: node.frontmatter.date,
           content: node.rawMarkdownBody
         })),
         nodesPerFeedFile: 500,
