@@ -117,8 +117,6 @@ module.exports = {
                   fields { slug }
                   frontmatter {
                     title
-                    date
-                    description
                   }
                 }
               }
@@ -126,11 +124,8 @@ module.exports = {
           }
         `,
         serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
-          id: node.fields.slug,
           url: siteUrl + node.fields.slug,
           title: node.frontmatter.title,
-          description: node.frontmatter.description,
-          date_published: node.frontmatter.date,
           content: node.rawMarkdownBody
         })),
         nodesPerFeedFile: 500,
@@ -191,7 +186,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-		exclude: [`/404`, `/tag/*`, `/admin`,`/offline-plugin-app-shell-fallback`],
+		    exclude: [`/404`, `/tag/*`, `/category/*`, `/page/*`, `/admin`,`/offline-plugin-app-shell-fallback`, `/tags`, `/pages/success`],
         query: `
           {
             site {
