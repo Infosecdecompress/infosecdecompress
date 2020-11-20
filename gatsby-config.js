@@ -121,7 +121,6 @@ module.exports = {
               ) {
               edges {
                 node {
-                  html
                   rawMarkdownBody
                   fields { slug }
                   frontmatter {
@@ -135,7 +134,11 @@ module.exports = {
         serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
           url: siteUrl + node.fields.slug,
           title: node.frontmatter.title,
+          // content: node.rawMarkdownBody.replace(/(\\r\\n)*|(\((.*?)\))|(\#*|\**)/g, ``)
           content: node.rawMarkdownBody
+              .replace(/(\((.*?)\))/g, ``)
+              .replace(/(\#*|\**)/g,'')
+              .replace(/(?:\\[rn])+/g,'')
         })),
         nodesPerFeedFile: 500,
       }
