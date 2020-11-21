@@ -136,9 +136,8 @@ module.exports = {
           title: node.frontmatter.title,
           // content: node.rawMarkdownBody.replace(/(\\r\\n)*|(\((.*?)\))|(\#*|\**)/g, ``)
           content: node.rawMarkdownBody
-              .replace(/(\((.*?)\))/g, ``)
-              .replace(/(\#*|\**)/g,'')
-              .replace(/(?:\\[rn])+/g,'')
+              .replace(/(\((.*?)\))|(\#)|(\*)|(\[)|(\])/g, ``)
+              .replace(/(?:\\[rn]|[\r\n]+)|(\\)+/g,'')
         })),
         nodesPerFeedFile: 500,
       }
