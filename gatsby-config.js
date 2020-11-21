@@ -132,12 +132,14 @@ module.exports = {
           }
         `,
         serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          id: node.fields.slug,
           url: siteUrl + node.fields.slug,
           title: node.frontmatter.title,
           // content: node.rawMarkdownBody.replace(/(\\r\\n)*|(\((.*?)\))|(\#*|\**)/g, ``)
           content: node.rawMarkdownBody
-              .replace(/(\((.*?)\))|(\#)|(\*)|(\[)|(\])/g, ``)
-              .replace(/(?:\\[rn]|[\r\n]+)|(\\)+/g,'')
+              .replace(/(\((.*?)\))|(\#)|(\*)|(\[)|(\])/g, ' ')
+              .replace(/(?:\\[rn]|[\r\n]+)|(\\)+/g,' ')
+              .replace(/\s\s+/g, ' ')
         })),
         nodesPerFeedFile: 500,
       }
