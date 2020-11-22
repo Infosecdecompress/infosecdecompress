@@ -10,7 +10,7 @@ const Page: React.FC<Props> = ({ title, children }) => {
 
   useEffect(() => {
     pageRef.current.scrollIntoView();
-  }, []);
+  });
 
   return (
     <div ref={pageRef} className={styles['page']}>
