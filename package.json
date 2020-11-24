@@ -40,13 +40,13 @@
     "informationsecurity"
   ],
   "dependencies": {
-    "@sentry/gatsby": "^5.27.4",
+    "@sentry/gatsby": "^5.27.6",
     "@sentry/tracing": "^5.27.6",
     "@sideway/address": "^4.1.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.8.1",
-    "gatsby": "^2.27.1",
+    "gatsby": "^2.27.2",
     "gatsby-cli": "^2.14.0",
     "gatsby-link": "^2.6.0",
     "gatsby-plugin-catch-links": "^2.5.0",
