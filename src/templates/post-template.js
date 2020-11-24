@@ -15,10 +15,9 @@ type Props = {
 const PostTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { frontmatter } = data.markdownRemark;
-  const { title: postTitle, description: postDescription, socialImage } = frontmatter;
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-  const socialImageUrl = socialImage === null || typeof socialImage === 'undefined' ? undefined : socialImage['publicURL']; 
-
+  const { title: postTitle, description: postDescription = '', socialImage } = frontmatter;
+  const metaDescription = postDescription || siteSubtitle;
+  const socialImageUrl = socialImage?.publicURL;
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImageUrl} >

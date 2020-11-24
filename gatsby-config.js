@@ -184,7 +184,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/index.js`,
+        modulePath: `${__dirname}/src/cms/index.js`
       }
     },
     {
@@ -192,9 +192,9 @@ module.exports = {
       options: {
         trackingIds: [siteConfig.googleAnalyticsId],
         pluginConfig: {
-          head: true,
-        },
-      },
+          head: true
+        }
+      }
     },
     {
       resolve: 'gatsby-plugin-sitemap',
@@ -248,8 +248,15 @@ module.exports = {
       options: {
         postCssPlugins: [...postCssPlugins],
         cssLoaderOptions: {
-          camelCase: false,
+          camelCase: false
         }
+      }
+    },
+    {
+      resolve: '@sentry/gatsby',
+      options: {
+        dsn: process.env.SENTRY_DSN,
+        tracesSampleRate: 1
       }
     },
     'gatsby-plugin-flow',
