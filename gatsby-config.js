@@ -173,7 +173,8 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          'gatsby-remark-external-links'
+          'gatsby-remark-external-links',
+          'gatsby-remark-lazy-load'
         ]
       }
     },
@@ -260,6 +261,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-flow',
+    'gatsby-plugin-preact',
     'gatsby-plugin-optimize-svgs',
     {
       resolve: `gatsby-plugin-csp`,
