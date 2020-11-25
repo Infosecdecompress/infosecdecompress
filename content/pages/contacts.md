@@ -2,6 +2,7 @@
 template: page
 title: 聯絡資訊
 slug: contacts
+socialImage: /media/icon.jpeg
 draft: false
 ---
 <style>
