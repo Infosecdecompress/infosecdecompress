@@ -40,8 +40,8 @@
     "informationsecurity"
   ],
   "dependencies": {
-    "@sentry/gatsby": "^5.27.6",
-    "@sentry/tracing": "^5.27.6",
+    "@sentry/gatsby": "^5.27.4",
+    "@sentry/tracing": "^5.27.4",
     "@sideway/address": "^4.1.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
