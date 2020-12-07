@@ -173,8 +173,7 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          'gatsby-remark-external-links',
-          'gatsby-remark-lazy-load'
+          'gatsby-remark-external-links'
         ]
       }
     },
@@ -261,7 +260,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-flow',
-    'gatsby-plugin-preact',
     'gatsby-plugin-optimize-svgs',
     {
       resolve: `gatsby-plugin-csp`,
@@ -272,7 +270,7 @@ module.exports = {
         mergeStyleHashes: false, // you can disable styles sha256 hashes
         mergeDefaultDirectives: true,
         directives: {
-          "script-src": "'self' 'unsafe-inline' www.google-analytics.com www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com",
+          "script-src": "'self' 'unsafe-inline' www.google-analytics.com www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com",
           "style-src": "'self' data: blob: 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
           "img-src": "'self' data: www.google-analytics.com stats.g.doubleclick.net",
           "font-src": "'self' fonts.gstatic.com fonts.googleapis.com",
