@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ccc4aad7-66d5-47b7-b676-f9ddadcb529f/deploy-status)](https://app.netlify.com/sites/infosecdecompress/deploys) 
+![Netlify](https://img.shields.io/netlify/ccc4aad7-66d5-47b7-b676-f9ddadcb529f?label=Netlify%20Build). ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m786602063-54f5b9ac689e721a6e20fa26?label=Uptime)  ![GitHub last commit](https://img.shields.io/github/last-commit/infosecdecompress/infosecdecompress?label=Last%20Commit)
 
 ## Credits
 Great thanks to Contributors of the [Lumen Theme](https://github.com/alxshelepenok/gatsby-starter-lumen/) for the awesome theme
