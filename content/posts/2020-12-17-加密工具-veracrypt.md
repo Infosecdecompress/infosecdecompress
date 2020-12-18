@@ -60,6 +60,8 @@ VeraCrypt 官方下載連結：https://www.veracrypt.fr/en/Downloads.html
 
 ![](/media/VeraCrypt_download.png)
 
+Mac的用戶除了要下載安裝VeraCrupt以外，還要多安裝 [macFuse (舊名OSXFuse）](https://osxfuse.github.io/)才能正常運作。
+
 下載後就可以進行安裝，安裝的第一步可以選繁體中文比較好理解，剩餘步驟與大多數軟體差不多，VeraCrypt 沒有夾帶惡意軟體，可以放心地點下一步。
 
 安裝的最後一步會問你願不願意贊助 VeraCrypt團隊，如果有餘力不妨支持一下這些免費開源的好軟體。
