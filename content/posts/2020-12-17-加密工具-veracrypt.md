@@ -9,7 +9,6 @@ description: 今天要來跟各位介紹一個強大多變的加密工具
   VeraCrypt。VeraCrypt是個免費、開源、且跨平台支援的好用工具。適合用來保護我們的外接硬碟與隨身碟裡保護的資料。
 category: Patches
 tags:
-  - patches
   - encryption
   - tool
   - VeraCrypt

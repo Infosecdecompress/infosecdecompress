@@ -10,10 +10,9 @@ description: |-
   前陣子吵得沸沸揚揚的Zoom爭議事件，最近又因為六四紀念事件重新引起關注，我們簡單整理了一下發生了什麼事，一起來了解一下吧～
 category: NewsUpdates
 tags:
-  - zoom
-  - e2ee
+  - Zoom
+  - E2EE
   - privacy
-  - news updates
 ---
 ![](/media/zoom_cover.jpg)
 

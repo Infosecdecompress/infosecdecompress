@@ -8,7 +8,6 @@ date: 2020-05-30T01:51:08.293Z
 description: 最近中油和台朔兩家石化公司接連受到勒索病毒攻擊，在這邊帶大家認識一下勒索病毒。
 category: NewsUpdates
 tags:
-  - news updates
   - ransomware
 ---
 <style>

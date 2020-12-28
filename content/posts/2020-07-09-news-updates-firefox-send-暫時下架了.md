@@ -8,9 +8,8 @@ date: 2020-07-08T14:05:43.914Z
 description: 在上一集提供給大家這個可以在不同裝置間更方便傳送檔案的工具，在昨天下架了！
 category: NewsUpdates
 tags:
-  - news updates
-  - firefox send
-  - mozilla
+  - Firefox Send
+  - Mozilla
 ---
 ![](/media/firefoxsend_cover.png)
 

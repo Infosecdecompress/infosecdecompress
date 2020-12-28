@@ -61,7 +61,7 @@ tags:
 
 歡迎在資安圈打滾或是想要踏入資安的朋友加入這個社群一起來交流討論
 
-入會申請連結：<http://bit.ly/TwSecSlack> 
+入會申請連結：<https://bit.ly/TwSecSlack> 
 
 ### Credits
 

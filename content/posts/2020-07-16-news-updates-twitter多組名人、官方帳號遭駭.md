@@ -10,8 +10,7 @@ description: |-
   Twitter在台灣凌晨四點左右，多組名人帳密被盜，攻擊者利用這些帳號散播釣魚內容。
 category: NewsUpdates
 tags:
-  - news updates
-  - twitter
+  - Twitter
   - phishing
 ---
 ![](/media/twitter_cover.jpg)

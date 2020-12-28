@@ -10,9 +10,8 @@ description: |-
   最近只要使用檢測服務就可以參加CITI CAFE的飲品抽獎活動哦～
 category: Patches
 tags:
-  - patches
-  - virustotal
-  - virus check
+  - VirusTotal
+  - VirusCheck.tw
 ---
 ![](/media/viruscheck_cover.jpg)
 
@@ -72,7 +71,7 @@ Virus Check 還與趨勢科技和奧義智慧科技合作，當遇到高風險�
 
 上傳檔案並完成檢測，憑上傳檔案時留下之e-mail，即可參加 CITY CAFE 60元飲品電子兌換卷抽獎活動。
 
-活動詳情：[【2020】惡意檔案檢測服務(Virus Check)-上傳並檢測成功抽獎活動說明](http://surl.twcert.org.tw/ckfxR)
+活動詳情：[【2020】惡意檔案檢測服務(Virus Check)-上傳並檢測成功抽獎活動說明](https://surl.twcert.org.tw/ckfxR)
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
