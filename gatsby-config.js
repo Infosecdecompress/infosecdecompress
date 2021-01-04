@@ -144,6 +144,7 @@ module.exports = {
         nodesPerFeedFile: 500,
       }
     },
+    'gatsby-plugin-netlify-cms-paths',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
