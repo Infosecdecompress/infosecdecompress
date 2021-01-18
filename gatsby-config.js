@@ -290,7 +290,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-flow',
-    'gatsby-plugin-optimize-svgs',
     {
       resolve: `gatsby-plugin-csp`,
       options: {
