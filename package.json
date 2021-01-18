@@ -7,7 +7,7 @@
     "develop": "yarn clean && gatsby develop",
     "build": "gatsby build",
     "cleandeploy": "yarn clean && gatsby build --prefix-paths",
-    "deploy": "gatsby build --prefix-paths",
+    "deploy": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --prefix-paths",
     "clean": "rimraf .cache public",
     "flow": "flow",
     "lint:js": "eslint --cache --ext .js,.jsx .",
