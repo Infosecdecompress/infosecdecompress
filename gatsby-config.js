@@ -14,6 +14,9 @@ module.exports = {
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
     author: siteConfig.author
+  },  
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true
   },
   plugins: [
     {
