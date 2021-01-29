@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
-import Sidebar from '../components/Sidebar';
 import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
 import Page from '../components/Page';
 import { useSiteMetadata, useCategoriesList, useTagsList } from '../hooks';
 
