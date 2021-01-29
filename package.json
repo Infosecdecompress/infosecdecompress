@@ -41,7 +41,7 @@
     "informationsecurity"
   ],
   "dependencies": {
-    "@sentry/gatsby": "^5.30.0",
+    "@sentry/gatsby": "^5.29.2",
     "@sentry/tracing": "^6.0.2",
     "@sideway/address": "^4.1.0",
     "bluebird": "^3.7.2",
