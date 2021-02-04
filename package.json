@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "@sentry/gatsby": "^5.29.2",
-    "@sentry/tracing": "^6.0.2",
+    "@sentry/tracing": "^6.1.0",
     "@sideway/address": "^4.1.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
