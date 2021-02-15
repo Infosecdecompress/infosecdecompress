@@ -14,6 +14,9 @@ module.exports = {
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
     author: siteConfig.author
+  },  
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true
   },
   plugins: [
     {
@@ -276,6 +279,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
+        implementation: require('sass'),
         postCssPlugins: [...postCssPlugins],
         cssLoaderOptions: {
           camelCase: false
@@ -290,7 +294,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-flow',
-    'gatsby-plugin-optimize-svgs',
     {
       resolve: `gatsby-plugin-csp`,
       options: {

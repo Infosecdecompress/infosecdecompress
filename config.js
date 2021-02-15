@@ -5,7 +5,7 @@ module.exports = {
   pathPrefix: '/',
   title: '資安解壓縮',
   subtitle: 'InfosecDecompress',
-  copyright: '©2020 資安解壓縮 InfosecDecompress',
+  copyright: 'Content is licensed under CC BY-SA 4.0',
   disqusShortname: '',
   postsPerPage: 10,
   googleAnalyticsId: 'G-G73BYNCQRH',
