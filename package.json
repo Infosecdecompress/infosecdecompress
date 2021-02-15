@@ -41,7 +41,7 @@
     "informationsecurity"
   ],
   "dependencies": {
-    "@sentry/gatsby": "^5.29.2",
+    "@sentry/gatsby": "^6.1.0",
     "@sentry/tracing": "^6.1.0",
     "@sideway/address": "^4.1.1",
     "bluebird": "^3.7.2",
@@ -64,7 +64,7 @@
     "gatsby-plugin-offline": "^3.8.0",
     "gatsby-plugin-preload-fonts": "^1.7.0",
     "gatsby-plugin-react-helmet": "^3.8.0",
-    "gatsby-plugin-sass": "^2.8.0",
+    "gatsby-plugin-sass": "^3.2.0",
     "gatsby-plugin-security-txt": "^1.1.4",
     "gatsby-plugin-sharp": "^2.12.0",
     "gatsby-plugin-sitemap": "^2.10.0",
