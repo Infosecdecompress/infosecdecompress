@@ -22,7 +22,8 @@ tags:
 
 前幾天Stanford Internet Observatory的研究人員針對Clubhouse公布了一些他們的研究與發現
 
-> Stanford Internet Observatory研究原文連結：[](https://cyber.fsi.stanford.edu/io/news/clubhouse-china)[Stanford Internet Observatory - Clubhouse in China: Is the data safe?](https://cyber.fsi.stanford.edu/io/news/clubhouse-china)
+> 原文連結：\
+> [Stanford Internet Observatory - Clubhouse in China: Is the data safe?](https://cyber.fsi.stanford.edu/io/news/clubhouse-china)
 
 ## 未加密的資料傳輸
 
@@ -49,6 +50,8 @@ tags:
 研究人員認為只要Clubhouse將這些錄音存放在美國，中國政府應該就無法取得。
 
 雖然中國政府有一些合法的方式可以要求Clubhouse提供用戶資訊，但只要Clubhouse沒有將資料存放在中國，或是沒有與其他中國的公司合作（就目前所知，除了Agora以外沒有），Clubhouse就可以拒絕提供這些資訊給中國政府。
+
+*除了上述的問題以外，Stanford Internet Observatory還發現了一些其他的安全性問題，他們已經這些問題回報給Clubhouse，並計畫在問題被修補後再公開。*
 
 ## Clubhouse 的回應
 
