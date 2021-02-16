@@ -1,7 +1,7 @@
 ---
 template: post
 title: Clubhouse資料儲存與安全性後續追蹤
-slug: newsupdates_
+slug: newsupdates_clubhouse_followup
 socialImage: /media/clubhouse_followup_cover.png
 draft: false
 date: 2021-02-16T03:38:14.919Z
