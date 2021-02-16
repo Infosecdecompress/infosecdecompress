@@ -1,6 +1,6 @@
 ---
 template: post
-title: Clubhouse資料儲存與安全性後續追追蹤
+title: Clubhouse資料儲存與安全性後續追蹤
 slug: newsupdates_
 socialImage: /media/clubhouse_followup_cover.png
 draft: false
