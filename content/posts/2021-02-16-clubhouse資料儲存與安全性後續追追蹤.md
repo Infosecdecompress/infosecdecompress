@@ -22,6 +22,8 @@ tags:
 
 前幾天Stanford Internet Observatory的研究人員針對Clubhouse公布了一些他們的研究與發現
 
+> Stanford Internet Observatory研究原文連結：[](https://cyber.fsi.stanford.edu/io/news/clubhouse-china)[Stanford Internet Observatory - Clubhouse in China: Is the data safe?](https://cyber.fsi.stanford.edu/io/news/clubhouse-china)
+
 ## 未加密的資料傳輸
 
 ### 用戶相關資訊
@@ -60,4 +62,4 @@ Clubhouse在收到Stanford Internet Observatory研究人員提出的問題和報
 
 ![](/media/clubhouse_followup_response.png)
 
-Stanford Internet Observatory研究原文連結：[](https://cyber.fsi.stanford.edu/io/news/clubhouse-china)<https://cyber.fsi.stanford.edu/io/news/clubhouse-china>
+Clubhouse的回應截圖（來源：[Stanford Internet Observatory - Clubhouse in China: Is the data safe?](https://cyber.fsi.stanford.edu/io/news/clubhouse-china))
