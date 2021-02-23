@@ -19,15 +19,15 @@ tags:
 
 [Bitwarden介紹](#bitwarden介紹)
 
-[將資料從LastPass匯出](#將資料從lastpass匯出)
+[從LastPass匯出](#從lastpass匯出)
 
-[將資料匯入Bitwarden](#將資料匯入bitwarden)
+[匯入Bitwarden](#匯入bitwarden)
 
 [刪除LastPass帳號](#刪除lastpass帳號)
 
 [在Bitwarden開啟多因素認證](#在bitwarden開啟多因素認證)
 
-[將Bitwarden改為繁體中文](將bitwarden改為繁體中文)
+[將Bitwarden改為繁體中文](#將bitwarden改為繁體中文)
 
 ### 前言
 
@@ -66,7 +66,7 @@ Bitwarden官方網站：<https://bitwarden.com/>
 
 在開始以前建議大家在一台確定安全沒有中毒的電腦上操作，如果可以的話盡量在無痕模式中進行
 
-### 將資料從LastPass匯出
+### 從LastPass匯出
 
 首先我們需要登入[LastPass網頁版](https://lastpass.com/?ac=1)，登入後點選左邊選單倒數第二個的**Advacned Options**，接著點**Export**
 
@@ -82,7 +82,7 @@ LastPass會開啟一個新的分頁並請你輸入密碼
 
 請將這個頁面保持開啟，等一下會用到
 
-### 將資料匯入Bitwarden
+### 匯入Bitwarden
 
 首先，登入[Bitwarden網頁版](https://vault.bitwarden.com/#/)，如果還沒有Bitwarden帳號的可以先[註冊一個](https://vault.bitwarden.com/#/register)
 
