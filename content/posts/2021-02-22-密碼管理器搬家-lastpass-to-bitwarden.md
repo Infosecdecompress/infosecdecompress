@@ -3,9 +3,10 @@ template: post
 title: 密碼管理器搬家教學 - LastPass to Bitwarden
 slug: patches_password_manager_transfer_tutorial
 socialImage: /media/PasswordManagerTransfer_11.png
-draft: true
+draft: false
 date: 2021-02-22T23:07:04.953Z
-description: description
+description: 不久前
+  LastPass公告了他們即將調整免費方案，三月以後只能選擇在一種裝置上存取密碼，因此在這個情況下我開始研究LastPass的付費方案和其他密碼管理器。在比較過後，我決定搬家到另一個密碼管理器Bitwarden
 category: Patches
 tags:
   - password manager
@@ -14,7 +15,7 @@ tags:
 ---
 ## 目錄
 
-  [前言](#前言)
+[前言](#前言)
 
 [Bitwarden介紹](#Bitwarden介紹)
 
