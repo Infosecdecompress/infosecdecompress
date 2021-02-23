@@ -17,17 +17,17 @@ tags:
 
 [前言](#前言)
 
-[Bitwarden介紹](#Bitwarden介紹)
+[Bitwarden介紹](#bitwarden介紹)
 
-[將資料從LastPass匯出](#將資料從LastPass匯出)
+[將資料從LastPass匯出](#將資料從lastpass匯出)
 
-[將資料匯入Bitwarden](#將資料匯入Bitwarden)
+[將資料匯入Bitwarden](#將資料匯入bitwarden)
 
-[刪除LastPass帳號](#刪除LastPass帳號)
+[刪除LastPass帳號](#刪除lastpass帳號)
 
-[在Bitwarden開啟多因素認證](#在Bitwarden開啟多因素認證)
+[在Bitwarden開啟多因素認證](#在bitwarden開啟多因素認證)
 
-[將Bitwarden改為繁體中文](#將Bitwarden改為繁體中文)
+[將Bitwarden改為繁體中文](將bitwarden改為繁體中文)
 
 ### 前言
 
