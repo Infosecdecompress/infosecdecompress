@@ -1,16 +1,20 @@
 ---
 template: post
-title: 密碼管理器搬家 - LastPass to Bitwarden
+title: 密碼管理器搬家教學 - LastPass to Bitwarden
 slug: patches_password_manager_transfer_tutorial
-socialImage: /media/icon.jpeg
+socialImage: /media/PasswordManagerTransfer_11.png
 draft: true
 date: 2021-02-22T23:07:04.953Z
 description: description
 category: Patches
+tags:
+  - password manager
+  - password vault
+  - password
 ---
 ## 目錄
 
-[前言](#前言)
+  [前言](#前言)
 
 [Bitwarden介紹](#Bitwarden介紹)
 
@@ -36,9 +40,13 @@ category: Patches
 
 ### Bitwarden介紹
 
+Bitwarden 是一個開源的密碼管理器，讓使用者可以安全的保護管理器中所儲存的帳號密碼等等的資訊。他支援了各大作業系、瀏覽器套件和手機。
+
+Bitwarden官方網站：<https://bitwarden.com/>
+
 ![PasswordManagerTransfer_11](/media/PasswordManagerTransfer_11.png)
 
-選擇 Bitwarden的主要原因：
+我選擇 Bitwarden的主要原因：
 
 * 開放原始碼
 * 在社群上評價好
@@ -51,11 +59,9 @@ category: Patches
 
 而會選擇付費的主要原因是我想要透過[實體金鑰](/posts/ep28_why_you_shouldnt_use_sms_as_2FA#u2f-實體金鑰)來保護我的帳號，畢竟密碼管理器保存了我所有的密碼，我會想要用最多的安全措施來保護他，而這是一個付費會員才有的功能
 
-Bitwarden官方網站：https://bitwarden.com/
+[](https://bitwarden.com/)Bitwarden軟體和擴充套件下載連結：<https://bitwarden.com/download/>
 
-Bitwarden軟體和擴充套件下載連結：https://bitwarden.com/download/
-
-## 教學
+## [](https://bitwarden.com/download/)教學
 
 在開始以前建議大家在一台確定安全沒有中毒的電腦上操作，如果可以的話盡量在無痕模式中進行
 
@@ -117,7 +123,7 @@ LastPass會開啟一個新的分頁並請你輸入密碼
 
 在Delete Your Account頁面點選第二個按鈕**Delete**，LastPass會接著問你你的LastPass密碼，輸入以後就可以刪除你的LastPass帳號了
 
-**這個動作是不可逆的，在刪除以前請確保你的資料有正確的匯入其他密碼管理器或是有適當的備份**
+**這個動作是不可逆的，**在刪除以前請確保你的資料有**正確的匯入其他密碼管理器**或是**有適當的備份**
 
 ![PasswordManagerTransfer_08](/media/PasswordManagerTransfer_08.png)
 
@@ -133,8 +139,6 @@ LastPass會開啟一個新的分頁並請你輸入密碼
 
 ### 將Bitwarden改為繁體中文
 
-Bitwarden有支援繁體中文的介面，想要更改介面語言的用戶可以到頁面上方的**Settings**，選擇左側的Options，並在**Language**選單選擇 **zh-TW - 中文 (台灣)** ，最後按下下方的Save來更改語言
+Bitwarden有支援繁體中文的介面，想要更改介面語言的用戶可以到頁面上方的**Settings**，選擇左側的Options，並在**Language**選單選擇 **zh-TW - 中文 (台灣)** ，最後按下下方的**Save**來更改語言
 
 ![PasswordManagerTransfer_10](/media/PasswordManagerTransfer_10.png)
-
-
