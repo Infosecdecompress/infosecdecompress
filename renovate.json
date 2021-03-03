@@ -1,13 +1,6 @@
 {
   "extends": [
     "config:base",
-    ":automergePatch",
-    ":automergeBranch",
-    ":automergePatch",
-    ":automergeBranch",
-    ":automergeLinters",
-    ":automergeTesters",
-    ":automergeTypes"
   ],
   "packageRules": [
     {
