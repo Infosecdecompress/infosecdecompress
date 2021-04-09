@@ -293,7 +293,6 @@ module.exports = {
         tracesSampleRate: 1
       }
     },
-    'gatsby-plugin-flow',
     {
       resolve: `gatsby-plugin-csp`,
       options: {
