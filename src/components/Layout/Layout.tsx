@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { useSiteMetadata } from '../../hooks';
-import styles from './Layout.module.scss';
+import * as styles from './Layout.module.scss';
 
 type Props = {
   title: string,

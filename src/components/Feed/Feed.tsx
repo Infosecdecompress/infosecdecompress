@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Edges } from '../../types';
-import styles from './Feed.module.scss';
+import * as styles from './Feed.module.scss';
 
 type Props = {
   edges: Edges
