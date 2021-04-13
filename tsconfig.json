@@ -16,9 +16,5 @@
     "noEmit": true,
     "skipLibCheck": true,
     // "noImplicitAny": false,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["*","jest/*"]
-    }
   }
 }
