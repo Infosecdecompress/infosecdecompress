@@ -18,10 +18,10 @@ const Post: React.FC<Props> = ({ post }) => {
   const { tags, title, date } = post.frontmatter;
 
   return (
-    <div className={styles['post']}>
-      <Link className={styles['post__home-button']} to="/">All Articles</Link>
+    <div className={styles}>
+      <Link className={styles['post__homeButton']} to="/">All Articles</Link>
 
-      <div className={styles['post__content']}>
+      <div className={styles}>
         <Content body={html} title={title} />
       </div>
 

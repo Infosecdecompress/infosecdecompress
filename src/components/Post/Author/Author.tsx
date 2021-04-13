@@ -8,7 +8,7 @@ const Author = () => {
 
   return (
     <div className={styles['author']}>
-      <p className={styles['author__bio']}><center>
+      <p className={styles}><center>
         對於這個節目有什麼想法，或想要聽什麼內容都歡迎到 
         <a
           href="/pages/contacts"

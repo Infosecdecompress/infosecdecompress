@@ -11,9 +11,9 @@ const Contacts = ({ contacts }: Props) => (
   <div className={styles['contacts']}>
     <ul className={styles['contacts__list']}>
       {Object.keys(contacts).map((name) => (!contacts[name] ? null : (
-        <li className={styles['contacts__list-item']} key={name}>
+        <li className={styles['contacts__listItem']} key={name}>
           <a
-            className={styles['contacts__list-item-link']}
+            className={styles['contacts__listItemLink']}
             href={getContactHref(name, contacts[name])}
             rel="noopener noreferrer"
             target="_blank"
