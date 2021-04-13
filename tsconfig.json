@@ -5,7 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "lib": ["dom", "es2017"],
-    "types": ["jest","@types/jest"],
+    "types": ["jest"],
     // "allowJs": true,
     // "checkJs": true,
     "jsx": "react",
@@ -15,6 +15,6 @@
     "emitDecoratorMetadata": true,
     "noEmit": true,
     "skipLibCheck": true,
-    // "noImplicitAny": false,
+    "noImplicitAny": false,
   }
 }
