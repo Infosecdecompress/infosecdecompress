@@ -42,7 +42,8 @@
   ],
   "dependencies": {
     "@sentry/gatsby": "^6.2.5",
-    "classnames": "^2.3.1",
+    "@types/react": "^17.0.3",
+    "classnames": "^2.2.6",
     "codecov": "^3.8.1",
     "gatsby": "^3.2.1",
     "gatsby-cli": "^3.3.0",
