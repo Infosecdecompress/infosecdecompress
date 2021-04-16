@@ -15,7 +15,8 @@
     "test": "jest --config ./jest/jest-config.js",
     "test:coverage": "jest --coverage --config ./jest/jest-config.js",
     "test:watch": "jest --watch --config ./jest/jest-config.js",
-    "preload-fonts": "gatsby-preload-fonts"
+    "preload-fonts": "gatsby-preload-fonts",
+    "type-check": "tsc --noEmit"
   },
   "repository": "https://github.com/Infosecdecompress/infosecdecompress",
   "author": "Jeffrey Hung <jeff@infosecdecompress.com>",
@@ -44,6 +45,10 @@
     "@sentry/gatsby": "^6.2.2",
     "@sentry/tracing": "^6.2.5",
     "@sideway/address": "^4.1.1",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.22",
+    "@types/react-helmet": "^6.1.1",
+    "@types/react-test-renderer": "^17.0.1",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.8.1",
