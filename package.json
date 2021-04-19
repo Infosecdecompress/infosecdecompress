@@ -84,7 +84,7 @@
     "invariant": "^2.2.4",
     "joi": "^17.4.0",
     "js-search": "^2.0.0",
-    "katex": "^0.13.0",
+    "katex": "^0.13.2",
     "lodash": "^4.17.21",
     "netlify-cms-app": "^2.14.40",
     "normalize-scss": "^7.0.1",
