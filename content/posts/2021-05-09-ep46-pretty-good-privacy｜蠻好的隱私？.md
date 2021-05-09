@@ -17,7 +17,7 @@ tags:
 ## Podcast連結
 
 * Apple Podcast
-* Spotify Podcast
+* [Spotify Podcast](https://open.spotify.com/episode/7wAR78aZ76iczwKMohUKiM)
 * [Firstory Podcast](https://open.firstory.me/story/ckohmxldp1sf408344yypud0g)
 
 - - -
