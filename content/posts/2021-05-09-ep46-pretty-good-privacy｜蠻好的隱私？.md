@@ -16,7 +16,7 @@ tags:
 ---
 ## Podcast連結
 
-* Apple Podcast
+* [Apple Podcast](https://podcasts.apple.com/tw/podcast/%E8%B3%87%E5%AE%89%E8%A7%A3%E5%A3%93%E7%B8%AE/id1513276667#episodeGuid=ckohmxldp1sf408344yypud0g)
 * [Spotify Podcast](https://open.spotify.com/episode/7wAR78aZ76iczwKMohUKiM)
 * [Firstory Podcast](https://open.firstory.me/story/ckohmxldp1sf408344yypud0g)
 
