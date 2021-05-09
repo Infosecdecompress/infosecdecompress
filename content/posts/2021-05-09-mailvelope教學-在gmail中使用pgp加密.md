@@ -3,7 +3,7 @@ template: post
 title: Mailvelope教學 - 在Gmail中使用PGP加密
 slug: patches_how_to_use_mailvelope
 socialImage: /media/mailvelope_02.png
-draft: true
+draft: false
 date: 2021-05-09T23:18:33.001Z
 description: EP46中介紹了什麼是PGP，本文要介紹的是一款可以讓我們用PGP來加密我們的Gmail的工具Mailvelope
 category: Patches
@@ -11,7 +11,8 @@ tags:
   - PGP
   - GPG
   - Mailvelope
-  - privacy
+  - public key
+  - digital signature
 ---
 ## Mailvelope簡介
 
