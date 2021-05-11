@@ -15,7 +15,7 @@ test('getContactHref', () => {
   expect(getContactHref('gitlab', '#')).toBe('https://www.gitlab.com/#');
   expect(getContactHref('weibo', '#')).toBe('https://www.weibo.com/#');
   expect(getContactHref('codepen', '#')).toBe('https://www.codepen.io/#');
-  expect(getContactHref('youtube', '#')).toBe('https://www.youtube.com/channel/#');
+  expect(getContactHref('youtube', '#')).toBe('https://www.youtube.com/#');
   expect(getContactHref('soundcloud', '#')).toBe('https://soundcloud.com/#');
   expect(getContactHref('firstory', '#')).toBe('https://open.firstory.me/user/#');
   expect(getContactHref('spotify', '#')).toBe('https://open.spotify.com/show/#');
