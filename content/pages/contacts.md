@@ -11,4 +11,4 @@ Facebook: [@infosecdecompress](https://www.facebook.com/infosecdecompress)
 
 Instagram: [@infosec.zip](https://www.instagram.com/infosec.zip/)
 
-Twitter: [@Infosec.zip](https://twitter.com/InfoSec_zip)
+Twitter: [@Infosec_zip](https://twitter.com/InfoSec_zip)

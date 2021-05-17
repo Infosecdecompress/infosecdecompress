@@ -167,6 +167,7 @@ module.exports = {
               linkImagesToOriginal: false,
               disableBgImageOnAlpha: true,
               disableBgImage: true, 
+              backgroundColor: `transparent`,
             }
           },
           {

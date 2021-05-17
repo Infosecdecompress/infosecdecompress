@@ -4,7 +4,7 @@
 Great thanks to Contributors of the [Lumen Theme](https://github.com/alxshelepenok/gatsby-starter-lumen/) for the awesome theme, [Simple Icons](https://simpleicons.org/) and [IconFinder](https://www.iconfinder.com/) for the great icons
 
 ## Licenses
-Except where otherwise noted, content on [資安解壓縮 Infosec Decompress](https://infosecdecompress.com) by Jeff & Carol is licensed under Creative Commons Attribution-ShareAlike 4.0 International ([CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)) ![CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png). 
+Except where otherwise noted, content on [資安解壓縮 Infosec Decompress](https://infosecdecompress.com) by Jeff & Carol is licensed under Creative Commons Attribution-ShareAlike 4.0 International ([CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)) ![CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png).  
 
 - - -
 
