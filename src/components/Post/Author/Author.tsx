@@ -9,7 +9,7 @@ const Author = () => {
   return (
     <div className={styles['author']}>
       <p className={styles}><center>
-        除非特別註記，資安解壓縮網站內容皆以
+        資安解壓縮網站內容除特別註記外皆以
         <a 
           href="http://creativecommons.org/licenses/by-sa/4.0/"
           rel="noopener noreferrer"
