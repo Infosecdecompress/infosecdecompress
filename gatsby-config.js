@@ -16,7 +16,9 @@ module.exports = {
     author: siteConfig.author
   },  
   flags: {
-    PRESERVE_WEBPACK_CACHE: true
+    PRESERVE_WEBPACK_CACHE: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PARALLEL_SOURCING: true
   },
   plugins: [
     {
@@ -294,7 +296,6 @@ module.exports = {
         tracesSampleRate: 1
       }
     },
-    'gatsby-plugin-flow',
     {
       resolve: `gatsby-plugin-csp`,
       options: {
