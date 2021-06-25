@@ -245,7 +245,7 @@ module.exports = {
         lang: `zh-tw`,
         start_url: '/',
         background_color: '#FFF',
-        theme_color: '#5D93FF',
+        theme_color: '#CDD9D9',
         display: 'standalone',
         orientation: 'portrait',
         icon: 'static/maskable_icon.png',
