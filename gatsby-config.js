@@ -13,7 +13,8 @@ module.exports = {
     copyright: siteConfig.copyright,
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
-    author: siteConfig.author
+    author: siteConfig.author,
+    description: siteConfig.description
   },  
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
@@ -58,7 +59,7 @@ module.exports = {
               siteMetadata {
                 site_url: url
                 title
-                description: subtitle
+                description
               }
             }
           }
@@ -239,12 +240,19 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: siteConfig.title,
-        short_name: siteConfig.title,
+        short_name: siteConfig.disqusShortname,
+        description: siteConfig.description,
+        lang: `zh-tw`,
         start_url: '/',
         background_color: '#FFF',
-        theme_color: '#F7A046',
+        theme_color: '#5D93FF',
         display: 'standalone',
-        icon: 'static/photo.jpg'
+        orientation: 'portrait',
+        icon: 'static/maskable_icon.png',
+        icon_options: {
+          type: `image/png`,
+          purpose: `any maskable`,
+        },
       },
     },
     {

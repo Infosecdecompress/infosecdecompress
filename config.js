@@ -6,10 +6,11 @@ module.exports = {
   title: '資安解壓縮',
   subtitle: 'InfosecDecompress',
   copyright: 'Content is licensed under CC BY-SA 4.0',
-  disqusShortname: '',
+  disqusShortname: 'infosec.zip',
   postsPerPage: 10,
   googleAnalyticsId: 'G-G73BYNCQRH',
   useKatex: false,
+  description: '資安解壓縮是第一個以資安為主題的中文Podcast節目，希望可以用最好理解的方式幫助大家更了解資訊安全，也更懂得保護自己。',
   menu: [
     {
       label: '文章列表',
