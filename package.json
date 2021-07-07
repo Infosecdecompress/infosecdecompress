@@ -126,7 +126,7 @@
     "postcss-pxtorem": "6.0.0",
     "react-test-renderer": "17.0.2",
     "rimraf": "3.0.2",
-    "sass": "^1.35.1",
+    "sass": "^1.35.2",
     "stylelint": "^13.13.1"
   }
 }
