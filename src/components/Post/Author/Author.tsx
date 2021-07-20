@@ -8,7 +8,7 @@ const Author = () => {
 
   return (
     <div className={styles['author']}>
-      <p className={styles}><center>
+      <center><p className={styles}>
         資安解壓縮網站內容除特別註記外皆以
         <a 
           href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -26,7 +26,7 @@ const Author = () => {
           聯絡資訊
         </a>
         告訴我們
-      </center></p>
+      </p></center>
     </div>
   );
 };
