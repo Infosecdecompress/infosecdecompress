@@ -3,7 +3,10 @@
 
 .meta {
   &__date {
-    font-style: italic;
+    font-style: bold;
+    border-top: 1px solid $color-gray-border;
+    max-width: $layout-post-width;
+    padding-top: 20px;
   }
 
 }

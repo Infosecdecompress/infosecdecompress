@@ -19,19 +19,18 @@ const Post: React.FC<Props> = ({ post }) => {
 
   return (
     <div className={styles}>
-      <Link className={styles['post__homeButton']} to="/">All Articles</Link>
+      <Link className={styles['post__homeButton']} to="/">文章列表</Link>
 
       <div className={styles}>
         <Content body={html} title={title} />
       </div>
 
-      <div className={styles['post__comments']}>
-        <Comments postSlug={slug} postTitle={post.frontmatter.title} />
-      </div>
-
       <div className={styles['post__footer']}>
         <Meta date={date} />
         {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
+        <div className={styles['post__comments']}>
+          <Comments postSlug={slug} postTitle={post.frontmatter.title} />
+        </div>
         <Author />
       </div>
     </div>
