@@ -6,7 +6,7 @@ module.exports = {
   title: '資安解壓縮',
   subtitle: 'InfosecDecompress',
   copyright: 'Content is licensed under CC BY-SA 4.0',
-  disqusShortname: 'infosec.zip',
+  disqusShortname: 'infoseczip',
   postsPerPage: 10,
   googleAnalyticsId: 'G-G73BYNCQRH',
   useKatex: false,

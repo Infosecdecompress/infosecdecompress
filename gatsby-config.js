@@ -314,15 +314,15 @@ module.exports = {
         mergeDefaultDirectives: true, 
         directives: {
           "default-src": "'self'",
-          "script-src": "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com",
+          "script-src": "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com twitter.com",
           "style-src": "'self' blob: 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
-          "img-src": "'self' www.google-analytics.com stats.g.doubleclick.net",
+          "img-src": "'self' www.google-analytics.com stats.g.doubleclick.net disqus.com",
           "font-src": "'self' fonts.gstatic.com fonts.googleapis.com",
           "object-src": "'self' blob:",
           "manifest-src": "'self'",
-          "prefetch-src": "'self' blob:",
+          "prefetch-src": "'self' blob:  disqus.com",
           "connect-src": "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net",
-          "frame-src": "'self' www.youtube-nocookie.com"
+          "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com"
           // you can add your directives or override defaults
         }
       }
