@@ -83,7 +83,7 @@
     "gatsby-transformer-remark": "^4.6.0",
     "gatsby-transformer-sharp": "^3.9.0",
     "js-search": "^2.0.0",
-    "katex": "^0.13.11",
+    "katex": "^0.13.13",
     "lodash": "^4.17.21",
     "netlify-cms-app": "^2.15.27",
     "normalize-scss": "^7.0.1",
