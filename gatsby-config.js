@@ -207,8 +207,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-		    exclude: [`/404`, `/tag/*`, `/category/*`, `/page/*`, `/admin`,`/offline-plugin-app-shell-fallback`, `/tags`, `/pages/success`],
-        query: `
+		    query: `
           {
             site {
               siteMetadata {
@@ -228,12 +227,43 @@ module.exports = {
             }
           }
         `,
-        output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
-          url: site.siteMetadata.siteUrl + edge.node.path,
-          changefreq: 'daily',
-          priority: 0.7
-        }))
+        output: '/',
+        serialize: (page, { resolvePagePath }) => ({
+          url: resolvePagePath(page),
+          changefreq: `daily`,
+          priority: 0.7,
+        }),
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+        resolvePagePath: (page) => {
+          if (!(page !== null && page !== void 0 && page.path)) {
+            throw Error(
+              '`path` does not exist on your page object.\nMake the page URI available at `path` or provide a custom `resolvePagePath` function.\nhttps://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/#api-reference\n      '
+            )
+          }
+
+          return page.path
+        },
+        resolvePages: (data) => data.allSitePage.edges.map(({ node }) => ({ path: node.path })),
+        excludes: [
+          `/404`, `/tag/*`, `/tags`, `/category/*`,`/categories`, `/pages/*`,`/page/*`, `/admin`,`/offline-plugin-app-shell-fallback`
+        ],
+        filterPages: (
+          page,
+          excludedRoute,
+          { minimatch, withoutTrailingSlash, resolvePagePath }
+        ) => {
+          if (typeof excludedRoute !== 'string') {
+            throw new Error(
+              "You've passed something other than string to the exclude array. This is supported, but you'll have to write a custom filter function.\nIgnoring the input for now: " +
+                JSON.stringify(excludedRoute, null, 2) +
+                '\nhttps://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/#api-reference\n      '
+            )
+          }
+          return minimatch(
+            withoutTrailingSlash(resolvePagePath(page)),
+            withoutTrailingSlash(excludedRoute)
+          )
+        }
       }
     },
     {
