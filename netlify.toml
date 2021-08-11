@@ -12,7 +12,7 @@
   package = "netlify-plugin-submit-sitemap"
 	[plugins.inputs]
 	baseUrl = "https://infosecdecompress.com"
-	sitemapPath = "/sitemap.xml"
+	sitemapPath = "/sitemap-index.xml"
 	providers = [
 		"google",
 		"bing"
