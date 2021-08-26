@@ -109,7 +109,7 @@
     "@types/jest": "^26.0.24",
     "@types/react-helmet": "^6.1.2",
     "@types/react-test-renderer": "^17.0.1",
-    "autoprefixer": "10.3.1",
+    "autoprefixer": "10.3.3",
     "babel-eslint": "10.1.0",
     "babel-jest": "27.0.6",
     "babel-preset-gatsby": "1.11.0",
