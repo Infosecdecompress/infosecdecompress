@@ -24,7 +24,7 @@ const Feed: React.FC<Props> = ({ edges }) => (
           <Link className={styles['feed__itemTitleLink']} to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>
         </h2>
         <p className={styles['feed__itemDescription']}>{edge.node.frontmatter.description}</p>
-        <Link className={styles['feed__itemReadmore']} to={edge.node.fields.slug}>Read</Link>
+        <Link className={styles['feed__itemReadmore']} to={edge.node.fields.slug}>繼續閱讀</Link>
       </div>
     ))}
   </div>
