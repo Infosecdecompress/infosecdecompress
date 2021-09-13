@@ -5,8 +5,6 @@
   YARN_VERSION = "1.22.10"
   YARN_FLAGS = "--no-ignore-optional"
 [[plugins]]
-  package = "netlify-plugin-is-website-vulnerable"
- [[plugins]]
   package = "netlify-purge-cloudflare-on-deploy"
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
