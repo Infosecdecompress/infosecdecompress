@@ -106,7 +106,7 @@
     "@babel/plugin-transform-react-jsx": "7.16.0",
     "@babel/plugin-transform-react-pure-annotations": "7.16.0",
     "@babel/preset-env": "7.16.0",
-    "@types/jest": "^27.0.2",
+    "@types/jest": "^27.0.3",
     "@types/react-helmet": "^6.1.4",
     "@types/react-test-renderer": "^17.0.1",
     "autoprefixer": "10.4.0",
