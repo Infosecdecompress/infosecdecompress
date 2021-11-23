@@ -119,7 +119,7 @@
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-jest": "24.7.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-react": "7.27.0",
+    "eslint-plugin-react": "7.27.1",
     "jest": "27.3.1",
     "jest-cli": "27.3.1",
     "lost": "8.3.1",
