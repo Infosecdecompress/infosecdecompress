@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostTemplate renders correctly 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="post"
+  >
+    <a
+      className="post__home-button"
+      href="/"
+    >
+      All Articles
+    </a>
+    <div
+      className="post__content"
+    >
+      <div
+        className="content"
+      >
+        <h1
+          className="content__title"
+        >
+          Perfecting the Art of Perfection
+        </h1>
+        <div
+          className="content__body"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="post__footer"
+    >
+      <div
+        className="meta"
+      >
+        <p
+          className="meta__date"
+        >
+          Published
+           
+          Sep 1, 2016
+        </p>
+      </div>
+      <div
+        className="author"
+      >
+        <p
+          className="author__bio"
+        >
+          Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.
+          <a
+            className="author__bio-twitter"
+            href="https://www.twitter.com/#"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <strong>
+              John Doe
+            </strong>
+             on Twitter
+          </a>
+        </p>
+      </div>
+    </div>
+    <div
+      className="post__comments"
+    />
+  </div>
+</div>
+`;

@@ -1,19 +1,19 @@
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
   fill: currentColor;
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  margin-right: .2em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
-  margin-left: .2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 1em;
+  line-height: 1em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  speak: none;
+  stroke: currentColor;
+  stroke-width: 0;
+  text-align: center;
+  text-transform: none;
+  width: 1em;
 }

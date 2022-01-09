@@ -11,6 +11,10 @@
   ],
   "packageRules": [
     {
+      "packagePatterns": ["^stylelint"],
+      "groupName": "stylelint"
+    },
+    {
       "packagePatterns": ["^eslint"],
       "groupName": "eslint"
     },
@@ -26,7 +30,5 @@
   "labels": ["renovate"],
   "prHourlyLimit": 4,
   "prConcurrentLimit": 16,
-  "rangeStrategy": "bump",
-  "bumpVersion": null,
-  "semanticCommits": true
+  "rangeStrategy": "bump"
 }

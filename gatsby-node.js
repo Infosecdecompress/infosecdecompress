@@ -1,4 +1,9 @@
-'use strict';
+"use strict";
 
-exports.createPages = require('./gatsby/create-pages');
-exports.onCreateNode = require('./gatsby/on-create-node');
+require("source-map-support").install();
+require("ts-node").register();
+
+const { createPages } = require("./internal/gatsby/create-pages");
+const { onCreateNode } = require("./internal/gatsby/on-create-node");
+
+module.exports = { createPages, onCreateNode };

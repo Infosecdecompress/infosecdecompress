@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author renders correctly 1`] = `
+<div
+  className="author"
+>
+  <p
+    className="author__bio"
+  >
+    Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.
+    <a
+      className="author__bio-twitter"
+      href="https://www.twitter.com/#"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <strong>
+        John Doe
+      </strong>
+       on Twitter
+    </a>
+  </p>
+</div>
+`;
