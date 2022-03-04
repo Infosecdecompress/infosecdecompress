@@ -1958,7 +1958,7 @@
     core-js-pure "^3.19.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.8", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
   version "7.15.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
@@ -1969,6 +1969,13 @@
   version "7.16.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
   integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.16.7":
+  version "7.17.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
+  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -8704,13 +8711,14 @@ gatsby-plugin-netlify-cms@^6.9.0:
     mini-css-extract-plugin "1.6.2"
     netlify-identity-widget "^1.9.2"
 
-gatsby-plugin-netlify@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.14.0.tgz#fa1b2441531d958a26b378c76753c5d24bd428d5"
-  integrity sha512-+lv5i0IhtIHFecP3uL6u/vF0DzDBGlkGzPyPIhgM1krZqlLy2LzKos1nyCMoi7aHm54/B8DENl4J+hMCkC0wjQ==
+gatsby-plugin-netlify@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-4.1.0.tgz#c37e38b73846a3cc0c3bf645b223cd61c115202d"
+  integrity sha512-7yLTnPqZH+Vukd6XCFjDUkRSOc9dtOFtPn53tMJ92NzkHWbpn+7nl4TL2m1J+YRkX81y1C8k/URe/m1e0DRkSQ==
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.16.7"
     fs-extra "^10.0.0"
+    gatsby-core-utils "^3.5.2"
     kebab-hash "^0.1.2"
     lodash "^4.17.21"
     webpack-assets-manifest "^5.0.6"
