@@ -364,13 +364,6 @@ module.exports = {
         canonical: 'https://infosecdecompress.com/.well-known/security.txt',
         languages: 'en, zh-Hant-TW'
       }
-    },
-    {
-      resolve: "@sentry/gatsby",
-      options: {
-        dsn: "https://e813e5e7c9304c2ba68e33f9eb206dca@o1129413.ingest.sentry.io/6196807",
-        sampleRate: 0.7,
-      },
     }
   ]
 };
