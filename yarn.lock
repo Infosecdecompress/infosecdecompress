@@ -8548,7 +8548,7 @@ gatsby-cli@^4.9.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.0:
+gatsby-core-utils@^3.5.2, gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.9.0.tgz#7be5969622e44c4475cb14f1ac64b49a4072ab6c"
   integrity sha512-SvPnr86oXTY3ldbQ4QAkEew3BQE9vlzUXcXVJqTOhMUeGEz2kibBFUmVp8ia9Y1eOD+K/0xXQ54jUqaResj69w==
