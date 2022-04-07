@@ -47,7 +47,7 @@
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/plugin-transform-spread": "^7.16.7",
     "@sentry/gatsby": "^6.18.1",
-    "@types/react": "^17.0.39",
+    "@types/react": "^17.0.44",
     "classnames": "^2.3.1",
     "codecov": "^3.8.3",
     "cross-env": "^7.0.3",
