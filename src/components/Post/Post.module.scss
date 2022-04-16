@@ -1,62 +1,62 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
 
 .post {
-  &__footer {
-    max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
+  .content {
+    @include margin-auto();
   }
 
-  &__comments {
+  .footer {
     max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
+    @include padding(0, 0.5);
+    @include margin-auto();
   }
 
-  &__home-button {
-    display: block;
-    max-width: 90px;
-    height: $button-height;
-    padding: 0 24px;
-    line-height: $button-height;
-    text-align: center;
-    color: $color-base;
+  .comments {
+    max-width: $layout-post-width;
+    @include padding(0, 0.5);
+    @include margin-auto();
+  }
+
+  .button {
     border: 1px solid $color-gray-border;
     border-radius: $button-border-radius;
+    color: $color-base;
+    display: block;
     font-size: $typographic-base-font-size;
     font-weight: normal;
+    height: $button-height;
+    line-height: $button-height;
     margin-left: auto;
     margin-right: auto;
+    max-width: 90px;
+    text-align: center;
+    @include padding(0, 1);
     @include margin-top(1);
 
     &:hover,
     &:focus {
       color: $color-primary;
     }
-
   }
-
 }
 
 @include breakpoint-md {
   .post {
-    &__footer {
-      padding: 0;
+    .footer {
+      @include padding-equal(0);
     }
 
-    &__comments {
-      padding: 0;
+    .comments {
+      @include padding-equal(0);
     }
 
-    &__home-button {
+    .button {
+      left: 30px;
+      max-width: none;
       position: fixed;
-      max-width: auto;
-      margin: 0;
       top: 30px;
-      left: 30px
+      @include margin-equal(0);
     }
-
   }
-
 }
