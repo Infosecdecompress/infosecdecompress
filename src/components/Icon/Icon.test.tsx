@@ -7,8 +7,8 @@ import { getIcon } from "@/utils";
 
 describe("Icon", () => {
   it("renders correctly", () => {
-    const [github] = Object.keys(ICONS) as Array<keyof typeof ICONS>;
-    const props = { name: github, icon: getIcon(github) };
+    const [twitter] = Object.keys(ICONS) as Array<keyof typeof ICONS>;
+    const props = { name: twitter, icon: getIcon(twitter) };
     const tree = renderer.create(<Icon {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
