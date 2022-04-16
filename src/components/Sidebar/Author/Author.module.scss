@@ -2,20 +2,22 @@
 @import "../../../assets/scss/mixins";
 
 .author {
-  &__photo {
+  .photo {
     background-clip: padding-box;
     border-radius: 50%;
     display: inline-block;
-    margin-bottom: 0;
+    height: 75px;
+    width: 75px;
+    @include margin-bottom(0);
   }
 
-  &__title {
+  .title {
     font-size: $typographic-base-font-size * 1.125;
     font-weight: 600;
     @include line-height(1.125);
     @include margin(0.5, 0, 0.5, 0);
 
-    &-link {
+    .link {
       color: $color-base;
 
       &:hover,
@@ -25,7 +27,7 @@
     }
   }
 
-  &__subtitle {
+  .subtitle {
     color: $color-gray;
     @include line-height(1);
     @include margin-bottom(1);

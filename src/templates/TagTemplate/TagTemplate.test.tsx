@@ -11,13 +11,6 @@ const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 
 describe("TagTemplate", () => {
-  const props = {
-    data: {
-      ...mocks.allMarkdownRemark,
-    },
-    ...mocks.pageContext,
-  };
-
   beforeEach(() => {
     mockedStaticQuery.mockImplementationOnce(({ render }) =>
       render(mocks.siteMetadata),
@@ -26,6 +19,13 @@ describe("TagTemplate", () => {
   });
 
   it("renders correctly", () => {
+    const props = {
+      data: {
+        allMarkdownRemark: mocks.allMarkdownRemark,
+      },
+      pageContext: mocks.pageContext,
+    };
+
     const tree = renderer.create(<TagTemplate {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -5,6 +5,7 @@ import * as queries from "./queries";
 import * as utils from "./utils";
 
 type CreateWithPagination = (parameters: {
+  limit: number;
   group?: string;
   template: string;
   total: number;
@@ -13,7 +14,7 @@ type CreateWithPagination = (parameters: {
 }) => void;
 
 const getPaginationPath = (basePath: string, page: number): string =>
-  [basePath, "page", page].join("/");
+  [basePath === "/" ? "" : basePath, "page", page].join("/");
 
 const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -62,12 +63,15 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
     page,
     path,
     total,
+    limit,
   }) => {
     createPage({
       component: template,
       path: page === 0 ? path : getPaginationPath(path, page),
       context: {
         group,
+        limit,
+        offset: page * limit,
         pagination: {
           currentPage: page,
           prevPagePath:
@@ -94,8 +98,9 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
 
     for (let page = 0; page < total; page += 1) {
       createWithPagination({
+        limit: postsLimit,
         group: category.fieldValue,
-        template: constants.templates.categoriesTemplate,
+        template: constants.templates.categoryTemplate,
         total,
         page,
         path,
@@ -116,8 +121,9 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
 
     for (let page = 0; page < total; page += 1) {
       createWithPagination({
+        limit: postsLimit,
         group: tag.fieldValue,
-        template: constants.templates.categoriesTemplate,
+        template: constants.templates.tagTemplate,
         total,
         page,
         path,
@@ -126,12 +132,14 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
   });
 
   const path = constants.routes.indexRoute;
+  const template = constants.templates.indexTemplate;
   const posts = await queries.postsQuery(graphql);
-  const total = Math.ceil(posts?.edges?.length ?? 0 / postsLimit);
+  const total = Math.ceil((posts?.edges?.length ?? 0) / postsLimit);
 
   for (let page = 0; page < total; page += 1) {
     createWithPagination({
-      template: constants.templates.indexTemplate,
+      limit: postsLimit,
+      template,
       total,
       page,
       path,

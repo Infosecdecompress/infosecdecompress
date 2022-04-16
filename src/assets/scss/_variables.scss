@@ -1,17 +1,16 @@
 @use "sass:math";
 @use "sass:color";
 
-$color-base: #222222;
-$color-primary: #5d93ff;
-$color-secondary: #f7a046;
+$color-base: hsl(0, 0%, 13%);
+$color-primary: hsl(220, 100%, 68%);
+$color-secondary: hsl(31, 92%, 62%);
 
-$color-white: #ffffff;
-$color-gray: color.adjust($color-base, 40%);
-$color-gray-border: color.adjust($color-base, 77%);
-$color-gray-bg: color.adjust($color-base, 79%);
+$color-white: hsl(0, 0%, 100%);
+$color-gray: color.adjust($color-base, $lightness: 40%);
+$color-gray-border: color.adjust($color-base, $lightness: 77%);
+$color-gray-bg: color.adjust($color-base, $lightness: 79%);
 
-$typographic-font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI",
-  "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+$typographic-font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 16px;
@@ -23,10 +22,7 @@ $typographic-base-font-color: $color-base;
 $typographic-link-p-font-color: $color-primary;
 $typographic-link-s-font-color: $color-secondary;
 
-$typographic-leading: math.round(
-  16 * math.div($typographic-root-font-size, 100) *
-    $typographic-base-line-height
-);
+$typographic-leading: math.round(16 * math.div($typographic-root-font-size, 100) * $typographic-base-line-height);
 
 $button-height: 35px;
 $button-border-radius: 20px;

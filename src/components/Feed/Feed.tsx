@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 import { Edge } from "@/types";
 
-import styles from "./Feed.module.scss";
+import * as styles from "./Feed.module.scss";
 
 type Props = {
   edges: Array<Edge>;
@@ -13,10 +13,10 @@ type Props = {
 const Feed: React.FC<Props> = ({ edges }: Props) => (
   <div className={styles.feed}>
     {edges.map(edge => (
-      <div className={styles.feed__item} key={edge.node.fields.slug}>
-        <div className={styles["feed__item-meta"]}>
+      <div className={styles.item} key={edge.node.fields.slug}>
+        <div className={styles.meta}>
           <time
-            className={styles["feed__item-meta-time"]}
+            className={styles.time}
             dateTime={new Date(edge.node.frontmatter.date).toLocaleDateString(
               "en-US",
               { year: "numeric", month: "long", day: "numeric" },
@@ -27,28 +27,22 @@ const Feed: React.FC<Props> = ({ edges }: Props) => (
               month: "long",
             })}
           </time>
-          <span className={styles["feed__item-meta-divider"]} />
-          <span className={styles["feed__item-meta-category"]}>
-            <Link
-              to={edge.node.fields.categorySlug}
-              className={styles["feed__item-meta-category-link"]}
-            >
+          <span className={styles.divider} />
+          <span className={styles.category}>
+            <Link to={edge.node.fields.categorySlug} className={styles.link}>
               {edge.node.frontmatter.category}
             </Link>
           </span>
         </div>
-        <h2 className={styles["feed__item-title"]}>
-          <Link
-            className={styles["feed__item-title-link"]}
-            to={edge.node.fields.slug}
-          >
+        <h2 className={styles.title}>
+          <Link className={styles.link} to={edge.node.fields.slug}>
             {edge.node.frontmatter.title}
           </Link>
         </h2>
-        <p className={styles["feed__item-description"]}>
+        <p className={styles.description}>
           {edge.node.frontmatter.description}
         </p>
-        <Link className={styles["feed__item-more"]} to={edge.node.fields.slug}>
+        <Link className={styles.more} to={edge.node.fields.slug}>
           Read
         </Link>
       </div>

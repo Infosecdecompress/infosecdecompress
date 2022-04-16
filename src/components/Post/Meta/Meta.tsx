@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Meta.module.scss";
+import * as styles from "./Meta.module.scss";
 
 interface Props {
   date: string;
@@ -8,7 +8,7 @@ interface Props {
 
 const Meta: React.FC<Props> = ({ date }: Props) => (
   <div className={styles.meta}>
-    <p className={styles.meta__date}>
+    <p className={styles.date}>
       Published{" "}
       {new Date(date).toLocaleDateString("en-US", {
         year: "numeric",

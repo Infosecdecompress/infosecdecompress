@@ -4,14 +4,14 @@
 @import "../../assets/scss/mixins";
 
 .pagination {
-  @include margin-top(2);
   display: flex;
+  @include margin-top(2);
 
-  &__prev {
+  .previous {
     text-align: left;
     width: 50%;
 
-    &-link {
+    .previousLink {
       color: $color-secondary;
       font-size: 26px;
       font-weight: bold;
@@ -21,18 +21,18 @@
         color: $color-primary;
       }
 
-      &--disable {
-        color: color.adjust($color-gray, 20%);
+      &.disable {
+        color: color.adjust($color-gray, $whiteness: 20%);
         pointer-events: none;
       }
     }
   }
 
-  &__next {
+  .next {
     text-align: right;
     width: 50%;
 
-    &-link {
+    .nextLink {
       color: $color-secondary;
       font-size: 26px;
       font-weight: bold;
@@ -42,8 +42,8 @@
         color: $color-primary;
       }
 
-      &--disable {
-        color: color.adjust($color-gray, 20%);
+      &.disable {
+        color: color.adjust($color-gray, $whiteness: 20%);
         pointer-events: none;
       }
     }

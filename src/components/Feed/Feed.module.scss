@@ -2,20 +2,20 @@
 @import "../../assets/scss/mixins";
 
 .feed {
-  &__item {
+  .item {
     @include margin-bottom(1.25);
 
     &:last-child {
       @include margin-bottom(0.5);
     }
 
-    &-title {
+    .title {
       font-size: $typographic-base-font-size * 1.6875;
       @include line-height(1.5);
       @include margin-top(0);
       @include margin-bottom(0.5);
 
-      &-link {
+      .link {
         color: $color-base;
 
         &:hover,
@@ -26,26 +26,26 @@
       }
     }
 
-    &-description {
+    .description {
       font-size: $typographic-base-font-size;
       @include line-height(1);
       @include margin-bottom(0.75);
     }
 
-    &-meta {
-      &-time {
+    .meta {
+      .time {
         color: $color-base;
         font-size: $typographic-small-font-size;
         font-weight: 600;
         text-transform: uppercase;
       }
 
-      &-divider {
-        margin: 0 5px;
+      .divider {
+        @include margin(0, 0.5);
       }
 
-      &-category {
-        &-link {
+      .category {
+        .link {
           color: $color-secondary;
           font-size: $typographic-small-font-size;
           font-weight: 600;
@@ -59,7 +59,7 @@
       }
     }
 
-    &-more {
+    .more {
       color: $color-primary;
       font-size: $typographic-base-font-size;
 

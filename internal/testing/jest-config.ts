@@ -20,6 +20,12 @@ const jestConfig: Config.InitialOptions = {
     ".+\\.(css|sass|scss)$": "identity-obj-proxy",
     ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
       "identity-obj-proxy",
+    "^gatsby-page-utils/(.*)$": "gatsby-page-utils/dist/$1",
+    "^gatsby-core-utils/(.*)$": "gatsby-core-utils/dist/$1",
+    "^gatsby-plugin-utils/(.*)$": [
+      "gatsby-plugin-utils/dist/$1",
+      "gatsby-plugin-utils/$1",
+    ],
   },
   transform: { "^.+\\.(t)sx?$": ["@swc/jest", swc] },
   setupFiles: ["<rootDir>/internal/testing/jest-setup.ts"],

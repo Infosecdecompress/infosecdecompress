@@ -4,13 +4,13 @@
 .author {
   border-top: 1px solid $color-gray-border;
   max-width: $layout-post-width;
-  padding-top: 20px;
+  @include padding-top(1);
   @include line-height(1);
   @include margin-top(1);
   @include margin-bottom(2);
 
-  &__bio {
-    &-twitter {
+  .bio {
+    .twitter {
       display: block;
       text-decoration: underline;
     }

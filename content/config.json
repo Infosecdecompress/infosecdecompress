@@ -1,11 +1,11 @@
 {
   "title": "Blog by John Doe",
-  "url": "https://lumen.netlify.com",
+  "url": "https://lumen.alxshelepenok.com",
   "subtitle": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
   "copyright": "© All rights reserved.",
   "googleAnalyticsId": "UA-73379983-2",
   "disqusShortname": "",
-  "postsPerPage": "4",
+  "postsLimit": 4,
   "pathPrefix": "/",
   "menu": [
     {
@@ -32,7 +32,6 @@
       "facebook": "#",
       "telegram": "#",
       "twitter": "#",
-      "vkontakte": "",
       "linkedin": "#",
       "instagram": "#",
       "line": "",

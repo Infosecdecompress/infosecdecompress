@@ -47,7 +47,7 @@ const TagTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
+  query TagTemplate($group: String, $limit: Int!, $offset: Int!) {
     site {
       siteMetadata {
         title
@@ -55,11 +55,11 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      limit: $postsLimit
-      skip: $postsOffset
+      limit: $limit
+      skip: $offset
       filter: {
         frontmatter: {
-          tags: { in: [$tag] }
+          tags: { in: [$group] }
           template: { eq: "post" }
           draft: { ne: true }
         }

@@ -1,8 +1,10 @@
 import React from "react";
 
-import { Link, withPrefix } from "gatsby";
+import { Link } from "gatsby";
 
-import styles from "./Author.module.scss";
+import { Image } from "@/components/Image";
+
+import * as styles from "./Author.module.scss";
 
 type Props = {
   author: {
@@ -16,29 +18,23 @@ type Props = {
 const Author = ({ author, isIndex }: Props) => (
   <div className={styles.author}>
     <Link to="/">
-      <img
-        src={withPrefix(author.photo)}
-        className={styles.author__photo}
-        width="75"
-        height="75"
-        alt={author.name}
-      />
+      <Image alt={author.name} path={author.photo} className={styles.photo} />
     </Link>
 
-    {isIndex === true ? (
-      <h1 className={styles.author__title}>
-        <Link className={styles["author__title-link"]} to="/">
+    {isIndex ? (
+      <h1 className={styles.title}>
+        <Link className={styles.link} to="/">
           {author.name}
         </Link>
       </h1>
     ) : (
-      <h2 className={styles.author__title}>
-        <Link className={styles["author__title-link"]} to="/">
+      <h2 className={styles.title}>
+        <Link className={styles.link} to="/">
           {author.name}
         </Link>
       </h2>
     )}
-    <p className={styles.author__subtitle}>{author.bio}</p>
+    <p className={styles.subtitle}>{author.bio}</p>
   </div>
 );
 

@@ -47,13 +47,13 @@ const CategoryTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query CategoryPage($category: String, $postsLimit: Int!, $postsOffset: Int!) {
+  query CategoryTemplate($group: String, $limit: Int!, $offset: Int!) {
     allMarkdownRemark(
-      limit: $postsLimit
-      skip: $postsOffset
+      limit: $limit
+      skip: $offset
       filter: {
         frontmatter: {
-          category: { eq: $category }
+          category: { eq: $group }
           template: { eq: "post" }
           draft: { ne: true }
         }

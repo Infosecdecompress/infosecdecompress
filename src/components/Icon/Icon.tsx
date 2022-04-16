@@ -1,12 +1,14 @@
 import React from "react";
 
-import styles from "./Icon.module.scss";
+import { ICONS } from "@/constants";
+
+import * as styles from "./Icon.module.scss";
 
 interface Props {
-  name: string;
+  name: keyof typeof ICONS;
   icon: {
-    path?: string;
     viewBox?: string;
+    path?: string;
   };
 }
 

@@ -14,15 +14,16 @@ describe("Comments", () => {
     mockedStaticQuery.mockImplementationOnce(({ render }) =>
       render(mocks.siteMetadata),
     );
+
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  const props = {
-    postTitle: "test",
-    postSlug: "/test",
-  };
-
   it("renders correctly", () => {
+    const props = {
+      postTitle: mocks.markdownRemark.frontmatter.title,
+      postSlug: mocks.markdownRemark.fields.slug,
+    };
+
     const tree = renderer.create(<Comments {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

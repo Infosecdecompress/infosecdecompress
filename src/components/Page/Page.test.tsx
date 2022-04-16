@@ -1,15 +1,16 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Page from "./Page";
+import { Page } from "@/components/Page";
+import * as mocks from "@/mocks";
 
 describe("Page", () => {
-  const props = {
-    children: "test",
-    title: "test",
-  };
-
   it("renders correctly", () => {
+    const props = {
+      children: mocks.markdownRemark.html,
+      title: mocks.markdownRemark.frontmatter.title,
+    };
+
     const tree = renderer
       .create(<Page {...props}>{props.children}</Page>)
       .toJSON();

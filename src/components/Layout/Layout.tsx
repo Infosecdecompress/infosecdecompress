@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 
 import { useSiteMetadata } from "@/hooks";
 
-import styles from "./Layout.module.scss";
+import * as styles from "./Layout.module.scss";
 
 interface Props {
   title: string;
@@ -12,7 +12,12 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<Props> = ({ children, title, description, socialImage = "" }: Props) => {
+const Layout: React.FC<Props> = ({
+  children,
+  title,
+  description,
+  socialImage = "",
+}: Props) => {
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage || author.photo;
   const metaImageUrl = url + metaImage;

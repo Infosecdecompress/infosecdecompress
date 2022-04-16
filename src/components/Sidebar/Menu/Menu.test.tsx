@@ -5,11 +5,8 @@ import { Menu } from "@/components/Sidebar/Menu";
 import * as mocks from "@/mocks";
 
 describe("Menu", () => {
-  const props = {
-    menu: mocks.menu,
-  };
-
   it("renders correctly", () => {
+    const props = { menu: mocks.menu };
     const tree = renderer.create(<Menu {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

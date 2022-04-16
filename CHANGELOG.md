@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file.
 
 ## [4.0.0] - 2021-10-24
 
-- Remove Netlify CMS
 - Upgrade to Gatsby 4.0
 
 ## [3.0.3] - 2019-07-25

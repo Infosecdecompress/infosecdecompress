@@ -1,9 +1,11 @@
 import { Node as GatsbyNode } from "gatsby";
 
 interface Frontmatter {
+  date?: string;
   slug?: string;
   template?: string;
   category?: string;
+  description?: string;
   tags?: Array<string>;
 }
 

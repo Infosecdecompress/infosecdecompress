@@ -23,7 +23,7 @@ const useTagsList = () => {
             totalCount
           }
         }
-      }>
+      }
     `,
   );
 

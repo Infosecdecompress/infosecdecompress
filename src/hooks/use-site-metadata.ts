@@ -25,7 +25,6 @@ const useSiteMetadata = () => {
                 linkedin
                 telegram
                 instagram
-                vkontakte
                 soundcloud
               }
             }

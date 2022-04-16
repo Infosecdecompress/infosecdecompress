@@ -2,19 +2,23 @@
 @import "../../assets/scss/mixins";
 
 .post {
-  &__footer {
-    margin: 0 auto;
-    max-width: $layout-post-width;
-    padding: 0 15px;
+  .content {
+    @include margin-auto();
   }
 
-  &__comments {
-    margin: 0 auto;
+  .footer {
     max-width: $layout-post-width;
-    padding: 0 15px;
+    @include padding(0, 0.5);
+    @include margin-auto();
   }
 
-  &__home-button {
+  .comments {
+    max-width: $layout-post-width;
+    @include padding(0, 0.5);
+    @include margin-auto();
+  }
+
+  .button {
     border: 1px solid $color-gray-border;
     border-radius: $button-border-radius;
     color: $color-base;
@@ -26,8 +30,8 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 90px;
-    padding: 0 24px;
     text-align: center;
+    @include padding(0, 1);
     @include margin-top(1);
 
     &:hover,
@@ -39,20 +43,20 @@
 
 @include breakpoint-md {
   .post {
-    &__footer {
-      padding: 0;
+    .footer {
+      @include padding-equal(0);
     }
 
-    &__comments {
-      padding: 0;
+    .comments {
+      @include padding-equal(0);
     }
 
-    &__home-button {
+    .button {
       left: 30px;
-      margin: 0;
-      max-width: auto;
+      max-width: none;
       position: fixed;
       top: 30px;
+      @include margin-equal(0);
     }
   }
 }

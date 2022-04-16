@@ -1,87 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Post renders correctly 1`] = `
-<div
-  className="post"
->
+<div>
   <a
-    className="post__home-button"
     href="/"
   >
     All Articles
   </a>
-  <div
-    className="post__content"
-  >
-    <div
-      className="content"
-    >
-      <h1
-        className="content__title"
-      >
-        test
+  <div>
+    <div>
+      <h1>
+        Perfecting the Art of Perfection
       </h1>
       <div
-        className="content__body"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<p>test</p>",
+            "__html": "<p>An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts.</p>",
           }
         }
       />
     </div>
   </div>
-  <div
-    className="post__footer"
-  >
-    <div
-      className="meta"
-    >
-      <p
-        className="meta__date"
-      >
+  <div>
+    <div>
+      <p>
         Published
          
         Sep 1, 2016
       </p>
     </div>
-    <div
-      className="tags"
-    >
-      <ul
-        className="tags__list"
-      >
-        <li
-          className="tags__list-item"
-        >
-          <a
-            className="tags__list-item-link"
-            href="/test_0"
-          >
-            test_0
-          </a>
-        </li>
-        <li
-          className="tags__list-item"
-        >
-          <a
-            className="tags__list-item-link"
-            href="/test_1"
-          >
-            test_1
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div
-      className="author"
-    >
-      <p
-        className="author__bio"
-      >
+    <div>
+      <p>
         Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.
         <a
-          className="author__bio-twitter"
           href="https://www.twitter.com/#"
           rel="noopener noreferrer"
           target="_blank"
@@ -94,8 +45,6 @@ exports[`Post renders correctly 1`] = `
       </p>
     </div>
   </div>
-  <div
-    className="post__comments"
-  />
+  <div />
 </div>
 `;

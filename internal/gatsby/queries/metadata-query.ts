@@ -12,7 +12,9 @@ const metadataQuery = async (graphql: CreatePagesArgs["graphql"]) => {
   const result = await graphql<MetadataQueryResult>(`
     query SiteMetaData {
       site {
-        postsLimit
+        siteMetadata {
+          postsLimit
+        }
       }
     }
   `);

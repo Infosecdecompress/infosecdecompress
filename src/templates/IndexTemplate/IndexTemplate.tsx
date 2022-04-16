@@ -45,10 +45,10 @@ const IndexTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
+  query IndexTemplate($limit: Int!, $offset: Int!) {
     allMarkdownRemark(
-      limit: $postsLimit
-      skip: $postsOffset
+      limit: $limit
+      skip: $offset
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
     ) {

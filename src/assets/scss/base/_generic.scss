@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: $typographic-base-line-height;
   margin: 0 0 0 calc(100vw - 100%);
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -146,11 +146,6 @@ figcaption {
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
-}
-
-.anchor {
-  margin-left: -30px !important;
-  padding-right: 14px !important;
 }
 
 @include breakpoint-sm {

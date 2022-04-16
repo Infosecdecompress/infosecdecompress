@@ -10,11 +10,11 @@ const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 
 describe("Author", () => {
-  console.log(mockedStaticQuery);
   beforeEach(() => {
     mockedStaticQuery.mockImplementationOnce(({ render }) =>
       render(mocks.siteMetadata),
     );
+
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 

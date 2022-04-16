@@ -17,11 +17,8 @@ describe("Sidebar", () => {
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  const props = {
-    isIndex: true,
-  };
-
   it("renders correctly", () => {
+    const props = { isIndex: true };
     const tree = renderer.create(<Sidebar {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

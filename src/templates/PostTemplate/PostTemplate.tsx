@@ -23,7 +23,7 @@ const PostTemplate: React.FC<Props> = ({ data }: Props) => {
     <Layout
       title={`${title} - ${siteTitle}`}
       description={metaDescription}
-      socialImage={socialImage?.publicURL}
+      socialImage={socialImage}
     >
       <Post post={data.markdownRemark} />
     </Layout>
@@ -31,7 +31,7 @@ const PostTemplate: React.FC<Props> = ({ data }: Props) => {
 };
 
 export const query = graphql`
-  query PostBySlug($slug: String!) {
+  query PostTemplate($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
@@ -44,9 +44,7 @@ export const query = graphql`
         description
         tags
         title
-        socialImage {
-          publicURL
-        }
+        socialImage
       }
     }
   }

@@ -1,16 +1,12 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Pagination from "./Pagination";
+
+import { Pagination } from "@/components/Pagination";
+import * as mocks from "@/mocks";
 
 describe("Pagination", () => {
-  const props = {
-    prevPagePath: "/page/1",
-    nextPagePath: "/page/3",
-    hasNextPage: true,
-    hasPrevPage: true,
-  };
-
   it("renders correctly", () => {
+    const props = { ...mocks.pageContext.pagination };
     const tree = renderer.create(<Pagination {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

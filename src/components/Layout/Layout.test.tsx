@@ -12,12 +12,11 @@ const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 describe("Layout", () => {
   const props = {
     ...mocks.siteMetadata,
-    description: "test",
-    title: "test",
+    title: mocks.siteMetadata.site.siteMetadata.title,
+    description: mocks.siteMetadata.site.siteMetadata.subtitle,
   };
 
   beforeEach(() => {
-    console.log(mockedStaticQuery);
     mockedStaticQuery.mockImplementationOnce(({ render }) => render(props));
     mockedUseStaticQuery.mockReturnValue(props);
   });

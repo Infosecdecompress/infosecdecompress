@@ -11,11 +11,11 @@
       "@/types": ["./src/types"],
       "@/hooks": ["./src/hooks"],
       "@/utils/*": ["./src/utils/*"],
+      "@/internal/*": ["./internal/*"],
       "@/constants": ["./src/constants"],
       "@/components": ["./src/components"],
       "@/components/*": ["./src/components/*"],
-      "@/mocks": ["./internal/testing/__mocks__"],
-      "@/internal/*": ["./internal/*"]
+      "@/mocks": ["./internal/testing/__mocks__"]
     },
     "noEmit": true,
     "strict": true,

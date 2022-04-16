@@ -25,7 +25,7 @@ const PageTemplate: React.FC<Props> = ({ data }: Props) => {
     <Layout
       title={`${title} - ${siteTitle}`}
       description={metaDescription}
-      socialImage={socialImage?.publicURL}
+      socialImage={socialImage}
     >
       <Sidebar />
       <Page title={title}>
@@ -36,7 +36,7 @@ const PageTemplate: React.FC<Props> = ({ data }: Props) => {
 };
 
 export const query = graphql`
-  query PageBySlug($slug: String!) {
+  query PageTemplate($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
@@ -44,9 +44,7 @@ export const query = graphql`
         title
         date
         description
-        socialImage {
-          publicURL
-        }
+        socialImage
       }
     }
   }

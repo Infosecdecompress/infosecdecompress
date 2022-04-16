@@ -1,26 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination renders correctly 1`] = `
-<div
-  className="pagination"
->
-  <div
-    className="pagination__prev"
-  >
+<div>
+  <div>
     <a
-      className="pagination__prev-link"
-      href="/page/1"
+      className=""
+      href="/typography/page/1"
       rel="prev"
     >
       ← PREV
     </a>
   </div>
-  <div
-    className="pagination__next"
-  >
+  <div>
     <a
-      className="pagination__next-link"
-      href="/page/3"
+      className=""
+      href="/typography/page/3"
       rel="next"
     >
       → NEXT
