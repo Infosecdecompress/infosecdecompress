@@ -23,7 +23,7 @@
 ## Features
 
 - Beautiful typography.
-- Mobile-First approach in development.
+- Mobile first approach in development.
 - Syntax highlighting in code blocks using PrismJS.
 - Pagination support.
 
