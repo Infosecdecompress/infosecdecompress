@@ -57,7 +57,7 @@
       "error",
       {
         "groups": [
-          ["react|path"],
+          ["^(react|path)"],
           ["^\\u0000"],
           ["^@?\\w"],
           ["^[^. ]"],
