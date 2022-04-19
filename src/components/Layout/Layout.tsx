@@ -1,20 +1,21 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { useSiteMetadata } from '../../hooks';
-import * as styles from './Layout.module.scss';
+import React from "react";
+import Helmet from "react-helmet";
+import { useSiteMetadata } from "@/hooks";
+import * as styles from "./Layout.module.scss";
 
-type Props = {
-  title: string,
-  description?: string,
-  socialImage?: string
-};
+interface Props {
+  title: string;
+  description?: string;
+  socialImage?: string;
+  children: React.ReactNode;
+}
 
 const Layout: React.FC<Props> = ({
   children,
   title,
   description,
-  socialImage = ''
-}) => {
+  socialImage = "",
+}: Props) => {
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage || author.photo;
   const metaImageUrl = url + metaImage;

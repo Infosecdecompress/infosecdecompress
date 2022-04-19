@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use "sass:color";
 /** 
  * Variables
  */
@@ -15,10 +16,10 @@ $color-base: #222;
 $color-primary: #5D93FF;
 $color-secondary: #F7A046;
 
-$color-white: #FFF;
-$color-gray: lighten($color-base, 40%);
-$color-gray-border: lighten($color-base, 77%);
-$color-gray-bg: lighten($color-base, 79%);
+$color-white: hsl(0, 0%, 100%);
+$color-gray: color.adjust($color-base, $lightness: 40%);
+$color-gray-border: color.adjust($color-base, $lightness: 77%);
+$color-gray-bg: color.adjust($color-base, $lightness: 79%);
 
 // Typographic
 $typographic-font-family:"Noto Sans", "Noto Sans TC", -apple-system, sans-serif;
@@ -33,13 +34,11 @@ $typographic-base-font-color: $color-base;
 $typographic-link-p-font-color: $color-primary;
 $typographic-link-s-font-color: $color-secondary;
 
-$typographic-leading: round(16 * (math.div($typographic-root-font-size, 100)) * $typographic-base-line-height);
+$typographic-leading: math.round(16 * math.div($typographic-root-font-size, 100) * $typographic-base-line-height);
 
-// Buttons
 $button-height: 35px;
 $button-border-radius: 20px;
 
-// Layout
 $layout-post-single-width: 945px;
 $layout-post-width: $layout-post-single-width - 305px;
 
