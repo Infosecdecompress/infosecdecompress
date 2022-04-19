@@ -1,25 +1,7 @@
 {
-  "version": "2.0.0",
   "name": "infosecdecompress",
+  "version": "2.0.0",
   "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
-  "scripts": {
-    "develop": "yarn clean && gatsby develop",
-    "build": "gatsby build",
-    "cleandeploy": "yarn clean && gatsby build --prefix-paths",
-    "deploy": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --prefix-paths",
-    "clean": "rimraf .cache public",
-    "lint:js": "eslint --cache --ext .js,.jsx .",
-    "lint:scss": "stylelint \"src/**/*.scss\"",
-    "lint": "concurrently \"yarn run lint:js\" \"yarn run lint:scss\"",
-    "test": "jest --config ./jest/jest-config.js",
-    "test:coverage": "jest --coverage --config ./jest/jest-config.js",
-    "test:watch": "jest --watch --config ./jest/jest-config.js",
-    "preload-fonts": "gatsby-preload-fonts",
-    "type-check": "tsc --noEmit"
-  },
-  "repository": "https://github.com/Infosecdecompress/infosecdecompress",
-  "author": "Jeffrey Hung <jeff@infosecdecompress.com>",
-  "license": "MIT",
   "keywords": [
     "gatsby",
     "graphql",
@@ -84,6 +66,7 @@
     "gatsby-plugin-feed": "^4.12.1",
     "gatsby-plugin-google-gtag": "^4.12.1",
     "gatsby-plugin-image": "^2.12.1",
+    "gatsby-plugin-json-output": "^1.2.0",
     "gatsby-plugin-manifest": "^4.12.1",
     "gatsby-plugin-offline": "^5.12.1",
     "gatsby-plugin-optimize-svgs": "^1.0.5",
@@ -107,8 +90,7 @@
     "prismjs": "^1.28.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "typescript": "^4.6.2"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@alxshelepenok/eslint-config": "^1.0.28",

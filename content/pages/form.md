@@ -5,6 +5,7 @@ slug: form
 socialImage: /media/icon.jpeg
 draft: true
 ---
+
 <style>
 label{
   padding:10px;

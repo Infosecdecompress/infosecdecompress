@@ -1,12 +1,15 @@
-import React from 'react';import ReactDisqusComments from 'react-disqus-comments';
-import { useSiteMetadata } from '../../../hooks';
+import React from "react";
 
-type Props = {
-  postTitle: string,
-  postSlug: string
-};
+import { DiscussionEmbed } from "disqus-react";
 
-const Comments: React.FC<Props> = ({ postTitle, postSlug }) => {
+import { useSiteMetadata } from "@/hooks";
+
+interface Props {
+  postTitle: string;
+  postSlug: string;
+}
+
+const Comments: React.FC<Props> = ({ postTitle, postSlug }: Props) => {
   const { url, disqusShortname } = useSiteMetadata();
 
   if (!disqusShortname) {
@@ -14,11 +17,13 @@ const Comments: React.FC<Props> = ({ postTitle, postSlug }) => {
   }
 
   return (
-    <ReactDisqusComments
+    <DiscussionEmbed
       shortname={disqusShortname}
-      identifier={postTitle}
-      title={postTitle}
-      url={url + postSlug}
+      config={{
+        url: url + postSlug,
+        identifier: postTitle,
+        title: postTitle,
+      }}
     />
   );
 };

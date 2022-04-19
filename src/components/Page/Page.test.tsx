@@ -1,15 +1,19 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Page from './Page';
+import React from "react";
+import renderer from "react-test-renderer";
 
-describe('Page', () => {
-  const props = {
-    children: 'test',
-    title: 'test',
-  };
+import { Page } from "@/components/Page";
+import * as mocks from "@/mocks";
 
-  it('renders correctly', () => {
-    const tree = renderer.create(<Page {...props} />).toJSON();
+describe("Page", () => {
+  it("renders correctly", () => {
+    const props = {
+      children: mocks.markdownRemark.html,
+      title: mocks.markdownRemark.frontmatter.title,
+    };
+
+    const tree = renderer
+      .create(<Page {...props}>{props.children}</Page>)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

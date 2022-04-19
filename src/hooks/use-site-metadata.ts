@@ -1,5 +1,4 @@
-
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby";
 
 const useSiteMetadata = () => {
   const { site } = useStaticQuery(
@@ -8,8 +7,8 @@ const useSiteMetadata = () => {
         site {
           siteMetadata {
             author {
-              name
               bio
+              name
               photo
               contacts {
                 firstory
@@ -31,8 +30,8 @@ const useSiteMetadata = () => {
               }
             }
             menu {
-              label
               path
+              label
             }
             url
             title
@@ -42,7 +41,7 @@ const useSiteMetadata = () => {
           }
         }
       }
-    `
+    `,
   );
 
   return site.siteMetadata;

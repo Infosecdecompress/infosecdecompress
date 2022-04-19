@@ -1,38 +1,40 @@
-import React from 'react';
-import { withPrefix, Link } from 'gatsby';
-import * as styles from './Author.module.scss';
+import React from "react";
+
+import { Link } from "gatsby";
+
+import { Image } from "@/components/Image";
+
+import * as styles from "./Author.module.scss";
 
 type Props = {
   author: {
-    name: string,
-    bio: string,
-    photo: string
-  },
-  isIndex?: boolean
+    name: string;
+    bio: string;
+    photo: string;
+  };
+  isIndex?: boolean;
 };
 
 const Author = ({ author, isIndex }: Props) => (
-  <div className={styles}>
+  <div className={styles.author}>
     <Link to="/">
-      <img
-        src={withPrefix(author.photo)}
-        className={styles['author__photo']}
-        width="75"
-        height="75"
-        alt={author.name}
-      />
+      <Image alt={author.name} path={author.photo} className={styles.photo} />
     </Link>
 
-    { isIndex === true ? (
-      <h1 className={styles['author__title']}>
-        <Link className={styles['author__titleLink']} to="/">{author.name}</Link>
+    {isIndex ? (
+      <h1 className={styles.title}>
+        <Link className={styles.link} to="/">
+          {author.name}
+        </Link>
       </h1>
     ) : (
-      <h2 className={styles['author__title']}>
-        <Link className={styles['author__titleLink']} to="/">{author.name}</Link>
+      <h2 className={styles.title}>
+        <Link className={styles.link} to="/">
+          {author.name}
+        </Link>
       </h2>
     )}
-    <p className={styles['author__subtitle']}>{author.bio}</p>
+    <p className={styles.subtitle}>{author.bio}</p>
   </div>
 );
 

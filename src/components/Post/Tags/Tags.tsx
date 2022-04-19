@@ -1,22 +1,26 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import * as styles from './Tags.module.scss';
+import React from "react";
+
+import { Link } from "gatsby";
+
+import * as styles from "./Tags.module.scss";
 
 type Props = {
-  tags: string[],
-  tagSlugs: string[]
+  tags: string[];
+  tagSlugs: string[];
 };
 
-const Tags: React.FC<Props> = ({ tags, tagSlugs }) => (
-  <div className={styles['tags']}>
-    <ul className={styles['tags__list']}>
-      {tagSlugs && tagSlugs.map((slug, i) => (
-        <li className={styles['tags__listItem']} key={tags[i]}>
-          <Link to={slug} className={styles['tags__listItemLink']}>
-            {tags[i]}
-          </Link>
-        </li>
-      ))}
+const Tags = ({ tags, tagSlugs }: Props) => (
+  <div className={styles.tags}>
+    <ul className={styles.list}>
+      {tagSlugs
+        ? tagSlugs.map((slug, i) => (
+            <li className={styles.item} key={slug}>
+              <Link to={slug} className={styles.link}>
+                {tags[i]}
+              </Link>
+            </li>
+          ))
+        : null}
     </ul>
   </div>
 );

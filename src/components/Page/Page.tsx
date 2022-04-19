@@ -1,24 +1,28 @@
-import React, { useRef, useEffect } from 'react';
-import * as styles from './Page.module.scss';
+import React, { useEffect, useRef } from "react";
 
-type Props = {
-  title?: string,
-};
+import type { Nullable } from "@/types";
 
-const Page: React.FC<Props> = ({ title, children }) => {
-  const pageRef = useRef<HTMLDivElement>();
+import * as styles from "./Page.module.scss";
+
+interface Props {
+  title?: string;
+  children: React.ReactNode;
+}
+
+const Page: React.FC<Props> = ({ title, children }: Props) => {
+  const pageRef = useRef<Nullable<HTMLDivElement>>(null);
 
   useEffect(() => {
-    pageRef.current.scrollIntoView();
-  });
+    if (pageRef.current) {
+      pageRef.current.scrollIntoView();
+    }
+  }, []);
 
   return (
-    <div ref={pageRef} className={styles['page']}>
-      <div className={styles['page__inner']}>
-        { title && <h1 className={styles['page__title']}>{title}</h1>}
-        <div className={styles['page__body']}>
-          {children}
-        </div>
+    <div ref={pageRef} className={styles.page}>
+      <div className={styles.inner}>
+        {title && <h1 className={styles.title}>{title}</h1>}
+        <div className={styles.body}>{children}</div>
       </div>
     </div>
   );

@@ -1,26 +1,29 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { useStaticQuery, StaticQuery } from 'gatsby';
-import Comments from './Comments';
-import siteMetadata from '../../../../jest/__fixtures__/site-metadata';
-import { RenderCallback } from '../../../types';
+import React from "react";
+import renderer from "react-test-renderer";
 
-describe('Comments', () => {
+import { StaticQuery, useStaticQuery } from "gatsby";
+
+import { Comments } from "@/components/Post/Comments";
+import * as mocks from "@/mocks";
+
+const mockedStaticQuery = StaticQuery as jest.Mock;
+const mockedUseStaticQuery = useStaticQuery as jest.Mock;
+
+describe("Comments", () => {
   beforeEach(() => {
-    StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => (
-        render(siteMetadata)
-      ),
-      useStaticQuery.mockReturnValue(siteMetadata)
+    mockedStaticQuery.mockImplementationOnce(({ render }) =>
+      render(mocks.siteMetadata),
     );
+
+    mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  const props = {
-    postTitle: 'test',
-    postSlug: '/test'
-  };
+  it("renders correctly", () => {
+    const props = {
+      postTitle: mocks.markdownRemark.frontmatter.title,
+      postSlug: mocks.markdownRemark.fields.slug,
+    };
 
-  it('renders correctly', () => {
     const tree = renderer.create(<Comments {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
