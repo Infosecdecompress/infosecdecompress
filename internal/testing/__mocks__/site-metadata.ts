@@ -4,12 +4,12 @@ import menu from "./menu";
 export default {
   site: {
     siteMetadata: {
-      url: "https://www.lumen.local",
-      title: "Blog by John Doe",
+      url: "https://infosecdecompress.com",
+      title: "資安解壓縮",
       subtitle:
-        "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
-      copyright: "All rights reserved.",
-      postsPerPage: 4,
+        "InfosecDecompress.",
+      copyright: "Content is licensed under CC BY-SA 4.0",
+      postsPerPage: 10,
       author,
       menu,
     },
