@@ -20,6 +20,6 @@ test("getContactHref", () => {
     "https://open.spotify.com/show/#",
   );
   expect(getContactHref("applepodcast", "#")).toBe(
-    "https://podcasts.apple.com/us/podcast/#",
+    "https://podcasts.apple.com/tw/podcast/#",
   );
 });

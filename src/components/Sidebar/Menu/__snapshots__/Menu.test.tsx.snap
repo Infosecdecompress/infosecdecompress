@@ -1,30 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Menu renders correctly 1`] = `
-<nav
-  className="menu"
->
-  <ul
-    className="menu__list"
-  >
-    <li
-      className="menu__list-item"
-    >
+<nav>
+  <ul>
+    <li>
       <a
-        className="menu__list-item-link"
-        href="/#0/"
+        href="/"
       >
-        Item 0
+        Articles
       </a>
     </li>
-    <li
-      className="menu__list-item"
-    >
+    <li>
       <a
-        className="menu__list-item-link"
-        href="/#1/"
+        href="/pages/about"
       >
-        Item 1
+        About Me
+      </a>
+    </li>
+    <li>
+      <a
+        href="/pages/contacts"
+      >
+        Contact Me
       </a>
     </li>
   </ul>

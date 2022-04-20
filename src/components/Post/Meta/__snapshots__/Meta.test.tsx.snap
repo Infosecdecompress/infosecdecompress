@@ -3,9 +3,9 @@
 exports[`Meta renders correctly 1`] = `
 <div>
   <p>
-    Published
+    發佈於
      
-    Sep 1, 2016
+    2016年8月31日
   </p>
 </div>
 `;
