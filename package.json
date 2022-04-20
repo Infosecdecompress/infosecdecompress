@@ -23,11 +23,11 @@
   "license": "MIT",
   "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
   "scripts": {
-    "develop": "yarn clean && gatsby develop",
     "build": "gatsby build",
+    "clean": "rimraf .cache public",
     "cleandeploy": "yarn clean && gatsby build --prefix-paths",
     "deploy": " gatsby build --prefix-paths",
-    "clean": "rimraf .cache public",
+    "develop": "yarn clean && gatsby develop",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
     "format:ts": "prettier --write .",
