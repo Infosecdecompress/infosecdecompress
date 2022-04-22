@@ -19,7 +19,7 @@
     "clean": "rimraf .cache public",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
-    "format:ts": "prettier --write .",
+    "format:ts": "eslint \"src\" --ext .tsx,.ts --fix && prettier --write .",
     "lint": "npm run lint:ts && npm run lint:scss",
     "lint:commit": "commitlint --edit",
     "lint:scss": "stylelint \"src/**/*.scss\"",
