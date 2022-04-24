@@ -39,7 +39,7 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
 
   const pages = await queries.pagesQuery(graphql);
 
-  pages.forEach(edge => {
+  pages.forEach((edge) => {
     const { node } = edge;
 
     if (node?.frontmatter?.template === "page" && node?.fields?.slug) {
@@ -88,7 +88,7 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
   const metadata = await queries.metadataQuery(graphql);
   const postsLimit = metadata?.postsLimit ?? 1;
 
-  categories.forEach(category => {
+  categories.forEach((category) => {
     const total = Math.ceil(category.totalCount / postsLimit);
     const path = utils.concat(
       constants.routes.categoryRoute,
@@ -110,7 +110,7 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
 
   const tags = await queries.tagsQuery(graphql);
 
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     const path = utils.concat(
       constants.routes.tagRoute,
       "/",
