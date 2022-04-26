@@ -23,7 +23,7 @@
       "groupName": "gatsby"
     },
     {
-      "packageNames": ["react", "react-dom"],
+      "packageNames": ["react", "react-dom", "react-test-renderer"],
       "groupName": "react"
     }
   ],
