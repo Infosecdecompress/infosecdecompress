@@ -91,8 +91,8 @@
     "gatsby-transformer-sharp": "^4.12.1",
     "js-search": "^2.0.0",
     "prismjs": "^1.28.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
