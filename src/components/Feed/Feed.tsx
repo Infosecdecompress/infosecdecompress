@@ -1,6 +1,9 @@
 import React from "react";
+
 import { Link } from "gatsby";
+
 import { Edge } from "@/types";
+
 import * as styles from "./Feed.module.scss";
 
 type Props = {
@@ -9,7 +12,7 @@ type Props = {
 
 const Feed: React.FC<Props> = ({ edges }: Props) => (
   <div className={styles.feed}>
-    {edges.map(edge => (
+    {edges.map((edge) => (
       <div className={styles.item} key={edge.node.fields.slug}>
         <div className={styles.meta}>
           <time

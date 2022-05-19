@@ -30,7 +30,7 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
     }
 
     if (tags) {
-      const value = tags.map(tag =>
+      const value = tags.map((tag) =>
         utils.concat(
           constants.routes.tagRoute,
           "/",

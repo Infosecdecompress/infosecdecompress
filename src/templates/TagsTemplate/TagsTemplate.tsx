@@ -17,7 +17,7 @@ const TagsTemplate: React.FC = () => {
       <Sidebar />
       <Page title="Tags">
         <ul>
-          {tags.map(tag => (
+          {tags.map((tag) => (
             <li key={tag.fieldValue}>
               <Link to={`/tag/${toKebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})
