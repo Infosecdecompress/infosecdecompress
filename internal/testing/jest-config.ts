@@ -27,10 +27,10 @@ const jestConfig: Config.InitialOptions = {
       "gatsby-plugin-utils/$1",
     ],
   },
-  transform: { "^.+\\.(t)sx?$": ["@swc/jest", swc] },
+  transform: { "^.+\\.[jt]sx?$": ["@swc/jest", swc] },
   setupFiles: ["<rootDir>/internal/testing/jest-setup.ts"],
-  testPathIgnorePatterns: ["node_modules", ".cache", "public"],
-  transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"],
+  testPathIgnorePatterns: ["node_modules", "\\.cache", "<rootDir>.*/public"],
+  transformIgnorePatterns: ["node_modules/(?!(gatsby|gatsby-script)/)"],
 };
 
 export default jestConfig;
