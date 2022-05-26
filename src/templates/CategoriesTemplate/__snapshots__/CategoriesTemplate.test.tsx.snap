@@ -146,9 +146,12 @@ exports[`CategoriesTemplate renders correctly 1`] = `
   <div>
     <div>
       <h1>
-        Categories
+        分類 標籤
       </h1>
       <div>
+        <h2>
+          分類
+        </h2>
         <ul>
           <li>
             <a
@@ -163,6 +166,31 @@ exports[`CategoriesTemplate renders correctly 1`] = `
           <li>
             <a
               href="/category/design-inspiration/"
+            >
+              design inspiration
+               (
+              1
+              )
+            </a>
+          </li>
+        </ul>
+        <h2>
+          標籤
+        </h2>
+        <ul>
+          <li>
+            <a
+              href="/tag/typography/"
+            >
+              typography
+               (
+              1
+              )
+            </a>
+          </li>
+          <li>
+            <a
+              href="/tag/design-inspiration/"
             >
               design inspiration
                (
