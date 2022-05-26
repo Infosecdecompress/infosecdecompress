@@ -9,7 +9,7 @@ import { Menu } from "./Menu";
 
 import * as styles from "./Sidebar.module.scss";
 
-import Search from "../SearchContainer";
+// import Search from "../SearchContainer";
 
 type Props = {
   isIndex?: boolean;
@@ -24,7 +24,7 @@ const Sidebar = ({ isIndex }: Props) => {
         <Author author={author} isIndex={isIndex} />
         <Menu menu={menu} />
         <Contacts contacts={author.contacts} />
-        <Search />
+        {/* <Search /> */}
         <Copyright copyright={copyright} />
       </div>
     </div>
