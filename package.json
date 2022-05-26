@@ -4,17 +4,10 @@
   "description": "資安解壓縮的家 Website of Infosec Decompress",
   "keywords": [
     "gatsby",
-    "graphql",
-    "pagination",
-    "categories",
-    "tags",
-    "static",
-    "blog",
-    "minimal",
-    "react",
     "informationsecurity",
     "cybersecurity",
-    "sentryio"
+    "sentryio",
+    "sentry"
   ],
   "repository": {
     "type": "git",
