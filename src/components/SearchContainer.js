@@ -16,12 +16,12 @@ class Search extends Component {
    */
   async componentDidMount() {
     Axios.get("/feed-1.json")
-      .then(result => {
+      .then((result) => {
         const feedData = result.data;
         this.setState({ itemList: feedData.items });
         this.rebuildIndex();
       })
-      .catch(err => {
+      .catch((err) => {
         this.setState({ isError: true });
         console.log("====================================");
         console.log(`Something bad happened while fetching the data\n${err}`);
@@ -37,7 +37,7 @@ class Search extends Component {
     const tokenizer = {
       tokenize(text) {
         return text.split(REGEX).filter(
-          text => text, // Filter empty tokens
+          (text) => text, // Filter empty tokens
         );
       },
     };
@@ -59,7 +59,7 @@ class Search extends Component {
    * handles the input change and perform a search with js-search
    * in which the results will be added to the state
    */
-  searchData = e => {
+  searchData = (e) => {
     const { search } = this.state;
     const queryResult = search.search(e.target.value);
     this.setState({ searchQuery: e.target.value, searchResults: queryResult });
@@ -70,7 +70,7 @@ class Search extends Component {
       status.style.display = "none";
     }
   };
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
   };
 
@@ -85,7 +85,7 @@ class Search extends Component {
               <input
                 id="Search"
                 value={searchQuery}
-                onChange={evt => this.searchData(evt)}
+                onChange={(evt) => this.searchData(evt)}
                 placeholder="搜尋文章"
                 style={{
                   margin: "0 auto",
@@ -111,7 +111,7 @@ class Search extends Component {
               }}
             >
               <tbody>
-                {queryResults.map(item => {
+                {queryResults.map((item) => {
                   return (
                     <tr key={`row_${item.id}`}>
                       <td

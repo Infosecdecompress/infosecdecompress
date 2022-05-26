@@ -42,7 +42,7 @@ export default {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 const siteUrl = site.siteMetadata.site_url;
                 let html = edge.node.html;
                 html = html
@@ -114,7 +114,7 @@ export default {
             }
           }
         `,
-        serializeFeed: results =>
+        serializeFeed: (results) =>
           results.data.allMarkdownRemark.edges.map(({ node }) => ({
             id: node.fields.slug,
             url: siteUrl + node.fields.slug,
@@ -192,7 +192,7 @@ export default {
           priority: 0.7,
         }),
         resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
-        resolvePagePath: page => {
+        resolvePagePath: (page) => {
           if (!(page !== null && page !== void 0 && page.path)) {
             throw Error(
               "`path` does not exist on your page object.\nMake the page URI available at `path` or provide a custom `resolvePagePath` function.\nhttps://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/#api-reference\n      ",
@@ -201,7 +201,7 @@ export default {
 
           return page.path;
         },
-        resolvePages: data =>
+        resolvePages: (data) =>
           data.allSitePage.edges.map(({ node }) => ({ path: node.path })),
         excludes: [
           `/404`,
