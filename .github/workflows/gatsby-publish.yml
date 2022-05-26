@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+        git-ref:
+          description: Git Ref (Optional)    
+          required: false
 
 jobs:
   build:
@@ -13,4 +18,5 @@ jobs:
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: master
           gatsby-args: --prefix-paths
