@@ -39,10 +39,10 @@
     ]
   },
   "lint-staged": {
-    "*.{tsx?,ts?}": [
+    "*.{tsx?}": [
       "npm run format:ts"
     ],
-    "*.{css?,scss?}": [
+    "*.{(sc|sa|c)ss}": [
       "npm run format:scss"
     ]
   },
