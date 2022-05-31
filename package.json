@@ -18,8 +18,8 @@
   "scripts": {
     "build": "npm run clean && gatsby build",
     "clean": "rimraf .cache public",
-    "cleandeploy": "npm run clean && gatsby build --prefix-paths",
-    "deploy": " gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
+    "cleandeploy": "npm run clean && gatsby build",
+    "deploy": " gatsby build && gh-pages -d public -b gh-pages",
     "develop": "npm run clean && gatsby develop",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
