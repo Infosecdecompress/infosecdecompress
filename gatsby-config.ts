@@ -280,7 +280,7 @@ export default {
     {
       resolve: "@sentry/gatsby",
       options: {
-        dsn: process.env.SENTRY_DSN,
+        dsn: "https://e813e5e7c9304c2ba68e33f9eb206dca@o1129413.ingest.sentry.io/6196807",
         tracesSampleRate: 1,
       },
     },
