@@ -311,9 +311,8 @@ export default {
           "prefetch-src":
             "'self' blob: disqus.com disquscdn.com c.disquscdn.com www.googletagmanager.com",
           "connect-src":
-            "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net sentry.io",
+            "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net o1129413.ingest.sentry.io",
           "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com",
-          // you can add your directives or override defaults
         },
       },
     },
