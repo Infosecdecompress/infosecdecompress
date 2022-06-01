@@ -1,9 +1,10 @@
 {
   "name": "infosecdecompress",
-  "version": "2.2.0",
+  "version": "2.5.0",
   "description": "資安解壓縮的家 Website of Infosec Decompress",
   "keywords": [
     "gatsby",
+    "security",
     "informationsecurity",
     "cybersecurity",
     "sentryio",
