@@ -309,7 +309,7 @@ export default {
           "object-src": "'self' blob:",
           "manifest-src": "'self'",
           "prefetch-src":
-            "'self' blob: disqus.com disquscdn.com c.disquscdn.com",
+            "'self' blob: disqus.com disquscdn.com c.disquscdn.com www.googletagmanager.com",
           "connect-src":
             "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net sentry.io",
           "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com",
