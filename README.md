@@ -1,4 +1,4 @@
-![Netlify](https://img.shields.io/netlify/ccc4aad7-66d5-47b7-b676-f9ddadcb529f?label=Netlify%20Build) ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m786602063-54f5b9ac689e721a6e20fa26?label=Uptime) ![GitHub last commit](https://img.shields.io/github/last-commit/infosecdecompress/infosecdecompress?label=Last%20Commit) [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m786602063-54f5b9ac689e721a6e20fa26?label=Uptime) ![GitHub last commit](https://img.shields.io/github/last-commit/infosecdecompress/infosecdecompress?label=Last%20Commit) [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Credits
 
