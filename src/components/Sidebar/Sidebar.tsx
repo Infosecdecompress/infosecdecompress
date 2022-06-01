@@ -2,14 +2,13 @@ import React from "react";
 
 import { useSiteMetadata } from "@/hooks";
 
+import Search from "../SearchContainer";
 import { Author } from "./Author";
 import { Contacts } from "./Contacts";
 import { Copyright } from "./Copyright";
 import { Menu } from "./Menu";
 
 import * as styles from "./Sidebar.module.scss";
-
-// import Search from "../SearchContainer";
 
 type Props = {
   isIndex?: boolean;
@@ -24,7 +23,7 @@ const Sidebar = ({ isIndex }: Props) => {
         <Author author={author} isIndex={isIndex} />
         <Menu menu={menu} />
         <Contacts contacts={author.contacts} />
-        {/* <Search /> */}
+        <Search />
         <Copyright copyright={copyright} />
       </div>
     </div>

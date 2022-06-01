@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import Axios from "axios";
 import * as JsSearch from "js-search";
 
@@ -11,6 +12,7 @@ class Search extends Component {
     isError: false,
     searchQuery: "",
   };
+
   /**
    * React lifecycle method to fetch the data
    */
@@ -18,14 +20,12 @@ class Search extends Component {
     Axios.get("/feed-1.json")
       .then((result) => {
         const feedData = result.data;
-        this.setState({ itemList: feedData.items });
-        this.rebuildIndex();
+        this.setState({ itemList: feedData.items }, () => {
+          this.rebuildIndex();
+        });
       })
-      .catch((err) => {
+      .catch(() => {
         this.setState({ isError: true });
-        console.log("====================================");
-        console.log(`Something bad happened while fetching the data\n${err}`);
-        console.log("====================================");
       });
   }
 
@@ -44,10 +44,10 @@ class Search extends Component {
     const { itemList } = this.state;
     const dataToSearch = new JsSearch.Search("id");
     dataToSearch.tokenizer = tokenizer;
-    /**PrefixIndexStrategy   AllSubstringsIndexStrategy ExactWordIndexStrategy  */
+    /** PrefixIndexStrategy   AllSubstringsIndexStrategy ExactWordIndexStrategy  */
     dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy();
     dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer();
-    /**defines the search index  https://github.com/bvaughn/js-search#configuring-the-search-index*/
+    /** defines the search index  https://github.com/bvaughn/js-search#configuring-the-search-index*/
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("title");
     dataToSearch.addIndex("title"); // sets the index attribute for the data
     dataToSearch.addIndex("content"); // sets the index attribute for the data
@@ -64,12 +64,13 @@ class Search extends Component {
     const queryResult = search.search(e.target.value);
     this.setState({ searchQuery: e.target.value, searchResults: queryResult });
     var status = document.getElementById("result");
-    if (e.target.value != "") {
+    if (e.target.value !== "") {
       status.style.display = "block";
     } else {
       status.style.display = "none";
     }
   };
+
   handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -111,8 +112,7 @@ class Search extends Component {
               }}
             >
               <tbody>
-                {queryResults.map((item) => {
-                  return (
+                {queryResults.map((item) => (
                     <tr key={`row_${item.id}`}>
                       <td
                         style={{
@@ -122,8 +122,7 @@ class Search extends Component {
                         <a href={item.url}>{item.title}</a>
                       </td>
                     </tr>
-                  );
-                })}
+                  ))}
               </tbody>
             </table>
           </div>

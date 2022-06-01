@@ -1,4 +1,5 @@
 import React from "react"
+
 import { ErrorBoundary } from "@sentry/react"
 import { Link } from "gatsby"
 
