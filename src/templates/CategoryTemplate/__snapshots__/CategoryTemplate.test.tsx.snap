@@ -138,6 +138,67 @@ exports[`CategoryTemplate renders correctly 1`] = `
           </li>
         </ul>
       </div>
+      <div
+        style={
+          Object {
+            "margin": "5px auto",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "margin": "0 auto",
+            }
+          }
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <div
+              style={
+                Object {
+                  "margin": "0 auto",
+                }
+              }
+            >
+              <input
+                id="Search"
+                onChange={[Function]}
+                placeholder="搜尋文章"
+                style={
+                  Object {
+                    "border": "1px solid #ccc",
+                    "borderRadius": "4px",
+                    "boxSizing": "border-box",
+                    "display": "inline-block",
+                    "margin": "0 auto",
+                    "padding": "5px 5px",
+                    "width": "250px",
+                  }
+                }
+                value=""
+              />
+            </div>
+          </form>
+          <div>
+            <table
+              id="result"
+              style={
+                Object {
+                  "border": "1px solid #ccc",
+                  "borderCollapse": "collapse",
+                  "borderRadius": "4px",
+                  "display": "none",
+                  "width": "250px",
+                }
+              }
+            >
+              <tbody />
+            </table>
+          </div>
+        </div>
+      </div>
       <div>
         Content is licensed under CC BY-SA 4.0
       </div>
