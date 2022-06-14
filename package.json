@@ -75,8 +75,8 @@
     "gatsby-transformer-remark": "^5.16.0",
     "gatsby-transformer-sharp": "^4.16.0",
     "prismjs": "^1.28.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
@@ -128,7 +128,7 @@
     "postcss-scss": "^4.0.4",
     "prettier": "^2.7.0",
     "prettier-plugin-packagejson": "^2.2.18",
-    "react-test-renderer": "^18.1.0",
+    "react-test-renderer": "^18.2.0",
     "rimraf": "3.0.2",
     "sass": "^1.52.3",
     "semantic-release": "^19.0.3",
