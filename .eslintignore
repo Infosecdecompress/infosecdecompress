@@ -2,3 +2,4 @@
 !*.ts
 !*.tsx
 /public/
+/src/components/SearchContainer.tsx
