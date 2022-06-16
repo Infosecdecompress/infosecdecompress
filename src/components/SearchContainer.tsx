@@ -113,16 +113,16 @@ class Search extends Component {
             >
               <tbody>
                 {queryResults.map((item) => (
-                    <tr key={`row_${item.id}`}>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                        }}
-                      >
-                        <a href={item.url}>{item.title}</a>
-                      </td>
-                    </tr>
-                  ))}
+                  <tr key={`row_${item.id}`}>
+                    <td
+                      style={{
+                        fontSize: "14px",
+                      }}
+                    >
+                      <a href={item.url}>{item.title}</a>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
