@@ -5,7 +5,7 @@ import * as styles from "./Author.module.scss";
 const Author = () => (
   <div className={styles.author}>
     <center>
-      <p className={styles}>
+      <p className={styles.bio}>
         資安解壓縮網站內容除特別註記外皆以
         <a
           href="http://creativecommons.org/licenses/by-sa/4.0/"
