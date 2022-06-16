@@ -35,9 +35,6 @@ jobs:
 
       - name: Build
         run: npm run build
-      
-      - name: Gatsby Develop
-        run: gatsby develop
         
 
 
