@@ -94,7 +94,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@jest/globals": "^27.5.1",
-    "@swc/core": "^1.2.218",
+    "@swc/core": "^1.2.242",
     "@swc/jest": "^0.2.22",
     "@types/gatsby-transformer-remark": "^2.9.1",
     "@types/jest": "^27.5.2",
