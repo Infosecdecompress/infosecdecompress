@@ -63,7 +63,7 @@ Bitwarden 官方網站：<https://bitwarden.com/>
 
 [](https://bitwarden.com/)Bitwarden 軟體和擴充套件下載連結：<https://bitwarden.com/download/>
 
-## [](https://bitwarden.com/download/)教學
+## 教學
 
 在開始以前建議大家在一台確定安全沒有中毒的電腦上操作，如果可以的話盡量在無痕模式中進行
 
@@ -87,7 +87,7 @@ LastPass 會開啟一個新的分頁並請你輸入密碼
 
 首先，登入[Bitwarden 網頁版](https://vault.bitwarden.com/#/)，如果還沒有 Bitwarden 帳號的可以先[註冊一個](https://vault.bitwarden.com/#/register)
 
-> 如果登入後希望將介面改為繁體中文的話可以參考[文末的教學](#將Bitwarden改為繁體中文)
+> 如果登入後希望將介面改為繁體中文的話可以參考[文末的教學](#將-bitwarden-改為繁體中文)
 
 登入後點選上方的**工具**，接著選擇左方選單中的匯入資料
 
@@ -107,7 +107,7 @@ LastPass 會開啟一個新的分頁並請你輸入密碼
 
 完成匯入以後強烈建議大家開啟 Bitwarden 的多因素認證來確保帳號的安全性
 
-> 教學：[在 Bitwarden 開啟多因素認證](#在Bitwarden開啟多因素認證)
+> 教學：[在 Bitwarden 開啟多因素認證](#在-bitwarden-開啟多因素認證)
 
 ### 刪除 LastPass 帳號
 
