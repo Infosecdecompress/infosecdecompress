@@ -80,7 +80,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@alxshelepenok/eslint-config": "^1.0.94",
+    "@alxshelepenok/eslint-config": "^1.0.95",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@jest/globals": "^27.5.1",
