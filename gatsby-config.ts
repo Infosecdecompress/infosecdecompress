@@ -313,7 +313,6 @@ export default {
           "connect-src":
             "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net o1129413.ingest.sentry.io",
           "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com",
-          "report-uri": "https://infosecdecompress.com/csp-report"
         },
       },
     },
