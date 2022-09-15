@@ -70,7 +70,7 @@
     "gatsby-plugin-react-helmet": "^5.22.0",
     "gatsby-plugin-sass": "^5.22.0",
     "gatsby-plugin-security-txt": "^1.1.8",
-    "gatsby-plugin-sharp": "^4.22.0",
+    "gatsby-plugin-sharp": "^4.23.0",
     "gatsby-plugin-sitemap": "^5.22.0",
     "gatsby-plugin-sri": "^1.1.0",
     "gatsby-remark-autolink-headers": "^5.22.0",
