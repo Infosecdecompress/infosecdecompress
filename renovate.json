@@ -16,11 +16,20 @@
     {
       "packageNames": ["react", "react-dom", "react-test-renderer"],
       "groupName": "react"
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     }
   ],
   "labels": ["renovate"],
   "prHourlyLimit": 4,
   "prConcurrentLimit": 16,
   "rangeStrategy": "bump",
-  "semanticCommits": "enabled"
+  "semanticCommits": "enabled",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
 }
