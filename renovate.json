@@ -24,8 +24,6 @@
     }
   ],
   "labels": ["renovate"],
-  "prHourlyLimit": 4,
-  "prConcurrentLimit": 16,
   "rangeStrategy": "bump",
   "semanticCommits": "enabled",
   "lockFileMaintenance": {
