@@ -141,7 +141,7 @@
     "rimraf": "3.0.2",
     "sass": "^1.55.0",
     "source-map-support": "^0.5.21",
-    "stylelint": "^14.13.0",
+    "stylelint": "^14.14.0",
     "stylelint-config-recommended-scss": "^7.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.3.0",
