@@ -10,7 +10,7 @@
     "plugin:import/errors",
     "airbnb-typescript",
     "@alxshelepenok/eslint-config",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -40,6 +40,7 @@
     "import/prefer-default-export": ["off"],
     "sort-keys": ["off"],
     "camelcase": ["off"],
+    "arrow-body-style": ["error", "as-needed"],
     "comma-dangle": ["error", "always-multiline"],
     "sort-imports": ["off"],
     "no-restricted-globals": ["off"],

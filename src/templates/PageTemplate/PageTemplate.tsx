@@ -3,6 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import { Layout } from "@/components/Layout";
+import { Meta } from "@/components/Meta";
 import { Page } from "@/components/Page";
 import { Sidebar } from "@/components/Sidebar";
 import { useSiteMetadata } from "@/hooks";
@@ -15,18 +16,12 @@ interface Props {
 }
 
 const PageTemplate: React.FC<Props> = ({ data }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { html: body } = data.markdownRemark;
   const { frontmatter } = data.markdownRemark;
-  const { title, description = "", socialImage } = frontmatter;
-  const metaDescription = description || siteSubtitle;
+  const { title } = frontmatter;
 
   return (
-    <Layout
-      title={`${title} - ${siteTitle}`}
-      description={metaDescription}
-      socialImage={socialImage}
-    >
+    <Layout>
       <Sidebar />
       <Page title={title}>
         <div dangerouslySetInnerHTML={{ __html: body }} />
@@ -44,10 +39,34 @@ export const query = graphql`
         title
         date
         description
-        socialImage
+        socialImage {
+          publicURL
+        }
       }
     }
   }
 `;
+
+export const Head: React.FC<Props> = ({ data }) => {
+  const { title, subtitle, url } = useSiteMetadata();
+
+  const {
+    frontmatter: {
+      title: pageTitle,
+      description: pageDescription = "",
+      socialImage,
+    },
+  } = data.markdownRemark;
+  const description = pageDescription || subtitle;
+  const image = socialImage?.publicURL && url.concat(socialImage?.publicURL);
+
+  return (
+    <Meta
+      title={`${pageTitle} - ${title}`}
+      description={description}
+      image={image}
+    />
+  );
+};
 
 export default PageTemplate;
