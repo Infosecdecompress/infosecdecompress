@@ -146,7 +146,7 @@ exports[`TagTemplate renders correctly 1`] = `
   <div>
     <div>
       <h1>
-        typography
+        Typography
       </h1>
       <div>
         <div>

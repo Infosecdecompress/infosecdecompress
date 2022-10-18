@@ -5,7 +5,7 @@ import { Meta } from "@/components/Post/Meta";
 import * as mocks from "@/mocks";
 
 describe("Meta", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = {
       date: mocks.markdownRemark.frontmatter.date,
     };

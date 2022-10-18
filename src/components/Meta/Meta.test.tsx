@@ -3,21 +3,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import { Meta } from "@/components/Meta";
-
-const getMeta = (key: string) => {
-  const meta = document.getElementsByTagName("meta");
-
-  for (let i = 0; i < meta.length; i += 1) {
-    if (
-      key === meta[i].getAttribute("name") ||
-      key === meta[i].getAttribute("property")
-    ) {
-      return meta[i].getAttribute("content");
-    }
-  }
-
-  return "";
-};
+import { getMeta } from "@/utils";
 
 describe("Meta", () => {
   test("should contain correct metadata", async () => {

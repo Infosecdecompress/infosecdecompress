@@ -5,7 +5,7 @@ import { Page } from "@/components/Page";
 import * as mocks from "@/mocks";
 
 describe("Page", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = {
       children: mocks.markdownRemark.html,
       title: mocks.markdownRemark.frontmatter.title,
