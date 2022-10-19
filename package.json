@@ -50,7 +50,7 @@
     ]
   },
   "dependencies": {
-    "@sentry/gatsby": "^7.15.0",
+    "@sentry/gatsby": "^7.16.0",
     "@sentry/react": "^7.15.0",
     "@sentry/tracing": "^7.15.0",
     "axios": "^0.27.2",
