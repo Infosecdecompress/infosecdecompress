@@ -44,13 +44,13 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
 
     if (node?.frontmatter?.template === "page" && node?.fields?.slug) {
       createPage({
-        path: node.fields.slug,
+        path: node?.frontmatter?.slug || node.fields.slug,
         component: constants.templates.pageTemplate,
         context: { slug: node.fields.slug },
       });
     } else if (node?.frontmatter?.template === "post" && node?.fields?.slug) {
       createPage({
-        path: node.fields.slug,
+        path: node?.frontmatter?.slug || node.fields.slug,
         component: constants.templates.postTemplate,
         context: { slug: node.fields.slug },
       });
