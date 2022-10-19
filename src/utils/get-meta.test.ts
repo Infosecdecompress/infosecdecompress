@@ -30,5 +30,6 @@ describe("getMeta", () => {
 
     expect(getMeta("title")).toBe("any title");
     expect(getMeta("description")).toBe("any description");
+    expect(getMeta("og:image")).toBe("");
   });
 });
