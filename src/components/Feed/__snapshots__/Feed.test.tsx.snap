@@ -52,7 +52,7 @@ exports[`Feed renders correctly 1`] = `
     </div>
     <h2>
       <a
-        href="/posts/the-birth-of-movable-type"
+        href="/posts/johannes-gutenberg"
       >
         Johannes Gutenberg: The Birth of Movable Type
       </a>
@@ -61,7 +61,7 @@ exports[`Feed renders correctly 1`] = `
       German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible.
     </p>
     <a
-      href="/posts/the-birth-of-movable-type"
+      href="/posts/johannes-gutenberg"
     >
       Read
     </a>
