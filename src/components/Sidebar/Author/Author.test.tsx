@@ -13,7 +13,7 @@ describe("Author", () => {
     mockedStaticQuery.mockImplementationOnce(() => null);
   });
 
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = { isIndex: false, author: mocks.author };
     const tree = renderer.create(<Author {...props} />).toJSON();
     expect(tree).toMatchSnapshot();

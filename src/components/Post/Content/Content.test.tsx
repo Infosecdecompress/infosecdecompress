@@ -5,7 +5,7 @@ import { Content } from "@/components/Post/Content";
 import * as mocks from "@/mocks";
 
 describe("Content", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = {
       title: mocks.markdownRemark.frontmatter.title,
       body: mocks.markdownRemark.html,

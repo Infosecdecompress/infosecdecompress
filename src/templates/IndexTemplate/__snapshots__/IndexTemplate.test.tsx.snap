@@ -159,7 +159,7 @@ exports[`IndexTemplate renders correctly 1`] = `
                 <a
                   href="/typography"
                 >
-                  typography
+                  Typography
                 </a>
               </span>
             </div>
@@ -191,7 +191,7 @@ exports[`IndexTemplate renders correctly 1`] = `
                 <a
                   href="/design-inspiration"
                 >
-                  design inspiration
+                  Design Inspiration
                 </a>
               </span>
             </div>
@@ -207,6 +207,36 @@ exports[`IndexTemplate renders correctly 1`] = `
             </p>
             <a
               href="/posts/the-birth-of-movable-type"
+            >
+              Read
+            </a>
+          </div>
+          <div>
+            <div>
+              <time
+                dateTime="September 1, 2017"
+              >
+                September 2017
+              </time>
+              <span />
+              <span>
+                <a
+                  href="/typography"
+                >
+                  Typography
+                </a>
+              </span>
+            </div>
+            <h2>
+              <a
+                href="/posts/humane-typography-in-the-digital-age"
+              >
+                Humane Typography in the Digital Age
+              </a>
+            </h2>
+            <p />
+            <a
+              href="/posts/humane-typography-in-the-digital-age"
             >
               Read
             </a>
