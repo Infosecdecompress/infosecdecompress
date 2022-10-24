@@ -18,7 +18,7 @@ describe("Comments", () => {
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = {
       postTitle: mocks.markdownRemark.frontmatter.title,
       postSlug: mocks.markdownRemark.fields.slug,

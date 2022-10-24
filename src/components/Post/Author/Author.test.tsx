@@ -18,7 +18,7 @@ describe("Author", () => {
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const tree = renderer.create(<Author />).toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -17,7 +17,7 @@ describe("Post", () => {
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = { post: mocks.markdownRemark };
     const tree = renderer.create(<Post {...props} />).toJSON();
     expect(tree).toMatchSnapshot();

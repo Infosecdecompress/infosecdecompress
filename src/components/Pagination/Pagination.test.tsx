@@ -5,7 +5,7 @@ import { Pagination } from "@/components/Pagination";
 import * as mocks from "@/mocks";
 
 describe("Pagination", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = { ...mocks.pageContext.pagination };
     const tree = renderer.create(<Pagination {...props} />).toJSON();
     expect(tree).toMatchSnapshot();

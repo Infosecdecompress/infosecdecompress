@@ -3,14 +3,14 @@ title: "A Brief History of Typography"
 date: "2016-02-02T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "a-brief-history-of-typography"
+slug: "/posts/a-brief-history-of-typography"
 category: "Design Inspiration"
 tags:
   - "Linotype"
   - "Helvetica"
   - "History of typography"
 description: "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat."
-socialImage: "/media/cherry.jpg"
+socialImage: "./media/cherry.jpg"
 ---
 
 **Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est._ Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
