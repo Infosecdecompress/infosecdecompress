@@ -1,19 +1,19 @@
 import React from "react";
 
-import { render } from "@testing-library/react";
-
 import { Meta } from "@/components/Meta";
-import { getMeta } from "@/utils";
+import { testUtils } from "@/utils";
 
 describe("Meta", () => {
   test("should contain correct metadata", async () => {
-    render(<Meta description="description" title="title" image="image" />);
+    testUtils.renderWithCoilProvider(
+      <Meta description="description" title="title" image="image" />,
+    );
 
-    expect(getMeta("description")).toEqual("description");
-    expect(getMeta("twitter:description")).toEqual("description");
-    expect(getMeta("twitter:title")).toEqual("title");
-    expect(getMeta("og:title")).toEqual("title");
-    expect(getMeta("og:description")).toEqual("description");
-    expect(getMeta("og:image")).toEqual("image");
+    expect(testUtils.getMeta("description")).toEqual("description");
+    expect(testUtils.getMeta("twitter:description")).toEqual("description");
+    expect(testUtils.getMeta("twitter:title")).toEqual("title");
+    expect(testUtils.getMeta("og:title")).toEqual("title");
+    expect(testUtils.getMeta("og:description")).toEqual("description");
+    expect(testUtils.getMeta("og:image")).toEqual("image");
   });
 });

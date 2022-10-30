@@ -30,7 +30,9 @@
         "devDependencies": [
           "**/*.test.ts",
           "**/*.test.tsx",
-          "**/internal/**/*.ts"
+          "**/internal/**/*.ts",
+          "**/src/utils/test-utils/*.ts",
+          "**/src/utils/test-utils/*.tsx"
         ]
       }
     ],

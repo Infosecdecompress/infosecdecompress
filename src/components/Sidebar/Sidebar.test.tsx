@@ -1,10 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
 import { StaticQuery, useStaticQuery } from "gatsby";
 
 import { Sidebar } from "@/components/Sidebar";
 import * as mocks from "@/mocks";
+import { testUtils } from "@/utils";
 
 const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
@@ -19,7 +19,9 @@ describe("Sidebar", () => {
 
   test("renders correctly", () => {
     const props = { isIndex: true };
-    const tree = renderer.create(<Sidebar {...props} />).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Sidebar {...props} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

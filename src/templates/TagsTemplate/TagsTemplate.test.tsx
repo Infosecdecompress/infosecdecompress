@@ -1,11 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
 import { render as reactTestingLibraryRender } from "@testing-library/react";
 import { StaticQuery, useStaticQuery } from "gatsby";
 
 import * as mocks from "@/mocks";
-import { getMeta } from "@/utils";
+import { testUtils } from "@/utils";
 
 import TagsTemplate, { Head as GatsbyHead } from "./TagsTemplate";
 
@@ -24,23 +23,25 @@ describe("TagsTemplate", () => {
   });
 
   test("renders correctly", () => {
-    const tree = renderer.create(<TagsTemplate />).toJSON();
+    const tree = testUtils.createSnapshotsRenderer(<TagsTemplate />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test("head renders correctly", () => {
     reactTestingLibraryRender(<GatsbyHead />);
 
-    expect(getMeta("twitter:card")).toEqual("summary_large_image");
-    expect(getMeta("twitter:title")).toEqual("Tags - Blog by John Doe");
-    expect(getMeta("og:title")).toEqual("Tags - Blog by John Doe");
-    expect(getMeta("description")).toEqual(
+    expect(testUtils.getMeta("twitter:card")).toEqual("summary_large_image");
+    expect(testUtils.getMeta("twitter:title")).toEqual(
+      "Tags - Blog by John Doe",
+    );
+    expect(testUtils.getMeta("og:title")).toEqual("Tags - Blog by John Doe");
+    expect(testUtils.getMeta("description")).toEqual(
       "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
     );
-    expect(getMeta("twitter:description")).toEqual(
+    expect(testUtils.getMeta("twitter:description")).toEqual(
       "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
     );
-    expect(getMeta("og:description")).toEqual(
+    expect(testUtils.getMeta("og:description")).toEqual(
       "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
     );
   });

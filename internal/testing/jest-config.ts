@@ -9,7 +9,7 @@ const jestConfig: Config.InitialOptions = {
     "@/hooks": ["<rootDir>/src/hooks"],
     "@/utils": ["<rootDir>/src/utils"],
     "@/constants": ["<rootDir>/src/constants"],
-    "@/utils/([^\\.]*)$": ["<rootDir>/src/utils"],
+    "@/utils/([^\\.]*)$": ["<rootDir>/src/utils/$1"],
     "@/pages/([^\\.]*)$": ["<rootDir>/src/pages/$1"],
     "@/hooks/([^\\.]*)$": ["<rootDir>/src/hooks/$1"],
     "@/mocks": ["<rootDir>/internal/testing/__mocks__"],

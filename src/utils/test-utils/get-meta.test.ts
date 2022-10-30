@@ -1,6 +1,6 @@
-import { getMeta } from "@/utils";
+import { testUtils } from "@/utils";
 
-describe("getMeta", () => {
+describe("testUtils.getMeta", () => {
   test("successful getting value by key", () => {
     const getElementsByTagNameSpy = jest.spyOn(
       document,
@@ -28,8 +28,8 @@ describe("getMeta", () => {
       },
     ] as unknown as HTMLCollectionOf<HTMLElement>);
 
-    expect(getMeta("title")).toBe("any title");
-    expect(getMeta("description")).toBe("any description");
-    expect(getMeta("og:image")).toBe("");
+    expect(testUtils.getMeta("title")).toBe("any title");
+    expect(testUtils.getMeta("description")).toBe("any description");
+    expect(testUtils.getMeta("og:image")).toBe("");
   });
 });

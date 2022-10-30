@@ -1,11 +1,13 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
 import { Layout } from "@/components/Layout";
+import { testUtils } from "@/utils";
 
 describe("Layout", () => {
   test("renders correctly", () => {
-    const tree = renderer.create(<Layout>test</Layout>).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Layout>test</Layout>)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Button } from "@/components/Button";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import type { Node } from "@/types";
 
 import { Author } from "./Author";
@@ -10,7 +11,6 @@ import { Meta } from "./Meta";
 import { Tags } from "./Tags";
 
 import * as styles from "./Post.module.scss";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 interface Props {
   post: Node;
