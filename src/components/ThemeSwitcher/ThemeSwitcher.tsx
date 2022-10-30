@@ -23,6 +23,7 @@ const ThemeSwitcher: React.FC = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
+          <title>{mode}</title>
           <path
             pathLength="1"
             className={styles.moon}

@@ -1,6 +1,8 @@
 import { atom } from "@alxshelepenok/diesel";
 import { useCoilPersistedState } from "@alxshelepenok/diesel-extensions";
 
+import { getDefaultColorMode } from "@/utils";
+
 interface Theme {
   mode: "dark" | "light";
 }
@@ -8,7 +10,7 @@ interface Theme {
 const themeAtom = atom<Theme>({
   key: "themeAtom",
   default: {
-    mode: "light",
+    mode: getDefaultColorMode(),
   },
 });
 
