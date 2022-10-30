@@ -5,6 +5,7 @@ exports[`Tags renders correctly 1`] = `
   <ul>
     <li>
       <a
+        className=""
         href="/handwriting"
       >
         Handwriting
@@ -12,6 +13,7 @@ exports[`Tags renders correctly 1`] = `
     </li>
     <li>
       <a
+        className=""
         href="/helvetica"
       >
         Helvetica

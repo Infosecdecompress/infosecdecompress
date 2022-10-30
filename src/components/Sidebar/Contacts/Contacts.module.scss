@@ -1,5 +1,5 @@
-@import "../../../assets/scss/variables";
-@import "../../../assets/scss/mixins";
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
 
 .contacts {
   @include margin-bottom(1);
@@ -10,14 +10,14 @@
     flex-grow: 0;
     flex-shrink: 0;
     list-style: none;
-    max-width: 150px;
+    max-width: 165px;
     @include padding-equal(0);
     @include margin(0.5, 0);
 
     .item {
       align-content: center;
       align-items: center;
-      border: 1px solid $color-gray-bg;
+      border: 1px solid var(--color-contacts-border);
       border-radius: 50%;
       display: flex;
       height: $button-height;
@@ -34,12 +34,12 @@
 
       .link {
         border: 0;
-        color: $color-base;
+        color: var(--color-typographic-base-font);
         display: flex;
 
         &:hover,
         &:focus {
-          color: $color-primary;
+          color: var(--color-typographic-link-p-font);
         }
       }
     }
