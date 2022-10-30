@@ -11,7 +11,10 @@ const ThemeSwitcher: React.FC = () => {
 
   return (
     <div
-      className={cn(styles.themeSwitcher, { [styles.dark]: mode === "dark" })}
+      className={cn(styles.themeSwitcher, {
+        [styles.dark]: mode === "dark",
+        [styles.hidden]: typeof window === "undefined",
+      })}
     >
       <button className={styles.button} onClick={toggleTheme}>
         <svg

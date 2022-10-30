@@ -36,6 +36,10 @@
     transition: stroke-dasharray 200ms ease-in, opacity 400ms ease-in;
   }
 
+  &.hidden {
+    display: none;
+  }
+
   &.dark {
     .moon {
       opacity: 1;

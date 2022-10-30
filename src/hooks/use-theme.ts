@@ -7,6 +7,8 @@ interface Theme {
   mode: "dark" | "light";
 }
 
+export const themeAtomKey = "diesel:theme-atom";
+
 const themeAtom = atom<Theme>({
   key: "themeAtom",
   default: {
@@ -14,16 +16,12 @@ const themeAtom = atom<Theme>({
   },
 });
 
-const useTheme = (): readonly [
-  Theme,
-  () => void,
-  (nextValue: Theme) => void,
-] => {
+const useTheme = (): readonly [Theme, () => void] => {
   const [theme, set] = useCoilPersistedState(themeAtom);
 
   const toggle = () => set({ mode: theme.mode === "dark" ? "light" : "dark" });
 
-  return [theme, toggle, set];
+  return [theme, toggle];
 };
 
 export default useTheme;
