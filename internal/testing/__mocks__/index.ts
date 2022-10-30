@@ -1,3 +1,4 @@
+export { default as localStorageMock } from "./local-storage";
 export { default as markdownRemarkWithoutDescription } from "./markdown-remark-without-description";
 export { default as allMarkdownRemark } from "./all-markdown-remark";
 export { default as markdownRemark } from "./markdown-remark";
