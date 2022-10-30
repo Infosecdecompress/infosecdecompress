@@ -15,6 +15,7 @@
     outline: 0;
 
     svg {
+      pointer-events: none;
       stroke: var(--color);
       transition: stroke 400ms;
     }
