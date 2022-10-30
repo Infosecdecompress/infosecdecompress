@@ -1,7 +1,6 @@
 import React from "react";
 
-import { Link } from "gatsby";
-
+import { Button } from "@/components/Button";
 import type { Node } from "@/types";
 
 import { Author } from "./Author";
@@ -11,6 +10,7 @@ import { Meta } from "./Meta";
 import { Tags } from "./Tags";
 
 import * as styles from "./Post.module.scss";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 interface Props {
   post: Node;
@@ -23,9 +23,10 @@ const Post: React.FC<Props> = ({ post }: Props) => {
 
   return (
     <div className={styles.post}>
-      <Link className={styles.button} to="/">
-        All Articles
-      </Link>
+      <div className={styles.buttons}>
+        <Button className={styles.buttonArticles} title="All Articles" to="/" />
+        <ThemeSwitcher />
+      </div>
 
       <div className={styles.content}>
         <Content body={html} title={title} />
