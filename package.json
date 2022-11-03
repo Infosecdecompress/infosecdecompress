@@ -49,11 +49,11 @@
   "dependencies": {
     "@alxshelepenok/diesel": "^1.0.533",
     "@alxshelepenok/diesel-extensions": "^1.0.62",
-    "@sentry/gatsby": "^7.17.3",
+    "@sentry/gatsby": "^7.17.4",
     "@sentry/tracing": "^7.17.4",
     "classnames": "^2.3.2",
     "disqus-react": "^1.1.5",
-    "gatsby": "^4.24.6",
+    "gatsby": "^4.24.7",
     "gatsby-link": "^4.24.1",
     "gatsby-plugin-catch-links": "^4.24.0",
     "gatsby-plugin-feed": "^4.24.0",
