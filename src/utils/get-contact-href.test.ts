@@ -21,5 +21,6 @@ describe("getContactHref", () => {
     expect(getContactHref("linkedin", "#")).toBe(
       "https://www.linkedin.com/in/#",
     );
+    expect(getContactHref("mastodon", "#")).toBe("#");
   });
 });

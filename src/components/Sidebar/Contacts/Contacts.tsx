@@ -20,7 +20,7 @@ const Contacts: React.FC<Props> = ({ contacts }: Props) => (
             <a
               className={styles.link}
               href={getContactHref(name, contacts[name])}
-              rel="noopener noreferrer"
+              rel={`noopener noreferrer${name === "mastodon" ? " me" : ""}`}
               target="_blank"
             >
               <Icon name={name} icon={getIcon(name)} />
