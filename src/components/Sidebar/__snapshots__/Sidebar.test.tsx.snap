@@ -7,13 +7,15 @@ exports[`Sidebar renders correctly 1`] = `
       <a
         href="/"
       />
-      <h1>
-        <a
-          href="/"
-        >
-          John Doe
-        </a>
-      </h1>
+      <div>
+        <h1>
+          <a
+            href="/"
+          >
+            John Doe
+          </a>
+        </h1>
+      </div>
       <p>
         Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.
       </p>

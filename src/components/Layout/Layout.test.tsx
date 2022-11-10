@@ -1,28 +1,34 @@
 import React from "react";
-import renderer from "react-test-renderer";
-
-import { StaticQuery, useStaticQuery } from "gatsby";
 
 import { Layout } from "@/components/Layout";
-import * as mocks from "@/mocks";
-
-const mockedStaticQuery = StaticQuery as jest.Mock;
-const mockedUseStaticQuery = useStaticQuery as jest.Mock;
+import { testUtils } from "@/utils";
 
 describe("Layout", () => {
-  const props = {
-    ...mocks.siteMetadata,
-    title: mocks.siteMetadata.site.siteMetadata.title,
-    description: mocks.siteMetadata.site.siteMetadata.subtitle,
-  };
+  const LayoutWithChildren = () => <Layout>test</Layout>;
 
-  beforeEach(() => {
-    mockedStaticQuery.mockImplementationOnce(({ render }) => render(props));
-    mockedUseStaticQuery.mockReturnValue(props);
+  test("renders correctly", () => {
+    const tree = testUtils
+      .createSnapshotsRenderer(<LayoutWithChildren />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
-  it("renders correctly", () => {
-    const tree = renderer.create(<Layout {...props}>test</Layout>).toJSON();
-    expect(tree).toMatchSnapshot();
+  test("dark theme is set correctly", () => {
+    window.localStorage.setItem(
+      "diesel:theme-atom",
+      JSON.stringify({ mode: "dark" }),
+    );
+
+    testUtils.renderWithCoilProvider(<LayoutWithChildren />);
+
+    window.localStorage.removeItem("diesel:theme-atom");
+
+    expect(document.documentElement.className).toBe("dark");
+  });
+
+  test("light theme is set correctly", () => {
+    testUtils.renderWithCoilProvider(<LayoutWithChildren />);
+
+    expect(document.documentElement.className).toBe("light");
   });
 });

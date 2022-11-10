@@ -8,13 +8,15 @@ exports[`CategoryTemplate renders correctly 1`] = `
         <a
           href="/"
         />
-        <h2>
-          <a
-            href="/"
-          >
-            John Doe
-          </a>
-        </h2>
+        <div>
+          <h2>
+            <a
+              href="/"
+            >
+              John Doe
+            </a>
+          </h2>
+        </div>
         <p>
           Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.
         </p>
@@ -207,7 +209,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
   <div>
     <div>
       <h1>
-        typography
+        Typography
       </h1>
       <div>
         <div>
@@ -223,7 +225,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
                 <a
                   href="/typography"
                 >
-                  typography
+                  Typography
                 </a>
               </span>
             </div>
@@ -255,13 +257,13 @@ exports[`CategoryTemplate renders correctly 1`] = `
                 <a
                   href="/design-inspiration"
                 >
-                  design inspiration
+                  Design Inspiration
                 </a>
               </span>
             </div>
             <h2>
               <a
-                href="/posts/the-birth-of-movable-type"
+                href="/posts/johannes-gutenberg"
               >
                 Johannes Gutenberg: The Birth of Movable Type
               </a>
@@ -270,7 +272,37 @@ exports[`CategoryTemplate renders correctly 1`] = `
               German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible.
             </p>
             <a
-              href="/posts/the-birth-of-movable-type"
+              href="/posts/johannes-gutenberg"
+            >
+              Read
+            </a>
+          </div>
+          <div>
+            <div>
+              <time
+                dateTime="September 1, 2017"
+              >
+                September 2017
+              </time>
+              <span />
+              <span>
+                <a
+                  href="/typography"
+                >
+                  Typography
+                </a>
+              </span>
+            </div>
+            <h2>
+              <a
+                href="/posts/humane-typography-in-the-digital-age"
+              >
+                Humane Typography in the Digital Age
+              </a>
+            </h2>
+            <p />
+            <a
+              href="/posts/humane-typography-in-the-digital-age"
             >
               Read
             </a>

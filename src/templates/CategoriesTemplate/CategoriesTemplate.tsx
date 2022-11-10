@@ -3,18 +3,18 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { Layout } from "@/components/Layout";
+import { Meta } from "@/components/Meta";
 import { Page } from "@/components/Page";
 import { Sidebar } from "@/components/Sidebar";
 import { useCategoriesList, useSiteMetadata, useTagsList } from "@/hooks";
 import { toKebabCase } from "@/utils";
 
 const CategoriesTemplate: React.FC = () => {
-  const { title, subtitle } = useSiteMetadata();
   const categories = useCategoriesList();
   const tags = useTagsList();
 
   return (
-    <Layout title={`Categories - ${title}`} description={subtitle}>
+    <Layout>
       <Sidebar />
       <Page title="分類 標籤">
         <h2>分類</h2>
@@ -40,6 +40,13 @@ const CategoriesTemplate: React.FC = () => {
       </Page>
     </Layout>
   );
+};
+
+export const Head: React.FC = () => {
+  const { title, subtitle } = useSiteMetadata();
+  const pageTitle = `Categories - ${title}`;
+
+  return <Meta title={pageTitle} description={subtitle} />;
 };
 
 export default CategoriesTemplate;

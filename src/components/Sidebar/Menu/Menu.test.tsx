@@ -1,13 +1,15 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
 import { Menu } from "@/components/Sidebar/Menu";
 import * as mocks from "@/mocks";
+import { testUtils } from "@/utils";
 
 describe("Menu", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = { menu: mocks.menu };
-    const tree = renderer.create(<Menu {...props} />).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Menu {...props} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
