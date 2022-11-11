@@ -6,7 +6,7 @@ socialImage: "/media/twitter_cover.jpg"
 draft: false
 date: "2020-07-16T02:06:20.366Z"
 description: "|-
-  [2020/07/15 23:30 CDT Update: 新增Twitter官方回覆]  
+  [2020/07/15 23:30 CDT Update: 新增Twitter官方回覆]
   Twitter在台灣凌晨四點左右，多組名人帳密被盜，攻擊者利用這些帳號散播釣魚內容。"
 category: "NewsUpdates"
 tags:

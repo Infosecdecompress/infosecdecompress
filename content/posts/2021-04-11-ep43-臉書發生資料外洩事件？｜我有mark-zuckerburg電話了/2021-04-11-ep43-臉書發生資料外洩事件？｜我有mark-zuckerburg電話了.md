@@ -19,6 +19,7 @@ tags:
 - [Apple Podcast](https://podcasts.apple.com/tw/podcast/%E8%B3%87%E5%AE%89%E8%A7%A3%E5%A3%93%E7%B8%AE/id1513276667#episodeGuid=ckndnka46n9cp0a49o0sau7o0)
 - [Spotify Podcast](https://open.spotify.com/episode/5yn7q8Sq6hvEVfPoyt8FRi?si=75572ffa0bc246eb)
 - [Firstory Podcast](https://open.firstory.me/story/ckndnka46n9cp0a49o0sau7o0)
+
 ---
 
 ## 事發經過
