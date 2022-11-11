@@ -8,7 +8,7 @@ exports[`PostTemplate renders correctly 1`] = `
         className=""
         href="/"
       >
-       文章列表
+        文章列表
       </a>
     </div>
     <div>

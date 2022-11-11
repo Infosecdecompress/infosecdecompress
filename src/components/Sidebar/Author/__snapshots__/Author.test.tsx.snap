@@ -15,7 +15,7 @@ exports[`Author renders correctly 1`] = `
     </h2>
   </div>
   <p>
-    Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.
+    InfosecDecompress.
   </p>
 </div>
 `;

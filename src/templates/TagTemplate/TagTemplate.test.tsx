@@ -38,19 +38,19 @@ describe("TagTemplate", () => {
 
     expect(testUtils.getMeta("twitter:card")).toEqual("summary_large_image");
     expect(testUtils.getMeta("twitter:title")).toEqual(
-      "Typography - Page 2 - Blog by John Doe",
+      "Typography - Page 2 - 資安解壓縮",
     );
     expect(testUtils.getMeta("og:title")).toEqual(
-      "Typography - Page 2 - Blog by John Doe",
+      "Typography - Page 2 - 資安解壓縮",
     );
     expect(testUtils.getMeta("description")).toEqual(
-      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+      "InfosecDecompress.",
     );
     expect(testUtils.getMeta("twitter:description")).toEqual(
-      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+      "InfosecDecompress.",
     );
     expect(testUtils.getMeta("og:description")).toEqual(
-      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+      "InfosecDecompress.",
     );
   });
 });
