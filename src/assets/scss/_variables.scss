@@ -10,19 +10,11 @@
  // Google Noto Sans TC
  // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
-
-// Colors
-$color-base: #222;
-$color-primary: #5D93FF;
-$color-secondary: #F7A046;
-
-$color-gray-border: color.adjust($color-base, $lightness: 77%);
-$color-gray-bg: color.adjust($color-base, $lightness: 79%);
-
+ 
 $color-dark: hsl(220, 17%, 17%);
 $color-dark-cloud: hsl(220, 17%, 30%);
 $color-dark-paper: hsl(220, 17%, 12%);
-$color-white: hsl(0, 0%, 100%);
+$color-white: hsl(0, 0%, 98%);
 $color-white-cloud: hsl(240, 1%, 92%);
 $color-gray: hsl(220, 17%, 57%);
 $color-blue: hsl(220, 100%, 68%);
@@ -35,6 +27,7 @@ $typographic-small-font-size: 14px;
 $typographic-base-line-height: 1.625;
 $typographic-leading: math.round(16 * math.div($typographic-root-font-size, 100) * $typographic-base-line-height);
 $typographic-font-family:"Noto Sans", "Noto Sans TC", -apple-system, sans-serif;
+// $typographic-font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 
 $button-height: 40px;
 $button-border-radius: 20px;
