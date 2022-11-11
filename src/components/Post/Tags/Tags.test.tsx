@@ -1,17 +1,19 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
 import { Tags } from "@/components/Post/Tags";
 import * as mocks from "@/mocks";
+import { testUtils } from "@/utils";
 
 describe("Tags", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = {
       tags: mocks.markdownRemark.frontmatter.tags,
       tagSlugs: mocks.markdownRemark.fields.tagsSlugs,
     };
 
-    const tree = renderer.create(<Tags {...props} />).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Tags {...props} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

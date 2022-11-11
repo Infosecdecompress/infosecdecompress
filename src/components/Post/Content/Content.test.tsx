@@ -1,17 +1,19 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
 import { Content } from "@/components/Post/Content";
 import * as mocks from "@/mocks";
+import { testUtils } from "@/utils";
 
 describe("Content", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = {
       title: mocks.markdownRemark.frontmatter.title,
       body: mocks.markdownRemark.html,
     };
 
-    const tree = renderer.create(<Content {...props} />).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Content {...props} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

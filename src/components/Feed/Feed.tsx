@@ -35,14 +35,20 @@ const Feed: React.FC<Props> = ({ edges }: Props) => (
           </span>
         </div>
         <h2 className={styles.title}>
-          <Link className={styles.link} to={edge.node.fields.slug}>
+          <Link
+            className={styles.link}
+            to={edge.node.frontmatter?.slug || edge.node.fields.slug}
+          >
             {edge.node.frontmatter.title}
           </Link>
         </h2>
         <p className={styles.description}>
           {edge.node.frontmatter.description}
         </p>
-        <Link className={styles.more} to={edge.node.fields.slug}>
+        <Link
+          className={styles.more}
+          to={edge.node.frontmatter?.slug || edge.node.fields.slug}
+        >
           Read
         </Link>
       </div>

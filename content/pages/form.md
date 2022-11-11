@@ -1,8 +1,8 @@
 ---
-template: page
+template: "page"
 title: Form
-slug: form
-socialImage: /media/icon.jpeg
+slug: "form"
+socialImage: "/media/icon.jpeg"
 draft: true
 ---
 

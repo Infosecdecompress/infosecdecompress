@@ -16,6 +16,7 @@ const pagesQuery = async (graphql: CreatePagesArgs["graphql"]) => {
           node {
             frontmatter {
               template
+              slug
             }
             fields {
               slug
