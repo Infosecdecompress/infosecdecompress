@@ -1,7 +1,7 @@
 ---
 template: "post"
 title: Made In Taiwan 的惡意檔案檢測服務 VirusCheck.tw
-slug: "patches_viruscheck"
+slug: "/posts/patches_viruscheck"
 socialImage: "/media/viruscheck_cover.jpg"
 draft: false
 date: "2020-09-03T02:23:57.366Z"
@@ -10,8 +10,8 @@ description: "|-
   最近只要使用檢測服務就可以參加CITI CAFE的飲品抽獎活動哦～"
 category: "Patches"
 tags:
-  - "VirusTotal"
-  - "VirusCheck.tw"
+  - VirusTotal
+  - VirusCheck.tw
 ---
 
 ![](/media/viruscheck_cover.jpg)
@@ -51,17 +51,17 @@ Virus Check 還與趨勢科技和奧義智慧科技合作，當遇到高風險�
 
 - 檔案資訊、檔案[雜湊值](/posts/ep2-what-is-infosec/#雜湊函數-hash-function)
 - 風險值
-"
-  - "低風險：0 ~ 29"
-  - "中風險：30 ~ 69"
-  - "高風險：70 ~ 100
+
+  - 低風險：0 ~ 29
+  - 中風險：30 ~ 69
+  - 高風險：70 ~ 100
 
 - 檔案行為：
-"
-  - "系統登錄檔行為"
-  - "存取行為"
-  - "網路行為"
-  - "系統服務
+
+  - 系統登錄檔行為
+  - 存取行為
+  - 網路行為
+  - 系統服務
 
 ![](/media/viruscheck_report.jpg)
 

@@ -1,17 +1,17 @@
 ---
 template: "post"
 title: EP36 - 聊聊Clubhouse資安和隱私吧
-slug: "ep36_clubhouse_security_and_privacy"
+slug: "/posts/ep36_clubhouse_security_and_privacy"
 socialImage: "/media/ep36_cover.png"
 draft: false
 date: "2021-02-07T21:06:21.148Z"
 description: "前一個禮拜Clubhouse爆紅，大家爭先恐後的索取邀請碼想加入這個平台，我們也在得到邀請碼後，花了不少時間在上面。相信大家對於Clubhouse的出現與使用心得都有非常多不同見解，我們不會在這個部分多加著墨，主要還是想和大家聊聊資安與隱私層面的問題"
 category: "Episodes"
 tags:
-  - "Clubhouse"
-  - "Agora"
-  - "E2EE"
-  - "privacy"
+  - Clubhouse
+  - Agora
+  - E2EE
+  - privacy
 ---
 
 ## Podcast 連結
@@ -19,7 +19,6 @@ tags:
 - [Apple Podcast](https://podcasts.apple.com/tw/podcast/%E8%B3%87%E5%AE%89%E8%A7%A3%E5%A3%93%E7%B8%AE/id1513276667#episodeGuid=ckkvn9kysvre00898xp3borok)
 - [Spotify Podcast](https://open.spotify.com/episode/5CAfeFeg2udn6QA7fFa7Ml?si=TnPmkpRnTF-6WZ4AXzd2nw)
 - [Firstory Podcast](https://open.firstory.me/story/ckkvn9kysvre00898xp3borok)
-"
 ---
 
 ### Clubhouse 是什麼？

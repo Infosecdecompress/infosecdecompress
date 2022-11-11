@@ -1,7 +1,7 @@
 ---
 template: "post"
 title: EP46 - Pretty Good Privacy｜蠻好的隱私？
-slug: "ep46_pretty_good_privacy"
+slug: "/posts/ep46_pretty_good_privacy"
 socialImage: "/media/ep46_cover.png"
 draft: false
 date: "2021-05-09T20:24:34.019Z"
@@ -9,10 +9,10 @@ description: "今天的主角是Pretty Good
   Privacy，先不要因為他白話到不行的名字而小看它，PGP可是能做到連國安局都無法破解的安全性！早在1991年就被開發出來的PGP到底是怎麼做到高規格的安全性、經過這麼多年還可以存活下來，而身為一般民眾又可以怎麼利用這份技術呢？"
 category: "Episodes"
 tags:
-  - "PGP"
-  - "PKI"
-  - "public key"
-  - "digital signature"
+  - PGP
+  - PKI
+  - public key
+  - digital signature
 ---
 
 ## Podcast 連結
@@ -20,7 +20,6 @@ tags:
 - [Apple Podcast](https://podcasts.apple.com/tw/podcast/%E8%B3%87%E5%AE%89%E8%A7%A3%E5%A3%93%E7%B8%AE/id1513276667#episodeGuid=ckohmxldp1sf408344yypud0g)
 - [Spotify Podcast](https://open.spotify.com/episode/7wAR78aZ76iczwKMohUKiM)
 - [Firstory Podcast](https://open.firstory.me/story/ckohmxldp1sf408344yypud0g)
-"
 ---
 
 ### 什麼是 PGP？

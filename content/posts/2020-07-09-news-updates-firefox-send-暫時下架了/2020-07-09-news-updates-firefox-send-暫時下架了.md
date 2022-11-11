@@ -1,15 +1,15 @@
 ---
 template: "post"
 title: Firefox Send 暫時下架了
-slug: "newsupdates_firefoxsend"
+slug: "/posts/newsupdates_firefoxsend"
 socialImage: "/media/firefoxsend_cover.png"
 draft: false
 date: "2020-07-08T14:05:43.914Z"
 description: "在上一集提供給大家這個可以在不同裝置間更方便傳送檔案的工具，在昨天下架了！"
 category: "NewsUpdates"
 tags:
-  - "Firefox Send"
-  - "Mozilla"
+  - Firefox Send
+  - Mozilla
 ---
 
 ![](/media/firefoxsend_cover.png)

@@ -1,7 +1,7 @@
 ---
 template: "post"
 title: Clubhouse資料儲存與安全性後續追蹤
-slug: "newsupdates_clubhouse_followup"
+slug: "/posts/newsupdates_clubhouse_followup"
 socialImage: "/media/clubhouse_followup_cover.png"
 draft: false
 date: "2021-02-16T03:38:14.919Z"
@@ -9,10 +9,10 @@ description: "前幾天Stanford Internet
   Observatory就針對幾個點發表了一些他們的研究與發現，雖然沒有給出極為肯定的一些答案，大部分的問題都還是有點模糊的，但他們的發表還是把Clubhouse官方釣出來針對資料儲存與安全性給予回應"
 category: "NewsUpdates"
 tags:
-  - "Clubhouse"
-  - "Agora"
-  - "E2EE"
-  - "privacy"
+  - Clubhouse
+  - Agora
+  - E2EE
+  - privacy
 ---
 
 ![](/media/clubhouse_followup_cover.png)
