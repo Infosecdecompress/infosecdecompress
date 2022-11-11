@@ -10,7 +10,6 @@ description: "今天要來跟各位介紹一個強大多變的加密工具
 category: "Patches"
 tags:
   - encryption
-  - tool
   - VeraCrypt
 ---
 
