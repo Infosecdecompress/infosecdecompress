@@ -1,17 +1,17 @@
 ---
-template: post
+template: "post"
 title: EP43 -臉書發生資料外洩事件？｜我有Mark Zuckerburg電話了?!
-slug: ep43_553m_facebook_user_info_published_online
-socialImage: /media/ep43_cover.jpeg
+slug: "ep43_553m_facebook_user_info_published_online"
+socialImage: "/media/ep43_cover.jpeg"
 draft: false
-date: 2021-04-11T20:30:38.793Z
-description: 臉書在四月初的時候傳出發生資料外洩，事實上這件事並不太能算是一起資料外洩，但確確實實是因為臉書的漏洞所引起事件。這次事件所包含的五億筆資料都是用戶在臉書上舊的公開資訊，被人有意搜集整理而來，甚至被做成Telegram的Bot盈利
-category: Episodes
+date: "2021-04-11T20:30:38.793Z"
+description: "臉書在四月初的時候傳出發生資料外洩，事實上這件事並不太能算是一起資料外洩，但確確實實是因為臉書的漏洞所引起事件。這次事件所包含的五億筆資料都是用戶在臉書上舊的公開資訊，被人有意搜集整理而來，甚至被做成Telegram的Bot盈利"
+category: "Episodes"
 tags:
-  - Facebook
-  - Privacy
-  - PII
-  - data breach
+  - "Facebook"
+  - "Privacy"
+  - "PII"
+  - "data breach"
 ---
 
 ## Podcast 連結
@@ -19,7 +19,7 @@ tags:
 - [Apple Podcast](https://podcasts.apple.com/tw/podcast/%E8%B3%87%E5%AE%89%E8%A7%A3%E5%A3%93%E7%B8%AE/id1513276667#episodeGuid=ckndnka46n9cp0a49o0sau7o0)
 - [Spotify Podcast](https://open.spotify.com/episode/5yn7q8Sq6hvEVfPoyt8FRi?si=75572ffa0bc246eb)
 - [Firstory Podcast](https://open.firstory.me/story/ckndnka46n9cp0a49o0sau7o0)
-
+"
 ---
 
 ## 事發經過

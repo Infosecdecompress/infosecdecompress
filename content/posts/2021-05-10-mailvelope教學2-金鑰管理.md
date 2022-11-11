@@ -1,18 +1,18 @@
 ---
-template: post
+template: "post"
 title: Mailvelope教學2 - 金鑰管理
-slug: patches_how_to_use_mailvelope_2
-socialImage: /media/mailvelope_02.png
+slug: "patches_how_to_use_mailvelope_2"
+socialImage: "/media/mailvelope_02.png"
 draft: false
-date: 2021-05-10T21:51:17.331Z
-description: 本文要繼續分享如何在Mailvelope中管理我們的金鑰
-category: Patches
+date: "2021-05-10T21:51:17.331Z"
+description: "本文要繼續分享如何在Mailvelope中管理我們的金鑰"
+category: "Patches"
 tags:
-  - PGP
-  - GPG
-  - Mailvelope
-  - public key
-  - digital signature
+  - "PGP"
+  - "GPG"
+  - "Mailvelope"
+  - "public key"
+  - "digital signature"
 ---
 
 我們在[EP46](/posts/ep46_pretty_good_privacy)中介紹了什麼是 PGP，也在[上一篇文章](/posts/patches_how_to_use_mailvelope)中介紹了 Mailvelope 的簡易使用

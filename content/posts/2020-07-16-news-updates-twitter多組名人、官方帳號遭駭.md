@@ -1,17 +1,17 @@
 ---
-template: post
+template: "post"
 title: Twitter多組名人、官方帳號遭駭
-slug: newsupdates_twitter_hacked_phishing_incident
-socialImage: /media/twitter_cover.jpg
+slug: "newsupdates_twitter_hacked_phishing_incident"
+socialImage: "/media/twitter_cover.jpg"
 draft: false
-date: 2020-07-16T02:06:20.366Z
-description: |-
+date: "2020-07-16T02:06:20.366Z"
+description: "|-
   [2020/07/15 23:30 CDT Update: 新增Twitter官方回覆]  
-  Twitter在台灣凌晨四點左右，多組名人帳密被盜，攻擊者利用這些帳號散播釣魚內容。
-category: NewsUpdates
+  Twitter在台灣凌晨四點左右，多組名人帳密被盜，攻擊者利用這些帳號散播釣魚內容。"
+category: "NewsUpdates"
 tags:
-  - Twitter
-  - phishing
+  - "Twitter"
+  - "phishing"
 ---
 
 ![](/media/twitter_cover.jpg)

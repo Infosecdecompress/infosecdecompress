@@ -1,15 +1,15 @@
 ---
-template: post
+template: "post"
 title: 資安職涯讀書會 Slack Channel
-slug: patches_TwSecSlack
-socialImage: /media/twsecslack_cover.png
+slug: "patches_TwSecSlack"
+socialImage: "/media/twsecslack_cover.png"
 draft: false
-date: 2020-12-27T04:20:37.912Z
-description: 我們想把擁有同樣志向和目標的人連結在一起，建立起一個人脈網，透過資安職涯讀書會，推動資安職涯領域的互助圈，讓大家在這條道路上可以更順利
-category: Patches
+date: "2020-12-27T04:20:37.912Z"
+description: "我們想把擁有同樣志向和目標的人連結在一起，建立起一個人脈網，透過資安職涯讀書會，推動資安職涯領域的互助圈，讓大家在這條道路上可以更順利"
+category: "Patches"
 tags:
-  - HITCON
-  - NEX Foundation
+  - "HITCON"
+  - "NEX Foundation"
 ---
 
 不知道大家是不是和我們一樣，偶爾會有當初如果有這個就好了的想法？

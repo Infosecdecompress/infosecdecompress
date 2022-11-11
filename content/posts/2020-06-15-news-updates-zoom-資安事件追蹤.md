@@ -1,18 +1,18 @@
 ---
-template: post
+template: "post"
 title: Zoom 資安事件追蹤
-slug: newsupdates_zoom
-socialImage: /media/zoom_cover.jpg
+slug: "newsupdates_zoom"
+socialImage: "/media/zoom_cover.jpg"
 draft: false
-date: 2020-06-15T11:04:02.777Z
-description: |-
+date: "2020-06-15T11:04:02.777Z"
+description: "|-
   [2020.06.17 Update Zoom的最新公告 ]  
-  前陣子吵得沸沸揚揚的Zoom爭議事件，最近又因為六四紀念事件重新引起關注，我們簡單整理了一下發生了什麼事，一起來了解一下吧～
-category: NewsUpdates
+  前陣子吵得沸沸揚揚的Zoom爭議事件，最近又因為六四紀念事件重新引起關注，我們簡單整理了一下發生了什麼事，一起來了解一下吧～"
+category: "NewsUpdates"
 tags:
-  - Zoom
-  - E2EE
-  - privacy
+  - "Zoom"
+  - "E2EE"
+  - "privacy"
 ---
 
 ![](/media/zoom_cover.jpg)
@@ -48,10 +48,10 @@ Zoom 宣布實施 90 天資安計畫\
 - 在視訊與音訊推出[點對點加密](/posts/ep4-do-we-need-vpn#end-to-end-encryption-點對點加密)
 - 允許使用者選擇資料傳送的伺服器位置
 - 改善會議流程安全性
-
-  - 會議預設為需要使用密碼加入
-  - 參加者須在等候室等待主持人同意才能加入會議
-  - 主持人可以回報違規用戶給 Zoom 加以審查
+"
+  - "會議預設為需要使用密碼加入"
+  - "參加者須在等候室等待主持人同意才能加入會議"
+  - "主持人可以回報違規用戶給 Zoom 加以審查
 
 Zoom 發行公告：[Zoom 5.0 is here!](https://zoom.us/docs/en-us/zoom-v5-0.html)
 
@@ -76,7 +76,7 @@ Zoom 承認在中國政府指使下，中斷兩起在 Zoom 上由非政府組織
 **資安對 Zoom 只是附加功能而非必要，有別於其他大公司做法**
 
 對於免費用戶，Zoom 非但沒有要加密傳送的訊息以保障用戶隱私和安全，還直接表明要與政府機關分享資訊。除此之外 Zoom 與中國政府的互動令人擔憂，身為一間美國公司，為什麼對中國政府言聽計從?
-
+"
 ---
 
 ## 2020.06.17 Update
