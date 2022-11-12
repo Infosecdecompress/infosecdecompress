@@ -40,25 +40,32 @@ export default {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
-                const siteUrl = site.siteMetadata.site_url;
-                let html = edge.node.html;
-                html = html
-                  .replace(/href="\//g, `href="${siteUrl}/`)
-                  .replace(/src="\//g, `src="${siteUrl}/`)
-                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
-
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.site_url + edge.node.fields.slug,
-                  guid: site.siteMetadata.site_url + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": html }],
-                });
-              });
-            },
+            serialize: ({
+              query: { site, allMarkdownRemark },
+            }: {
+              query: {
+                site: {
+                  siteMetadata: {
+                    url: string;
+                  };
+                };
+                allMarkdownRemark: {
+                  edges: Array<types.Edge>;
+                };
+              };
+            }) =>
+              allMarkdownRemark.edges.map(({ node }) => ({
+                ...node.frontmatter,
+                date: node?.frontmatter?.date,
+                description: node?.frontmatter?.description,
+                url:
+                  site.siteMetadata.url +
+                  (node.frontmatter?.slug || node.fields?.slug),
+                guid:
+                  site.siteMetadata.url +
+                  (node.frontmatter?.slug || node.fields?.slug),
+                custom_elements: [{ "content:encoded": node.html }],
+              })),
             query: `
               {
                 allMarkdownRemark(
@@ -104,8 +111,8 @@ export default {
               edges {
                 node {
                   rawMarkdownBody
-                  fields { slug }
                   frontmatter {
+                    slug
                     title
                   }
                 }
@@ -115,8 +122,8 @@ export default {
         `,
         serializeFeed: (results) =>
           results.data.allMarkdownRemark.edges.map(({ node }) => ({
-            id: node.fields.slug,
-            url: node.fields.slug,
+            id: node.frontmatter.slug,
+            url: node.frontmatter.slug,
             title: node.frontmatter.title,
             // content: node.rawMarkdownBody.replace(/(\\r\\n)*|(\((.*?)\))|(\#*|\**)/g, ``)
             content: node.rawMarkdownBody
@@ -286,7 +293,6 @@ export default {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-catch-links",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-optimize-svgs",
     "gatsby-plugin-sass",
     {

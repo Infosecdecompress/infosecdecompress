@@ -112,7 +112,8 @@ class Search extends Component {
               }}
             >
               <tbody>
-                {queryResults.map((item) => (
+                {queryResults &&
+                  queryResults.map((item) => (
                   <tr key={`row_${item.id}`}>
                     <td
                       style={{

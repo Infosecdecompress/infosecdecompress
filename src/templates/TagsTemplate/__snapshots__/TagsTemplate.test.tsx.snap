@@ -8,15 +8,17 @@ exports[`TagsTemplate renders correctly 1`] = `
         <a
           href="/"
         />
-        <h2>
-          <a
-            href="/"
-          >
-            John Doe
-          </a>
-        </h2>
+        <div>
+          <h2>
+            <a
+              href="/"
+            >
+              John Doe
+            </a>
+          </h2>
+        </div>
         <p>
-          Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.
+          InfosecDecompress.
         </p>
       </div>
       <nav>
@@ -140,14 +142,14 @@ exports[`TagsTemplate renders correctly 1`] = `
       </div>
       <div
         style={
-          Object {
+          {
             "margin": "5px auto",
           }
         }
       >
         <div
           style={
-            Object {
+            {
               "margin": "0 auto",
             }
           }
@@ -157,7 +159,7 @@ exports[`TagsTemplate renders correctly 1`] = `
           >
             <div
               style={
-                Object {
+                {
                   "margin": "0 auto",
                 }
               }
@@ -167,7 +169,7 @@ exports[`TagsTemplate renders correctly 1`] = `
                 onChange={[Function]}
                 placeholder="搜尋文章"
                 style={
-                  Object {
+                  {
                     "border": "1px solid #ccc",
                     "borderRadius": "4px",
                     "boxSizing": "border-box",
@@ -185,7 +187,7 @@ exports[`TagsTemplate renders correctly 1`] = `
             <table
               id="result"
               style={
-                Object {
+                {
                   "border": "1px solid #ccc",
                   "borderCollapse": "collapse",
                   "borderRadius": "4px",

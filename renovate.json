@@ -1,5 +1,12 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:base",
+    ":automergePatch",
+    ":automergeBranch",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":automergeTypes"
+  ],
   "packageRules": [
     {
       "packagePatterns": ["^stylelint"],
@@ -16,18 +23,11 @@
     {
       "packageNames": ["react", "react-dom", "react-test-renderer"],
       "groupName": "react"
-    },
-    {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": true
     }
   ],
   "labels": ["renovate"],
+  "prHourlyLimit": 4,
+  "prConcurrentLimit": 16,
   "rangeStrategy": "bump",
-  "semanticCommits": "enabled",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true
-  }
+  "semanticCommits": "enabled"
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { Image } from "@/components/Image";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 import * as styles from "./Author.module.scss";
 
@@ -21,19 +22,22 @@ const Author = ({ author, isIndex }: Props) => (
       <Image alt={author.name} path={author.photo} className={styles.photo} />
     </Link>
 
-    {isIndex ? (
-      <h1 className={styles.title}>
-        <Link className={styles.link} to="/">
-          {author.name}
-        </Link>
-      </h1>
-    ) : (
-      <h2 className={styles.title}>
-        <Link className={styles.link} to="/">
-          {author.name}
-        </Link>
-      </h2>
-    )}
+    <div className={styles.titleContainer}>
+      {isIndex ? (
+        <h1 className={styles.title}>
+          <Link className={styles.link} to="/">
+            {author.name}
+          </Link>
+        </h1>
+      ) : (
+        <h2 className={styles.title}>
+          <Link className={styles.link} to="/">
+            {author.name}
+          </Link>
+        </h2>
+      )}
+      <ThemeSwitcher />
+    </div>
     <p className={styles.subtitle}>{author.bio}</p>
   </div>
 );
