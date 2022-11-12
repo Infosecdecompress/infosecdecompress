@@ -111,8 +111,8 @@ export default {
               edges {
                 node {
                   rawMarkdownBody
-                  fields { slug }
                   frontmatter {
+                    slug
                     title
                   }
                 }
@@ -122,8 +122,8 @@ export default {
         `,
         serializeFeed: (results) =>
           results.data.allMarkdownRemark.edges.map(({ node }) => ({
-            id: node.fields.slug,
-            url: node.fields.slug,
+            id: node.frontmatter.slug,
+            url: node.frontmatter.slug,
             title: node.frontmatter.title,
             // content: node.rawMarkdownBody.replace(/(\\r\\n)*|(\((.*?)\))|(\#*|\**)/g, ``)
             content: node.rawMarkdownBody
