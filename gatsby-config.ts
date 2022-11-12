@@ -68,6 +68,11 @@ export default {
               })),
             query: `
               {
+                site {
+                  siteMetadata {
+                    url
+                  }
+                }
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] },
@@ -76,11 +81,9 @@ export default {
                   edges {
                     node {
                       html
-                      fields {
-                        slug
-                      }
                       frontmatter {
                         title
+                        slug
                         date
                         template
                         draft
