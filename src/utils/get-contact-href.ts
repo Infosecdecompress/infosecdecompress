@@ -1,6 +1,8 @@
+import { btoa } from "abab";
+
 const getContactHref = (name: string, contact: string) => {
   const hrefs: { [key: string]: string } = {
-    email: window.btoa(contact),
+    email: btoa(contact) || "",
     line: `line://ti/p/${contact}`,
     telegram: `https://t.me/${contact}`,
     vkontakte: `https://vk.com/${contact}`,
