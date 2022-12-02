@@ -1,5 +1,7 @@
 import React from "react";
 
+import { atob } from "abab";
+
 import { Icon } from "@/components/Icon";
 import { ICONS } from "@/constants";
 import { Dictionary } from "@/types";
@@ -22,8 +24,7 @@ const Contacts: React.FC<Props> = ({ contacts }: Props) => (
                 className={styles.link}
                 onClick={() => {
                   window.location.href =
-                    "mailto:" +
-                    window.atob(getContactHref(name, contacts[name]));
+                    "mailto:" + atob(getContactHref(name, contacts[name]));
                 }}
               >
                 <Icon name={name} icon={getIcon(name)} />
