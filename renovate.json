@@ -7,22 +7,32 @@
     ":automergeTesters",
     ":automergeTypes"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "automergeType": "pr",
+    "platformAutomerge": true
+  },
   "packageRules": [
     {
       "packagePatterns": ["^stylelint"],
-      "groupName": "stylelint"
+      "groupName": "stylelint",
+      "automerge": true
     },
     {
       "packagePatterns": ["^eslint"],
-      "groupName": "eslint"
+      "groupName": "eslint",
+      "automerge": true
     },
     {
       "packagePatterns": ["gatsby"],
-      "groupName": "gatsby"
+      "groupName": "gatsby",
+      "automerge": true
     },
     {
       "packageNames": ["react", "react-dom", "react-test-renderer"],
-      "groupName": "react"
+      "groupName": "react",
+      "automerge": true
     }
   ],
   "labels": ["renovate"],
