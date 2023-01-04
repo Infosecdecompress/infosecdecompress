@@ -13,28 +13,6 @@
     "automergeType": "pr",
     "platformAutomerge": true
   },
-  "packageRules": [
-    {
-      "packagePatterns": ["^stylelint"],
-      "groupName": "stylelint",
-      "automerge": true
-    },
-    {
-      "packagePatterns": ["^eslint"],
-      "groupName": "eslint",
-      "automerge": true
-    },
-    {
-      "packagePatterns": ["gatsby"],
-      "groupName": "gatsby",
-      "automerge": true
-    },
-    {
-      "packageNames": ["react", "react-dom", "react-test-renderer"],
-      "groupName": "react",
-      "automerge": true
-    }
-  ],
   "labels": ["renovate"],
   "prHourlyLimit": 4,
   "prConcurrentLimit": 16,
