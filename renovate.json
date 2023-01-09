@@ -1,21 +1,18 @@
 {
-  "extends": [
-    "config:base",
-    ":automergePatch",
-    ":automergeBranch",
-    ":automergeLinters",
-    ":automergeTesters",
-    ":automergeTypes"
-  ],
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
     "automergeType": "pr",
     "platformAutomerge": true
   },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    }
+  ],
   "labels": ["renovate"],
-  "prHourlyLimit": 4,
-  "prConcurrentLimit": 16,
   "rangeStrategy": "bump",
   "semanticCommits": "enabled"
 }
