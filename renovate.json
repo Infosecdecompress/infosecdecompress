@@ -7,8 +7,12 @@
   },
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch","pin","digest"],
       "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
       "automerge": true
     }
   ],
@@ -16,5 +20,6 @@
   "rangeStrategy": "bump",
   "prHourlyLimit": 10,
   "prConcurrentLimit": 20,
-  "semanticCommits": "enabled"
+  "semanticCommits": "enabled",
+  "platformAutomerge": true
 }
