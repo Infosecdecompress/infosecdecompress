@@ -72,7 +72,7 @@
     "gatsby-plugin-sass": "^5.25.0",
     "gatsby-plugin-security-txt": "^1.2.0",
     "gatsby-plugin-sharp": "^4.25.0",
-    "gatsby-plugin-sitemap": "^5.25.0",
+    "gatsby-plugin-sitemap": "^6.4.0",
     "gatsby-plugin-sri": "^1.1.0",
     "gatsby-remark-autolink-headers": "^5.25.0",
     "gatsby-remark-copy-linked-files": "^5.25.0",
