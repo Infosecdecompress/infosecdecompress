@@ -63,7 +63,7 @@
     "gatsby-plugin-catch-links": "^4.25.0",
     "gatsby-plugin-csp": "^1.1.4",
     "gatsby-plugin-feed": "^4.25.0",
-    "gatsby-plugin-google-gtag": "^4.25.0",
+    "gatsby-plugin-google-gtag": "^5.4.0",
     "gatsby-plugin-image": "^2.25.0",
     "gatsby-plugin-json-output": "^1.2.0",
     "gatsby-plugin-manifest": "^4.25.0",
