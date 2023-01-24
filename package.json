@@ -60,7 +60,7 @@
     "disqus-react": "^1.1.5",
     "gatsby": "^4.25.2",
     "gatsby-link": "^4.25.0",
-    "gatsby-plugin-catch-links": "^4.25.0",
+    "gatsby-plugin-catch-links": "^5.4.0",
     "gatsby-plugin-csp": "^1.1.4",
     "gatsby-plugin-feed": "^4.25.0",
     "gatsby-plugin-google-gtag": "^4.25.0",
