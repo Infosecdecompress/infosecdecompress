@@ -51,6 +51,15 @@ jobs:
           paths:
             - coverage
 
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run build
+
   codecov:
     <<: *defaults
     steps:
@@ -80,3 +89,6 @@ workflows:
       - codecov:
           requires:
             - coverage
+      - build:
+          requires:
+            - install
