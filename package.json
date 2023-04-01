@@ -136,7 +136,7 @@
     "react-test-renderer": "^18.2.0",
     "rimraf": "4.4.1",
     "sass": "^1.60.0",
-    "semantic-release": "^21.0.0",
+    "semantic-release": "^21.0.1",
     "source-map-support": "^0.5.21",
     "stylelint": "^15.4.0",
     "stylelint-config-recommended-scss": "^9.0.1",
