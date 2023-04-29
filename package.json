@@ -141,7 +141,7 @@
     "stylelint": "^15.6.0",
     "stylelint-config-recommended-scss": "^11.0.0",
     "stylelint-order": "^6.0.3",
-    "stylelint-scss": "^4.6.0",
+    "stylelint-scss": "^4.7.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
