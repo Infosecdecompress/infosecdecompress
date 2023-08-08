@@ -21,7 +21,7 @@
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
     "format:ts": "eslint \"src\" --ext .tsx,.ts --fix && prettier --write .",
     "lint": "npm run lint:ts && npm run lint:scss",
-    "lint:commit": "commitlint --edit",
+    "lint:commit": "commitlint",
     "lint:scss": "stylelint \"src/**/*.scss\"",
     "lint:staged": "lint-staged",
     "lint:ts": "eslint \"src\" --ext .tsx,.ts && prettier --check .",
@@ -30,7 +30,6 @@
     "serve": "gatsby serve",
     "start": "npm run clean && gatsby develop",
     "test": "jest --config ./internal/testing/jest-config.ts",
-    "test:coverage": "jest --coverage --config ./internal/testing/jest-config.ts",
     "test:update-snapshot": "jest --updateSnapshot --config ./internal/testing/jest-config.ts",
     "test:watch": "jest --watch --config ./internal/testing/jest-config.ts"
   },
@@ -40,10 +39,10 @@
     ]
   },
   "lint-staged": {
-    "*.{tsx?}": [
+    "*.tsx?": [
       "npm run format:ts"
     ],
-    "*.{(sc|sa|c)ss}": [
+    "*.(sc|sa|c)ss": [
       "npm run format:scss"
     ]
   },
@@ -92,7 +91,7 @@
     "@swc/jest": "^0.2.28",
     "@testing-library/dom": "^8.20.1",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^13.4.0",
     "@types/gatsby-transformer-remark": "^2.9.1",
     "@types/jest": "^29.5.3",
     "@types/node": "^18.17.3",
