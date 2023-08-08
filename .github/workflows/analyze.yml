@@ -36,7 +36,7 @@ jobs:
         id: npm-modules-cache
         uses: actions/cache/save@v3
         with:
-          path: ~/node_modules
+          path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
   commits:
@@ -58,7 +58,7 @@ jobs:
         id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/node_modules
+          path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install modules
@@ -87,7 +87,7 @@ jobs:
         id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/node_modules
+          path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install modules
@@ -116,7 +116,7 @@ jobs:
         id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/node_modules
+          path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install modules
@@ -155,7 +155,7 @@ jobs:
         id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/node_modules
+          path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install modules
