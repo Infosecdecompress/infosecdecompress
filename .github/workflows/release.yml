@@ -31,7 +31,7 @@ jobs:
 
       - name: Install modules
         if: steps.npm-modules-cache.outputs.cache-hit != 'true'
-        run: npm ci --ignore-scripts
+        run: npm ci
 
       - name: Cache modules
         id: npm-modules-cache
