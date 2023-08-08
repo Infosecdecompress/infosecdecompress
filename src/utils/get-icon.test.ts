@@ -1,5 +1,6 @@
 import { ICONS } from "@/constants";
-import { getIcon } from "@/utils";
+
+import getIcon from "./get-icon";
 
 describe("getIcon", () => {
   test("successful return icon", () => {
