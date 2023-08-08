@@ -20,14 +20,23 @@ jobs:
         with:
           node-version: 18.12.1
 
-      - name: Cache dependencies
+      - name: Cache npm
         uses: actions/cache/save@v3
+        id: npm-cache
         with:
           path: ~/.npm
-          key: npm-${{hashFiles('package-lock.json')}}
-          restore-keys: npm-
+          key: npm-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: npm-${{ runner.os }}-
 
-      - name: Install dependencies
+      - name: Cache modules
+        id: npm-modules-cache
+        uses: actions/cache/save@v3
+        with:
+          path: ~/node_modules
+          key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install modules
+        if: steps.npm-modules-cache.outputs.cache-hit != 'true'
         run: npm ci
 
   commits:
@@ -45,12 +54,16 @@ jobs:
         with:
           node-version: 18.12.1
 
-      - name: Restore dependencies
+      - name: Restore modules
+        id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/.npm
-          key: npm-${{hashFiles('package-lock.json')}}
-          restore-keys: npm-
+          path: ~/node_modules
+          key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install modules
+        if: steps.npm-modules-cache.outputs.cache-hit != 'true'
+        run: npm ci
 
       - name: Validate commits
         run: npm run lint:commit -- --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
@@ -70,12 +83,16 @@ jobs:
         with:
           node-version: 18.12.1
 
-      - name: Restore dependencies
+      - name: Restore modules
+        id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/.npm
-          key: npm-${{hashFiles('package-lock.json')}}
-          restore-keys: npm-
+          path: ~/node_modules
+          key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install modules
+        if: steps.npm-modules-cache.outputs.cache-hit != 'true'
+        run: npm ci
 
       - name: Run build
         run: npm run build
@@ -95,12 +112,16 @@ jobs:
         with:
           node-version: 18.12.1
 
-      - name: Restore dependencies
+      - name: Restore modules
+        id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/.npm
-          key: npm-${{hashFiles('package-lock.json')}}
-          restore-keys: npm-
+          path: ~/node_modules
+          key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install modules
+        if: steps.npm-modules-cache.outputs.cache-hit != 'true'
+        run: npm ci
 
       - name: Run linting
         run: npm run lint
@@ -108,12 +129,12 @@ jobs:
       - name: Run tests
         run: npm run test -- --coverage --runInBand --no-cache
 
-      - name: Cache coverage report
+      - name: Cache coverage
+        id: coverage-cache
         uses: actions/cache/save@v3
         with:
           path: coverage
-          key: coverage-${{ github.sha }}
-          restore-keys: coverage-
+          key: coverage-${{ runner.os }}-${{hashFiles('coverage/lcov.info')}}
 
   coverage:
     name: Coverage
@@ -130,19 +151,24 @@ jobs:
         with:
           node-version: 18.12.1
 
-      - name: Restore dependencies
+      - name: Restore modules
+        id: npm-modules-cache
         uses: actions/cache/restore@v3
         with:
-          path: ~/.npm
-          key: npm-${{hashFiles('package-lock.json')}}
-          restore-keys: npm-
+          path: ~/node_modules
+          key: npm-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Restore coverage report
+      - name: Install modules
+        if: steps.npm-modules-cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Restore coverage
+        id: coverage-cache
         uses: actions/cache/restore@v3
         with:
           path: coverage
-          key: coverage-${{ github.sha }}
-          restore-keys: coverage-
+          key: coverage-${{ runner.os }}-${{hashFiles('coverage/lcov.info')}}
+          restore-keys: coverage-${{ runner.os }}-
 
       - name: Send coverage report
         run: npx codecov
