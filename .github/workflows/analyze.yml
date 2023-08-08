@@ -37,13 +37,10 @@ jobs:
         run: npm run lint
 
       - name: Run tests
-        run: npm run test -- --runInBand --no-cache
+        run: npm run test -- --coverage --runInBand --no-cache
 
       - name: Run build
         run: npm run build
-
-      - name: Run coverage
-        run: npm run test:coverage -- --runInBand --no-cache
 
       - name: Run codecov
         run: npx codecov
