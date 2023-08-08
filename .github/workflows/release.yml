@@ -21,15 +21,25 @@ jobs:
         with:
           node-version: 18
 
-      - name: Cache dependencies
+      - name: Cache npm
         uses: actions/cache@v3
+        id: npm-cache
         with:
           path: ~/.npm
-          key: npm-${{hashFiles('package-lock.json')}}
-          restore-keys: npm-
+          key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-${{ runner.os }}-
 
-      - name: Install dependencies
+      - name: Install modules
+        if: steps.npm-modules-cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
+
+      - name: Cache modules
+        id: npm-modules-cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-modules-${{ runner.os }}-
 
       - name: Release
         env:
