@@ -1,6 +1,6 @@
 import React from "react";
 
-import { createSnapshotsRenderer } from "./render-with-coil-provider";
+import { createSnapshotsRenderer } from "@/utils/test-utils";
 
 describe("createSnapshotsRenderer", () => {
   test("renders correctly", () => {

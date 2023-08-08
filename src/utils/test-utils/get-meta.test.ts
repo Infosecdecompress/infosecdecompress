@@ -1,4 +1,4 @@
-import getMeta from "./get-meta";
+import { getMeta } from "@/utils/test-utils";
 
 describe("testUtils.getMeta", () => {
   test("successful getting value by key", () => {
