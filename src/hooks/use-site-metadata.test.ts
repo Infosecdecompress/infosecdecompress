@@ -1,9 +1,8 @@
 import { renderHook } from "@testing-library/react";
 import { StaticQuery, useStaticQuery } from "gatsby";
 
+import { useSiteMetadata } from "@/hooks";
 import * as mocks from "@/mocks";
-
-import useSiteMetadata from "./use-site-metadata";
 
 const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;

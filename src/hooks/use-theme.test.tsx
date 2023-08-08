@@ -3,7 +3,7 @@ import React from "react";
 import { CoilProvider } from "@alxshelepenok/diesel";
 import { act, renderHook } from "@testing-library/react";
 
-import useTheme from "./use-theme";
+import { useTheme } from "@/hooks";
 
 describe("useTheme", () => {
   const wrapper = ({ children }: { children: React.ReactNode }) => (

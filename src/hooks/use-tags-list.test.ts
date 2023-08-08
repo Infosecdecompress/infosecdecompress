@@ -1,9 +1,8 @@
 import { renderHook } from "@testing-library/react";
 import { StaticQuery, useStaticQuery } from "gatsby";
 
+import { useTagsList } from "@/hooks";
 import * as mocks from "@/mocks";
-
-import useTagsList from "./use-tags-list";
 
 const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
