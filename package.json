@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-lumen",
-  "version": "1.4.939",
+  "version": "1.4.940",
   "description": "A constantly evolving and thoughtful architecture for creating static blogs with Gatsby",
   "keywords": [
     "gatsby",
@@ -91,7 +91,7 @@
     "@swc/jest": "^0.2.28",
     "@testing-library/dom": "^8.20.1",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^14.0.0",
     "@types/gatsby-transformer-remark": "^2.9.1",
     "@types/jest": "^29.5.3",
     "@types/node": "^18.17.3",
@@ -130,7 +130,7 @@
     "lost": "9.0.1",
     "postcss": "^8.4.27",
     "postcss-scss": "^4.0.6",
-    "prettier": "^3.0.1",
+    "prettier": "^2.8.8",
     "prettier-plugin-packagejson": "^2.4.5",
     "react-test-renderer": "^18.2.0",
     "rimraf": "5.0.1",
