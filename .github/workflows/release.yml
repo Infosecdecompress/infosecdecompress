@@ -27,7 +27,9 @@ jobs:
         with:
           path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-${{ runner.os }}-
+          restore-keys:
+            npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+            npm-${{ runner.os }}-
 
       - name: Install modules
         if: steps.npm-modules-cache.outputs.cache-hit != 'true'
@@ -39,7 +41,8 @@ jobs:
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-modules-${{ runner.os }}-
+            npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+            npm-modules-${{ runner.os }}-
 
       - name: Release
         env:
