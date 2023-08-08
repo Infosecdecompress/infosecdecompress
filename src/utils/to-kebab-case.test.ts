@@ -1,4 +1,4 @@
-import { toKebabCase } from "@/utils";
+import toKebabCase from "./to-kebab-case";
 
 describe("toKebabCase", () => {
   test("successful conversion to kebab case", () => {
