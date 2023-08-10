@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@alxshelepenok/diesel": "^1.0.1013",
-    "@alxshelepenok/diesel-extensions": "^1.0.923",
+    "@alxshelepenok/diesel-extensions": "^1.0.925",
     "@sentry/gatsby": "^7.61.1",
     "@sentry/react": "^7.61.1",
     "@sentry/tracing": "^7.61.1",
