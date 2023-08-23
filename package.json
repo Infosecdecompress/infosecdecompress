@@ -100,7 +100,7 @@
     "@testing-library/jest-dom": "^6.0.1",
     "@testing-library/react": "^13.4.0",
     "@types/gatsby-transformer-remark": "^2.9.1",
-    "@types/jest": "^29.5.3",
+    "@types/jest": "^29.5.4",
     "@types/js-search": "^1.4.0",
     "@types/node": "^20.5.2",
     "@types/react": "^18.2.20",
