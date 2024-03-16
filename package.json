@@ -55,7 +55,7 @@
     "@sentry/gatsby": "^7.107.0",
     "@sentry/react": "^7.107.0",
     "@sentry/tracing": "^7.107.0",
-    "axios": "^1.6.7",
+    "axios": "^1.6.8",
     "classnames": "^2.5.1",
     "disqus-react": "^1.1.5",
     "gatsby": "^4.25.8",
