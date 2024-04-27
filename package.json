@@ -87,7 +87,7 @@
     "js-search": "^2.0.1",
     "prismjs": "^1.29.0",
     "react": "^18.3.1",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@alxshelepenok/eslint-config": "^1.0.446",
@@ -104,7 +104,7 @@
     "@types/js-search": "^1.4.4",
     "@types/node": "^20.8.7",
     "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.2.25",
+    "@types/react-dom": "^18.3.0",
     "@types/react-test-renderer": "^18.0.7",
     "@types/sass": "^1.45.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
