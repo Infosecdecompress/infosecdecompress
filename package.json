@@ -94,7 +94,7 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@jest/globals": "^29.7.0",
-    "@swc/core": "^1.7.40",
+    "@swc/core": "^1.7.42",
     "@swc/jest": "^0.2.37",
     "@testing-library/dom": "^8.20.1",
     "@testing-library/jest-dom": "^6.6.2",
