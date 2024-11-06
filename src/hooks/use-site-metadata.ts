@@ -28,23 +28,22 @@ const useSiteMetadata = () => {
                 github
                 soundcloud
               }
-            }
-            menu {
-              path
-              label
-            }
-            url
-            title
-            subtitle
-            copyright
-            disqusShortname
           }
+          menu {
+            path
+            label
+          }
+          url
+          title
+          subtitle
+          copyright
+          disqusShortname
         }
       }
-    `,
-  );
+    }
+  `);
 
-  return site.siteMetadata;
+  return site?.siteMetadata || {};
 };
 
 export default useSiteMetadata;

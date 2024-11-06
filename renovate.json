@@ -14,6 +14,23 @@
     {
       "matchDepTypes": ["devDependencies"],
       "automerge": true
+    },
+    {
+      "packagePatterns": ["^eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "packagePatterns": ["gatsby"],
+      "groupName": "gatsby"
+    },
+    {
+      "packageNames": ["react", "react-dom", "react-test-renderer"],
+      "groupName": "react"
+    },
+    {
+      "groupName": "node",
+      "matchPackageNames": ["node"],
+      "enabled": false
     }
   ],
   "labels": ["renovate"],
