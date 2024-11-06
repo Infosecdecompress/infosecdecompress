@@ -17,7 +17,7 @@ const useTagsList = () => {
           frontmatter: { template: { eq: "post" }, draft: { ne: true } }
         }
       ) {
-        group(field: frontmatter___tags) {
+        group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
           totalCount
         }
