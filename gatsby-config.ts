@@ -300,18 +300,17 @@ export default {
         directives: {
           "default-src": "'self'",
           "script-src":
-            "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com",
+            "'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com",
           "style-src":
             "'self' blob: 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com c.disquscdn.com",
-          "img-src":
-            "'self' www.google-analytics.com stats.g.doubleclick.net disqus.com",
-          "font-src": "'self' fonts.gstatic.com fonts.googleapis.com",
+          "img-src": "'self' disqus.com",
+          "font-src": "'self' fonts.googleapis.com",
           "object-src": "'self' blob:",
           "manifest-src": "'self'",
           "prefetch-src":
             "'self' blob: disqus.com disquscdn.com c.disquscdn.com www.googletagmanager.com",
           "connect-src":
-            "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net o1129413.ingest.sentry.io",
+            "'self' blob: data: wss://infosecdecompress.com o1129413.ingest.sentry.io",
           "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com",
           "report-uri":
             "https://o1129413.ingest.sentry.io/api/6196807/security/?sentry_key=e813e5e7c9304c2ba68e33f9eb206dca",
