@@ -313,7 +313,8 @@ export default {
           "connect-src":
             "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net o1129413.ingest.sentry.io",
           "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com",
-          "report-uri": "https://o1129413.ingest.sentry.io/api/6196807/security/?sentry_key=e813e5e7c9304c2ba68e33f9eb206dca"
+          "report-uri":
+            "https://o1129413.ingest.sentry.io/api/6196807/security/?sentry_key=e813e5e7c9304c2ba68e33f9eb206dca",
         },
       },
     },

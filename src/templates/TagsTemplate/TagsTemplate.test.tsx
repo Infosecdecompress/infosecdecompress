@@ -31,18 +31,12 @@ describe("TagsTemplate", () => {
     reactTestingLibraryRender(<GatsbyHead />);
 
     expect(testUtils.getMeta("twitter:card")).toEqual("summary_large_image");
-    expect(testUtils.getMeta("twitter:title")).toEqual(
-      "Tags - 資安解壓縮",
-    );
+    expect(testUtils.getMeta("twitter:title")).toEqual("Tags - 資安解壓縮");
     expect(testUtils.getMeta("og:title")).toEqual("Tags - 資安解壓縮");
-    expect(testUtils.getMeta("description")).toEqual(
-      "InfosecDecompress.",
-    );
+    expect(testUtils.getMeta("description")).toEqual("InfosecDecompress.");
     expect(testUtils.getMeta("twitter:description")).toEqual(
       "InfosecDecompress.",
     );
-    expect(testUtils.getMeta("og:description")).toEqual(
-      "InfosecDecompress.",
-    );
+    expect(testUtils.getMeta("og:description")).toEqual("InfosecDecompress.");
   });
 });

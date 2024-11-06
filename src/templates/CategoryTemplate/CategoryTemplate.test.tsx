@@ -46,11 +46,7 @@ describe("CategoryTemplate", () => {
     expect(testUtils.getMeta("twitter:description")).toEqual(
       "InfosecDecompress.",
     );
-    expect(testUtils.getMeta("description")).toEqual(
-      "InfosecDecompress.",
-    );
-    expect(testUtils.getMeta("og:description")).toEqual(
-      "InfosecDecompress.",
-    );
+    expect(testUtils.getMeta("description")).toEqual("InfosecDecompress.");
+    expect(testUtils.getMeta("og:description")).toEqual("InfosecDecompress.");
   });
 });
