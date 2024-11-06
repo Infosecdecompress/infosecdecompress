@@ -35,15 +35,9 @@ describe("CategoriesTemplate", () => {
     expect(testUtils.getMeta("twitter:title")).toEqual(
       "Categories - 資安解壓縮",
     );
-    expect(testUtils.getMeta("og:title")).toEqual(
-      "Categories - 資安解壓縮",
-    );
-    expect(testUtils.getMeta("description")).toEqual(
-      "InfosecDecompress.",
-    );
-    expect(testUtils.getMeta("og:description")).toEqual(
-      "InfosecDecompress.",
-    );
+    expect(testUtils.getMeta("og:title")).toEqual("Categories - 資安解壓縮");
+    expect(testUtils.getMeta("description")).toEqual("InfosecDecompress.");
+    expect(testUtils.getMeta("og:description")).toEqual("InfosecDecompress.");
     expect(testUtils.getMeta("twitter:description")).toEqual(
       "InfosecDecompress.",
     );

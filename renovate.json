@@ -7,13 +7,30 @@
   },
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch","pin","digest"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     },
     {
       "matchDepTypes": ["devDependencies"],
       "automerge": true
+    },
+    {
+      "packagePatterns": ["^eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "packagePatterns": ["gatsby"],
+      "groupName": "gatsby"
+    },
+    {
+      "packageNames": ["react", "react-dom", "react-test-renderer"],
+      "groupName": "react"
+    },
+    {
+      "groupName": "node",
+      "matchPackageNames": ["node"],
+      "enabled": false
     }
   ],
   "labels": ["renovate"],

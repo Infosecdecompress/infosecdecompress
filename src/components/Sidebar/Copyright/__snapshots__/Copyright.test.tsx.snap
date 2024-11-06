@@ -5,3 +5,5 @@ exports[`Copyright renders correctly 1`] = `
   Content is licensed under CC BY-SA 4.0
 </div>
 `;
+
+exports[`Copyright renders correctly with empty string 1`] = `<div />`;

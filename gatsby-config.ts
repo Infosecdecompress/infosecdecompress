@@ -74,9 +74,9 @@ export default {
                   }
                 }
                 allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+                  limit: 1000
+                  sort: {frontmatter: {date: DESC}}
+                  filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
                 ) {
                   edges {
                     node {
@@ -107,10 +107,10 @@ export default {
         graphQLQuery: `
           {
             allMarkdownRemark(
-              limit: 1000,
-              sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-              ) {
+              limit: 1000
+              sort: {frontmatter: {date: DESC}}
+              filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
+            ) {
               edges {
                 node {
                   rawMarkdownBody
@@ -162,15 +162,6 @@ export default {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: [config.googleAnalyticsId],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
@@ -309,7 +300,7 @@ export default {
         directives: {
           "default-src": "'self'",
           "script-src":
-            "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com",
+            "'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com",
           "style-src":
             "'self' blob: 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com c.disquscdn.com",
           "img-src": "'self' disqus.com",
@@ -317,9 +308,10 @@ export default {
           "object-src": "'self' blob:",
           "manifest-src": "'self'",
           "connect-src":
-            "'self' blob: data: wss://infosecdecompress.com www.google-analytics.com stats.g.doubleclick.net o1129413.ingest.sentry.io",
+            "'self' blob: data: wss://infosecdecompress.com o1129413.ingest.sentry.io",
           "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com",
-          "report-uri": "https://o1129413.ingest.sentry.io/api/6196807/security/?sentry_key=e813e5e7c9304c2ba68e33f9eb206dca"
+          "report-uri":
+            "https://o1129413.ingest.sentry.io/api/6196807/security/?sentry_key=e813e5e7c9304c2ba68e33f9eb206dca",
         },
       },
     },

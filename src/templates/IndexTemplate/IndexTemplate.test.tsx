@@ -43,14 +43,10 @@ describe("IndexTemplate", () => {
     expect(testUtils.getMeta("og:title")).toEqual(
       "Posts - Page 2 - 資安解壓縮",
     );
-    expect(testUtils.getMeta("description")).toEqual(
-      "InfosecDecompress.",
-    );
+    expect(testUtils.getMeta("description")).toEqual("InfosecDecompress.");
     expect(testUtils.getMeta("twitter:description")).toEqual(
       "InfosecDecompress.",
     );
-    expect(testUtils.getMeta("og:description")).toEqual(
-      "InfosecDecompress.",
-    );
+    expect(testUtils.getMeta("og:description")).toEqual("InfosecDecompress.");
   });
 });
