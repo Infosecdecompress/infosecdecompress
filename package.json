@@ -143,7 +143,7 @@
     "prettier-plugin-packagejson": "^2.5.3",
     "react-test-renderer": "^18.3.1",
     "rimraf": "6.0.1",
-    "sass": "^1.80.6",
+    "sass": "^1.80.7",
     "source-map-support": "^0.5.21",
     "stylelint": "^16.10.0",
     "stylelint-config-recommended-scss": "^14.1.0",
