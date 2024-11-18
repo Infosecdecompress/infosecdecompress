@@ -54,7 +54,7 @@
     "@alxshelepenok/diesel-extensions": "^1.0.1240",
     "@sentry/gatsby": "^8.38.0",
     "@sentry/react": "^8.38.0",
-    "@sentry/tracing": "^7.114.0",
+    "@sentry/tracing": "^7.119.2",
     "abab": "^2.0.6",
     "axios": "^1.7.7",
     "classnames": "^2.5.1",
