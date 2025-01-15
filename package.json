@@ -53,7 +53,7 @@
     "@alxshelepenok/diesel": "^1.0.1364",
     "@alxshelepenok/diesel-extensions": "^1.0.1240",
     "@sentry/gatsby": "^8.49.0",
-    "@sentry/react": "^8.48.0",
+    "@sentry/react": "^8.49.0",
     "@sentry/tracing": "^7.120.3",
     "abab": "^2.0.6",
     "axios": "^1.7.9",
