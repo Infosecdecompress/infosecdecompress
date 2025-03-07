@@ -91,7 +91,7 @@
   },
   "devDependencies": {
     "@alxshelepenok/eslint-config": "^1.0.552",
-    "@commitlint/cli": "^19.7.1",
+    "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.7.1",
     "@jest/globals": "^29.7.0",
     "@swc/core": "^1.11.7",
