@@ -103,7 +103,7 @@
     "@types/jest": "^29.5.14",
     "@types/js-search": "^1.4.4",
     "@types/node": "^22.14.0",
-    "@types/react": "^19.1.0",
+    "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.2",
     "@types/react-test-renderer": "^19.1.0",
     "@types/sass": "^1.45.0",
