@@ -147,7 +147,7 @@
     "source-map-support": "^0.5.21",
     "stylelint": "^16.18.0",
     "stylelint-config-recommended-scss": "^14.1.0",
-    "stylelint-order": "^6.0.4",
+    "stylelint-order": "^7.0.0",
     "stylelint-scss": "^6.11.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
