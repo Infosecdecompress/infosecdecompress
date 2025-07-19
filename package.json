@@ -107,7 +107,7 @@
     "@types/react-dom": "^19.1.6",
     "@types/react-test-renderer": "^19.1.0",
     "@types/sass": "^1.45.0",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
     "@typescript-eslint/parser": "^6.21.0",
     "autoprefixer": "^10.4.21",
     "browserslist": "^4.25.1",
