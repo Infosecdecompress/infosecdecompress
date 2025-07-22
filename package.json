@@ -93,7 +93,7 @@
     "@alxshelepenok/eslint-config": "^1.0.587",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@jest/globals": "^30.0.4",
+    "@jest/globals": "^30.0.5",
     "@swc/core": "^1.13.1",
     "@swc/jest": "^0.2.39",
     "@testing-library/dom": "^10.4.0",
