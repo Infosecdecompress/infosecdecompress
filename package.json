@@ -150,7 +150,7 @@
     "stylelint-order": "^7.0.0",
     "stylelint-scss": "^6.12.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=20"
