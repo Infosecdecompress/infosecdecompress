@@ -59,7 +59,7 @@
     "axios": "^1.13.5",
     "classnames": "^2.5.1",
     "disqus-react": "^1.1.7",
-    "gatsby": "^5.16.0",
+    "gatsby": "^5.16.1",
     "gatsby-link": "^5.16.0",
     "gatsby-plugin-catch-links": "^5.16.0",
     "gatsby-plugin-csp": "^1.1.4",
