@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
 
       - name: Cache npm
         uses: actions/cache@v5
@@ -57,7 +57,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
 
       - name: Restore modules
         id: npm-modules-cache
@@ -86,7 +86,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
 
       - name: Restore modules
         id: npm-modules-cache
@@ -115,7 +115,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
 
       - name: Restore modules
         id: npm-modules-cache
@@ -144,7 +144,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
 
       - name: Restore modules
         id: npm-modules-cache
@@ -180,7 +180,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
 
       - name: Restore modules
         id: npm-modules-cache
