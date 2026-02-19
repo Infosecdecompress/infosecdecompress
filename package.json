@@ -86,8 +86,8 @@
     "gatsby-transformer-sharp": "^5.16.0",
     "js-search": "^2.0.1",
     "prismjs": "^1.30.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@alxshelepenok/eslint-config": "^1.0.600",
@@ -141,7 +141,7 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.8.1",
     "prettier-plugin-packagejson": "^3.0.0",
-    "react-test-renderer": "^18.3.1",
+    "react-test-renderer": "^19.2.4",
     "rimraf": "6.1.3",
     "sass": "^1.97.3",
     "source-map-support": "^0.5.21",
