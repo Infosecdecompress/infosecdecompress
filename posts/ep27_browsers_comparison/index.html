@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta http-equiv="Content-Security-Policy" content="base-uri &#x27;self&#x27;; default-src &#x27;self&#x27;; script-src &#x27;self&#x27; &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com; style-src &#x27;self&#x27; blob: &#x27;unsafe-inline&#x27; fonts.googleapis.com fonts.gstatic.com c.disquscdn.com; object-src &#x27;self&#x27; blob:; form-action &#x27;self&#x27;; font-src &#x27;self&#x27; fonts.gstatic.com fonts.googleapis.com; connect-src &#x27;self&#x27; blob: data: wss://infosecdecompress.com o1129413.ingest.sentry.io; img-src &#x27;self&#x27; disqus.com; manifest-src &#x27;self&#x27;; frame-src &#x27;self&#x27; www.youtube-nocookie.com disqus.com twitter.com; report-uri https://o1129413.ingest.sentry.io/api/6196807/security/?sentry_key=e813e5e7c9304c2ba68e33f9eb206dca;"/><meta name="generator" content="Gatsby 5.16.1"/><meta name="theme-color" content="#CDD9D9"/><meta name="description" content="|- IE可說是伴著我們長大，從曾經最多人使用的瀏覽器，到後來其他瀏覽器的快速竄升，再到出現在各大梗圖裡成為被嘲諷的對象，現在IE也迎來了退役的日子。 剛好藉由這個機會和大家聊聊各大瀏覽器內建的資安隱私問題，快趁著這個機會和我們一起檢視自己使用的瀏覽器，也把該打開的資安與隱私功能打開" data-gatsby-head="true"/><meta name="twitter:card" content="summary_large_image" data-gatsby-head="true"/><meta name="twitter:title" content="EP27 - 瀏覽器大戰｜你用的瀏覽器安全嗎？ - 資安解壓縮" data-gatsby-head="true"/><meta name="twitter:description" content="|- IE可說是伴著我們長大，從曾經最多人使用的瀏覽器，到後來其他瀏覽器的快速竄升，再到出現在各大梗圖裡成為被嘲諷的對象，現在IE也迎來了退役的日子。 剛好藉由這個機會和大家聊聊各大瀏覽器內建的資安隱私問題，快趁著這個機會和我們一起檢視自己使用的瀏覽器，也把該打開的資安與隱私功能打開" data-gatsby-head="true"/><meta name="og:title" content="EP27 - 瀏覽器大戰｜你用的瀏覽器安全嗎？ - 資安解壓縮" data-gatsby-head="true"/><meta name="og:type" content="website" data-gatsby-head="true"/><meta name="og:description" content="|- IE可說是伴著我們長大，從曾經最多人使用的瀏覽器，到後來其他瀏覽器的快速竄升，再到出現在各大梗圖裡成為被嘲諷的對象，現在IE也迎來了退役的日子。 剛好藉由這個機會和大家聊聊各大瀏覽器內建的資安隱私問題，快趁著這個機會和我們一起檢視自己使用的瀏覽器，也把該打開的資安與隱私功能打開" data-gatsby-head="true"/><style data-href="/styles.83ec23ee8bee7fea44ec.css" data-identity="gatsby-global-css">@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap);@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);:after,:before,:root{--color-white:#fafafa;--color-primary:#5c92ff;--color-secondary:#f7a145;--color-prism-background:#eaeaeb;--color-typographic-base-font:#242933;--color-typographic-link-p-font:#5c92ff;--color-typographic-link-s-font:#f7a145;--color-page-border:#eaeaeb;--color-page-background:#fafafa;--color-sidebar-border:#eaeaeb;--color-sidebar-border-fade:#fafafa;--color-contacts-border:#eaeaeb;--color-button-border:#eaeaeb;--color-button-color:#242933;--color-theme-switcher:#3f485a;--color-theme-switcher-hover:#5c92ff}.dark :after,.dark :before,:root.dark{--color-white:#fafafa;--color-primary:#5c92ff;--color-secondary:#f7a145;--color-prism-background:#191d24;--color-typographic-base-font:#fafafa;--color-typographic-link-p-font:#5c92ff;--color-typographic-link-s-font:#f7a145;--color-page-border:#3f485a;--color-page-background:#242933;--color-sidebar-border:#3f485a;--color-sidebar-border-fade:#242933;--color-contacts-border:#3f485a;--color-button-border:#3f485a;--color-button-color:#fafafa;--color-theme-switcher:#eaeaeb;--color-theme-switcher-hover:#5c92ff}html{font-size:100}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background:var(--color-page-background);color:var(--color-typographic-base-font);font-size:16px;line-height:1.625;margin:0 0 0 calc(100vw - 100%);text-rendering:optimizelegibility}body,h1,h2,h3,h4,h5,h6{font-family:Noto Sans,Noto Sans TC,-apple-system,sans-serif}h1,h2,h3,h4,h5,h6{font-weight:600}h1{font-size:40px;line-height:52px;margin-bottom:26px;margin-top:104px}h2{font-size:27px;line-height:39px;margin-bottom:13px}h2,h3{margin-top:52px}h3{font-size:22px;line-height:26px}h4{font-size:19.2px;margin-top:39px}h4,h5{line-height:26px;margin-bottom:13px}h5,h6{font-size:16px;margin-top:65px}h6{line-height:26px;margin-bottom:13px}img{max-width:100%}hr,img{border:0;display:block}hr{background-image:linear-gradient(180deg,transparent 1px,transparent 11px,#242933 0,#242933 15px,transparent 0,transparent 26px);background-size:100% 26px;color:var(--color-typographic-base-font);height:26px;margin:52px auto;width:100px}a{color:var(--color-typographic-link-p-font);text-decoration:none}a:active,a:focus,a:hover{color:var(--color-typographic-link-s-font)}b,strong{font-weight:600}ul{-webkit-padding-start:50px;margin-bottom:0;margin-top:0;padding-inline-start:50px}ul li{margin-bottom:5px;padding:0 5px}p{line-height:26px;margin-bottom:0;margin-top:13px}blockquote{font-style:italic;padding:0;text-align:center}figure{display:block;height:auto;width:100%}figcaption{color:var(--color-typographic-base-font);font-size:14px;font-style:italic;line-height:19.5px;margin-bottom:0;margin-top:6.5px;text-align:center}@media screen and (min-width:685px){figure.float-left,figure.float-right{max-width:310px;padding:0 26px}.float-right{float:right}.float-left{float:left}}code[class*=language-],pre[class*=language-]{word-wrap:normal;color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:var(--color-prism-background)}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#073642}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{background:#eee8d5;color:#657b83;cursor:help}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.Feed-module--feed--a6204 .Feed-module--item--c7a63{margin-bottom:32.5px}.Feed-module--feed--a6204 .Feed-module--item--c7a63:last-child{margin-bottom:13px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f{font-size:27px;line-height:39px;margin-bottom:13px;margin-top:0}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f .Feed-module--link--6123b{color:var(--color-typographic-base-font)}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f .Feed-module--link--6123b:focus,.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f .Feed-module--link--6123b:hover{border-bottom:1px solid #242933;color:var(--color-typographic-base-font)}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--description--57348{font-size:16px;line-height:26px;margin-bottom:7.8px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--time--72864{color:var(--color-typographic-base-font);font-size:14px;font-weight:600;text-transform:uppercase}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--divider--81a18{margin:0 13px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--category--59f58 .Feed-module--link--6123b{color:var(--color-secondary);font-size:14px;font-weight:600;text-transform:uppercase}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--category--59f58 .Feed-module--link--6123b:focus,.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--category--59f58 .Feed-module--link--6123b:hover{color:#5c92ff}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--more--51a4e{color:var(--color-primary);font-size:16px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--more--51a4e:focus,.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--more--51a4e:hover{border-bottom:1px solid #5c92ff;color:var(--color-primary)}.Layout-module--layout--2c933{margin-left:auto;margin-right:auto;max-width:1070px}.Layout-module--layout--2c933:before{content:"";display:table}.Layout-module--layout--2c933:after{clear:both;content:"";display:table}.Page-module--page--24e03{margin-bottom:52px}.Page-module--page--24e03 .Page-module--inner--4b31d{padding:26px 19.5px 0}.Page-module--page--24e03 .Page-module--title--90338{font-size:40px;font-weight:600;line-height:52px;margin-bottom:37.7px;margin-top:0}.Page-module--page--24e03 .Page-module--body--561c4{font-size:16px;line-height:26px;margin:0 0 26px}@media screen and (min-width:685px){.Page-module--page--24e03{width:calc(58.275% - 12.5px)}.Page-module--page--24e03:nth-child(1n){clear:none;float:left;margin-right:30px}.Page-module--page--24e03:last-child{margin-right:0}.Page-module--page--24e03:nth-child(12n){float:right;margin-right:0}.Page-module--page--24e03:nth-child(12n+1){clear:both}.Page-module--page--24e03 .Page-module--inner--4b31d{padding:32.5px 19.5px 0}}@media screen and (min-width:960px){.Page-module--page--24e03{width:calc(66.6% - 10px)}.Page-module--page--24e03:nth-child(1n){clear:none;float:left;margin-right:30px}.Page-module--page--24e03:last-child{margin-right:0}.Page-module--page--24e03:nth-child(3n){float:right;margin-right:0}.Page-module--page--24e03:nth-child(3n+1){clear:both}.Page-module--page--24e03 .Page-module--inner--4b31d{padding:39px 26px 0}}.Pagination-module--pagination--d61cb{display:flex;margin-top:52px}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b{text-align:left;width:50%}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d{color:var(--color-secondary);font-size:26px;font-weight:700}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d:focus,.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d:hover{color:var(--color-primary)}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d.Pagination-module--disable--7e105{color:#3f485a;pointer-events:none}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8{text-align:right;width:50%}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff{color:var(--color-secondary);font-size:26px;font-weight:700}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff:focus,.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff:hover{color:var(--color-primary)}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff.Pagination-module--disable--7e105{color:#3f485a;pointer-events:none}.Button-module--button--b1113{border:1px solid var(--color-button-border);border-radius:20px;color:var(--color-button-color);display:inline-block;font-size:16px;font-weight:400;height:40px;line-height:40px;margin-left:auto;margin-right:auto;padding:0 26px;text-align:center;text-decoration:none}.Button-module--button--b1113:focus,.Button-module--button--b1113:hover{color:#5c92ff}.ThemeSwitcher-module--themeSwitcher--8a77f{--color:var(--color-theme-switcher)}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--button--7cb7b{align-items:center;background:transparent;border:0;cursor:pointer;display:flex;justify-content:center;outline:0}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--button--7cb7b svg{stroke:var(--color);pointer-events:none;transition:stroke .4s}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--button--7cb7b:hover{--color:var(--color-theme-switcher-hover)}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--moon--10537{stroke-dasharray:0 1px;opacity:0;transition:stroke-dasharray .2s ease-in,opacity .4s ease-in}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--sun--2163a{stroke-dasharray:1px 1px;opacity:1;transition:stroke-dasharray .2s ease-in,opacity .4s ease-in}.ThemeSwitcher-module--themeSwitcher--8a77f.ThemeSwitcher-module--dark--6db0c .ThemeSwitcher-module--moon--10537{stroke-dasharray:1px 1px;opacity:1}.ThemeSwitcher-module--themeSwitcher--8a77f.ThemeSwitcher-module--dark--6db0c .ThemeSwitcher-module--sun--2163a{stroke-dasharray:0 1px;opacity:0}.Author-module--author--cbd31 .Author-module--photo--9787b{background-clip:padding-box;border-radius:50%;display:inline-block;height:75px;margin-bottom:0;width:75px}.Author-module--author--cbd31 .Author-module--photo--9787b img{border-radius:50%}.Author-module--author--cbd31 .Author-module--title--cf7e5{font-size:18px;font-weight:600;line-height:29.25px;margin:0}.Author-module--author--cbd31 .Author-module--title--cf7e5 .Author-module--link--09c17,.Author-module--author--cbd31 .Author-module--title--cf7e5 .Author-module--link--09c17:focus,.Author-module--author--cbd31 .Author-module--title--cf7e5 .Author-module--link--09c17:hover{color:var(--color-typographic-base-font)}.Author-module--author--cbd31 .Author-module--subtitle--86ec5{color:#7f8ba4;line-height:26px;margin-bottom:26px}.Author-module--author--cbd31 .Author-module--titleContainer--4f576{align-items:center;display:flex;justify-content:space-between;margin:13px 0}.Icon-module--icon--1d7da{fill:currentcolor;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;speak:none;stroke:currentcolor;stroke-width:0;display:inline-block;font-style:normal;font-variant:normal;font-weight:400;height:1em;line-height:1em;text-align:center;text-transform:none;width:1em}.Contacts-module--contacts--09178{margin-bottom:26px}.Contacts-module--contacts--09178 .Contacts-module--list--9670b{display:flex;flex-flow:row wrap;flex-grow:0;flex-shrink:0;list-style:none;margin:13px 0;max-width:165px;padding:0}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0{align-content:center;align-items:center;border:1px solid var(--color-contacts-border);border-radius:50%;display:flex;height:40px;justify-content:center;line-height:40px;margin:6.5px;padding:0;text-align:center;width:40px}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0:nth-child(3n+1){margin-left:0}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0 .Contacts-module--link--de1e0{border:0;color:var(--color-typographic-base-font);cursor:pointer;display:flex}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0 .Contacts-module--link--de1e0:focus,.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0 .Contacts-module--link--de1e0:hover{color:var(--color-typographic-link-p-font)}.Copyright-module--copyright--2c602{color:#7f8ba4;font-size:14px}.Menu-module--menu--113a9{margin-bottom:26px}.Menu-module--menu--113a9 .Menu-module--list--e1ae3{list-style:none;margin:0;padding:0}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679{margin:13px 0;padding:0}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02{border:0;color:var(--color-typographic-base-font);font-size:16px;font-weight:400}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02:focus,.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02:hover{border-bottom:1px solid #5c92ff;color:#5c92ff}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02.Menu-module--active--6cb74{border-bottom:1px solid var(--color-typographic-base-font);color:var(--color-typographic-base-font)}.Sidebar-module--sidebar--1bfa1{width:100%}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0{padding:26px 19.5px 0;position:relative}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0:after{background:var(--color-sidebar-border);background:linear-gradient(to bottom,var(--color-sidebar-border) 0,var(--color-sidebar-border) 48%,var(--color-sidebar-border-fade) 100%)}@media screen and (min-width:685px){.Sidebar-module--sidebar--1bfa1{width:calc(41.625% - 17.5px)}.Sidebar-module--sidebar--1bfa1:nth-child(1n){clear:none;float:left;margin-right:30px}.Sidebar-module--sidebar--1bfa1:last-child{margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(12n){float:right;margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(12n+1){clear:both}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0{padding:32.5px 19.5px 0}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0:after{bottom:0;content:"";height:540px;position:absolute;right:-10px;top:30px;width:1px}}@media screen and (min-width:960px){.Sidebar-module--sidebar--1bfa1{width:calc(33.3% - 20px)}.Sidebar-module--sidebar--1bfa1:nth-child(1n){clear:none;float:left;margin-right:30px}.Sidebar-module--sidebar--1bfa1:last-child{margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(3n){float:right;margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(3n+1){clear:both}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0{padding:39px}}.Author-module--author--1c58d{border-top:1px solid var(--color-page-border);line-height:26px;margin-bottom:52px;margin-top:26px;max-width:640px;padding-top:26px}.Author-module--author--1c58d .Author-module--bio--08950 .Author-module--twitter--90647{display:block;text-decoration:underline}.Author-module--author--1c58d .Author-module--bio--08950 .Author-module--twitter--90647:focus,.Author-module--author--1c58d .Author-module--bio--08950 .Author-module--twitter--90647:hover{color:var(--color-typographic-link-s-font)}@media screen and (min-width:685px){.Author-module--author--1c58d{margin-left:auto;margin-right:auto}}.Content-module--content--80d58{margin:0 auto;max-width:945px;padding:0 13px}.Content-module--content--80d58 .Content-module--title--09504{font-size:32px;font-weight:600;line-height:42.9px;margin:26px auto 0;max-width:640px;text-align:center}.Content-module--content--80d58 .Content-module--body--726c2 figure{margin-bottom:26px}.Content-module--content--80d58 .Content-module--body--726c2 figure blockquote{font-style:italic;margin-top:0;padding:26px 0;text-align:center}.Content-module--content--80d58 .Content-module--body--726c2 figure blockquote p{font-size:26.9072px;line-height:39px;margin-bottom:26px;margin-top:0;max-width:640px}.Content-module--content--80d58 .Content-module--body--726c2 a{text-decoration:underline}.Content-module--content--80d58 .Content-module--body--726c2 *{margin-left:auto;margin-right:auto;max-width:640px}.Content-module--content--80d58 .Content-module--body--726c2 h2>a{visibility:hidden}.Content-module--content--80d58 .Content-module--body--726c2 h2>a>svg{fill:var(--color-typographic-base-font)}.Content-module--content--80d58 .Content-module--body--726c2 img{max-width:100%}@media screen and (min-width:960px){.Content-module--content--80d58{padding:0}.Content-module--content--80d58 .Content-module--title--09504{font-size:48px;line-height:58.5px;margin-bottom:39px;margin-top:58.5px}.Content-module--content--80d58 .Content-module--body--726c2{font-size:18px;line-height:29.25px;margin-bottom:29.25px}.Content-module--content--80d58 .Content-module--body--726c2 p{font-size:18px;line-height:29.25px;margin-bottom:19.5px}.Content-module--content--80d58 .Content-module--body--726c2 h2>a{padding-right:13px;visibility:unset}}.Meta-module--meta--dae0a .Meta-module--date--4d30d{font-style:italic}.Tags-module--tags--18589{margin-bottom:13px}.Tags-module--tags--18589 .Tags-module--list--82ae6{list-style:none;padding:0}.Tags-module--tags--18589 .Tags-module--list--82ae6 .Tags-module--item--52015{display:inline-block;margin:6.5px 0}@media screen and (min-width:685px){.Tags-module--tags--18589 .Tags-module--list--82ae6 .Tags-module--item--52015:first-child{margin-left:0;padding-left:0}}.Post-module--post--3a994 .Post-module--content--3c6e5{margin:0 auto}.Post-module--post--3a994 .Post-module--comments--d3b99,.Post-module--post--3a994 .Post-module--footer--f8705{margin:0 auto;max-width:640px;padding:0 13px}.Post-module--post--3a994 .Post-module--buttons--2972d{align-items:center;display:flex;justify-content:center;margin:26px 0 0;text-align:center}.Post-module--post--3a994 .Post-module--buttons--2972d .Post-module--buttonArticles--d793a{margin:0 13px 0 0}@media screen and (min-width:960px){.Post-module--post--3a994 .Post-module--comments--d3b99,.Post-module--post--3a994 .Post-module--footer--f8705{padding:0}.Post-module--post--3a994 .Post-module--buttons--2972d{left:30px;margin:0 13px 0 0;max-width:none;position:fixed;top:30px}}</style><link rel="alternate" type="application/rss+xml" title="資安解壓縮" href="/rss.xml"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><link rel="icon" href="/favicon-32x32.png?v=47c03a61bae62c031bb0bf0aca7f901a" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=47c03a61bae62c031bb0bf0aca7f901a"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><title data-gatsby-head="true">EP27 - 瀏覽器大戰｜你用的瀏覽器安全嗎？ - 資安解壓縮</title></head><body><script>
+          void function() {
+            var cachedMode;
+
+            try {
+              var preferredTheme = JSON.parse(localStorage.getItem('diesel:theme-atom'));
+
+              if (preferredTheme && preferredTheme.mode) {
+                cachedMode = preferredTheme.mode;
+              }
+            } catch (err) { }
+
+            function setTheme(newTheme) {
+              document.documentElement.className = newTheme;
+            }
+
+            var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+            setTheme(cachedMode || (darkQuery.matches ? 'dark' : 'light'));
+          }()
+        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--2c933"><div class="Post-module--post--3a994"><div class="Post-module--buttons--2972d"><a class="Button-module--button--b1113 Post-module--buttonArticles--d793a" href="/">文章列表</a></div><div class="Post-module--content--3c6e5"><div class="Content-module--content--80d58"><h1 class="Content-module--title--09504">EP27 - 瀏覽器大戰｜你用的瀏覽器安全嗎？</h1><div class="Content-module--body--726c2"><h2 id="podcast-連結" style="position:relative;"><a href="#podcast-%E9%80%A3%E7%B5%90" aria-label="podcast 連結 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Podcast 連結</h2>
+<ul>
+<li><a href="https://podcasts.apple.com/tw/podcast/%E8%B3%87%E5%AE%89%E8%A7%A3%E5%A3%93%E7%B8%AE/id1513276667#episodeGuid=cki3kl7tv8fdm0898c381a0a2" target="_blank" rel="nofollow noopener noreferrer">Apple Podcast</a></li>
+<li><a href="https://open.spotify.com/episode/16kqjiJrbadeqGNi5X3IrG?si=CqVjQESaQHGcaTYsFoa2Ow" target="_blank" rel="nofollow noopener noreferrer">Spotify Podcast</a></li>
+<li><a href="https://open.firstory.me/story/cki3kl7tv8fdm0898c381a0a2" target="_blank" rel="nofollow noopener noreferrer">Firstory Podcast</a></li>
+</ul>
+<hr>
+<h2 id="本集內容大綱" style="position:relative;"><a href="#%E6%9C%AC%E9%9B%86%E5%85%A7%E5%AE%B9%E5%A4%A7%E7%B6%B1" aria-label="本集內容大綱 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>本集內容大綱</h2>
+<h3 id="internet-explorer-ie-的退役" style="position:relative;"><a href="#internet-explorer-ie-%E7%9A%84%E9%80%80%E5%BD%B9" aria-label="internet explorer ie 的退役 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Internet Explorer (IE) 的退役</h3>
+<p>11 月 30 日起，微軟要開始停止軟體支援 IE，預計在明年中的時候就會完全停止支援</p>
+<p>IE 於 25 年前由微軟推出，曾經輝煌過也最多人使用，但隨著時代的洪流現在要被淘汰了</p>
+<p>相關新聞：</p>
+<ul>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666" target="_blank" rel="nofollow noopener noreferrer">Microsoft 365 apps say farewell to Internet Explorer 11 and Windows 10 sunsets Microsoft Edge Legacy</a></li>
+<li><a href="https://www.ithome.com.tw/news/139451" target="_blank" rel="nofollow noopener noreferrer">Microsoft 365 明年不再接受 IE11 存取、舊 Edge 3 月終止支援</a></li>
+</ul>
+<h4 id="瀏覽器大戰" style="position:relative;"><a href="#%E7%80%8F%E8%A6%BD%E5%99%A8%E5%A4%A7%E6%88%B0" aria-label="瀏覽器大戰 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>瀏覽器大戰</h4>
+<p>微軟以 Edge 再度宣布回歸瀏覽器競爭洪流，藉這個機會整理一下各家瀏覽器在安全性與隱私上所做的努力，大家可以參考看看，再依照自己的需求或信仰選擇適合自己的瀏覽器</p>
+<h3 id="前情提要---名詞解釋" style="position:relative;"><a href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81---%E5%90%8D%E8%A9%9E%E8%A7%A3%E9%87%8B" aria-label="前情提要   名詞解釋 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>前情提要 - 名詞解釋</h3>
+<h4 id="開放原始碼-open-source" style="position:relative;"><a href="#%E9%96%8B%E6%94%BE%E5%8E%9F%E5%A7%8B%E7%A2%BC-open-source" aria-label="開放原始碼 open source permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>開放原始碼 (Open Source)</h4>
+<p>開放原始碼，簡稱開源，指的是開發商把程式或系統的原始程式碼公開在網路上讓大家檢視</p>
+<p>社群會可以去檢視和研究開源軟體是怎麼運行的，在我們平常看不到的地方做了哪些事，透過這個方式來檢視軟體的安全性和隱私性</p>
+<p>通常一個程式會被開源，代表著開發商對自己的產品有一定的信心，不怕被大眾社群檢視，大家普遍也會認為開源的軟體比較直得被信任</p>
+<h4 id="瀏覽器指紋" style="position:relative;"><a href="#%E7%80%8F%E8%A6%BD%E5%99%A8%E6%8C%87%E7%B4%8B" aria-label="瀏覽器指紋 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>瀏覽器指紋</h4>
+<p>瀏覽器指紋是由作業系統、瀏覽器、螢幕大小、解析度、時區和語言等許多資訊所拼湊而來，用來識別使用者的一種資訊</p>
+<p>網頁可以在不需要用戶主動提供資訊或讀取 Cookie 的情況下，藉由瀏覽器指紋辨識出使用者</p>
+<p>許多網頁會透過這種方式追蹤和分析用戶行為並投放廣告</p>
+<h4 id="cookie" style="position:relative;"><a href="#cookie" aria-label="cookie permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cookie</h4>
+<p>Cookie 是網站為了辨識用戶身份而儲存在我們瀏覽器裡的資料</p>
+<p>我們之所以可以在每次開啟 Facebook、Gmail 網頁時不需要重新登入就是因為這些網站將我們登入的資訊儲以 Cookie 的方式存在我們的瀏覽器上。</p>
+<p>因為 Cookie 包含了我們的資訊，因此如果沒有保護好，就會對我們造成隱私或是安全性的威脅。如果一個惡意的網站可以讀取 Google 儲存在我們瀏覽器中的 Cookie 的話，他就會有辦法知道我們 Google 帳號相關的登入資訊。因此 Cookie 會需要被好好的保護和隔離，避免未經授權的網站讀取存在我們電腦上的 ˙Cookie。</p>
+<h4 id="webrtc-web-real-time-communication" style="position:relative;"><a href="#webrtc-web-real-time-communication" aria-label="webrtc web real time communication permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WebRTC (Web Real-Time Communication)</h4>
+<p>WebRTC 是一個讓瀏覽器可以支援即時語音通話或是視訊的技術。大部分的瀏覽器都有支援 WebRTC。</p>
+<p>之所以會需要再瀏覽器的安全性討論 WebRTC 是因為 2015 年時，WebRTC 被發現有個資安漏洞，導致我們在使用 WebRTC 相關技術時會洩漏我們的真實 IP，也就是說即時我們使用了像是 VPN 這類型的技術，也無法完全的保護我們的隱私。</p>
+<p>因此如果希望在上網時可以確保隱私，我們就會需要停用 WebRTC 的功能，或是更改 WebRTC 的設定，來確保 IP 位置不會被洩漏。</p>
+<p>相關新聞：<a href="https://torrentfreak.com/huge-security-flaw-leaks-vpn-users-real-ip-addresses-150130/" target="_blank" rel="nofollow noopener noreferrer">Huge Security Flaw Leaks VPN Users’ Real IP-Addresses</a></p>
+<h4 id="dns-over-https" style="position:relative;"><a href="#dns-over-https" aria-label="dns over https permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DNS over HTTPS</h4>
+<p>透過加密的 HTTPS 連線來進行 DNS 查詢，確保我們的 DNS 查詢記錄也是隱藏加密的，如此一來除了不用擔心查詢記錄被別人知道以外，也能確保我們查到的 DNS 在傳輸過程中是沒有被篡改過的。</p>
+<blockquote>
+<p>複習：<a href="/posts/ep19_why_is_https_so_important#https-%E8%B6%85%E6%96%87%E6%9C%AC%E5%82%B3%E8%BC%B8%E5%AE%89%E5%85%A8%E5%8D%94%E5%AE%9A-hypertext-transfer-protocol-secure">HTTPS 超文本傳輸安全協定 Hypertext Transfer Protocol Secure</a></p>
+<p><a href="/posts/ep19_why_is_https_so_important#%E5%8F%AA%E8%83%BD%E7%A2%BA%E4%BF%9Dhttp%E9%80%A3%E7%B7%9A%E6%98%AF%E5%AE%89%E5%85%A8%E7%9A%84">DNS over HTTPS 和如何啟用他？</a></p>
+</blockquote>
+<h4 id="google-安全瀏覽服務-google-safe-browsing" style="position:relative;"><a href="#google-%E5%AE%89%E5%85%A8%E7%80%8F%E8%A6%BD%E6%9C%8D%E5%8B%99-google-safe-browsing" aria-label="google 安全瀏覽服務 google safe browsing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Google 安全瀏覽服務 Google Safe Browsing</h4>
+<p>Google 安全瀏覽服務 是 Google 所推出的服務，能偵測出具有風險的網站，並提醒使用者和網站管理員避開潛在的危害。 Google 安全瀏覽服務有提供 API 讓其他開發者和公司可以透過 Google 安全瀏覽服務來查詢網站是否安全。</p>
+<p>Google 官方說明 - <a href="https://transparencyreport.google.com/safe-browsing/overview?hl=zh_TW" target="_blank" rel="nofollow noopener noreferrer">Google 安全瀏覽</a>、<a href="https://safebrowsing.google.com/" target="_blank" rel="nofollow noopener noreferrer">Google Safe Browsing</a></p>
+<p><img src="/media/ie_googlesafebrowsing.jpg" alt=""></p>
+<p>Google 安全瀏覽服務 每週偵測到的不安全網站數量 圖表來源：<a href="https://transparencyreport.google.com/safe-browsing/overview?hl=zh_TW" target="_blank" rel="nofollow noopener noreferrer">Google 安全瀏覽</a></p>
+<h4 id="cname-clocking" style="position:relative;"><a href="#cname-clocking" aria-label="cname clocking permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CName Clocking</h4>
+<p>現在許多廣告、追縱器阻擋的方式都是透過將已知的廣告追蹤器網址加入黑名單，在瀏覽網頁時如果發現網站要與黑名單中的廣告、追蹤器服務連線的話，就會將這些連線擋下。</p>
+<p>因此這些廣告、追蹤器服務就想出了一個應對方式，他們會與網頁合作，透過更改網站的 DNS 設定，讓原本會連去這些廣告追蹤器服務的連線，看起來像是只是網站本身的一個網頁而已。這會大大的增加阻擋廣告的難度和複雜度。</p>
+<p>舉例來說，廣告商 ABC.com 要與 Example.com 合作。原本的做法會是在 Example.com 的網頁中放入 tracking.abc.com 之類的連結，來呼叫 ABC.com 的追蹤器。如果我們將 tracking.abc.com 這個網址放入黑名單中，就可以擋向所有網站上 ABC.com 廣告商的追蹤和廣告。</p>
+<p>透過 CName Clocking，Example.com 就會設定一個專門的網址給 ABC.com，像是 track.example.com，並透過 DNS 設定將此網址的 CName 指向 tracking.abc.com，如此一來 Example.com 的網頁中出現 track.example.com 的連結時，就會被認為是 Example.com 自己的網頁，而不會被判定為第三方廣告或追蹤器。</p>
+<p>更多細節：<a href="https://webkit.org/blog/11338/cname-cloaking-and-bounce-tracking-defense/" target="_blank" rel="nofollow noopener noreferrer">CNAME Cloaking and Bounce Tracking Defense</a></p>
+<h3 id="常見瀏覽器" style="position:relative;"><a href="#%E5%B8%B8%E8%A6%8B%E7%80%8F%E8%A6%BD%E5%99%A8" aria-label="常見瀏覽器 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>常見瀏覽器</h3>
+<p>各大瀏覽器市佔率趨勢圖</p>
+<p><img src="/media/ie_browsertrend.png" alt=""></p>
+<p>圖表來源：<a href="https://gs.statcounter.com/browser-market-share/desktop/worldwide/#monthly-200901-202010" target="_blank" rel="nofollow noopener noreferrer">statCounter - Desktop Browser Market Share Worldwide</a></p>
+<h4 id="google-chrome" style="position:relative;"><a href="#google-chrome" aria-label="google chrome permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Google Chrome</h4>
+<ul>
+<li>
+<p>Google 在 2008 年所推出的瀏覽器，支援 Windows、Mac、Android、iOS 等各大作業系統</p>
+</li>
+<li>
+<p>目前是市占率最高的瀏覽器，有高達 66%的人都是使用 Chrome</p>
+</li>
+<li>
+<p>建立於同樣由 Google 開發的 Chromium 這個開源的瀏覽器專案上</p>
+<ul>
+<li>Chromium 就像是車子的引擎，Chrome 就是一台以 Chromium 為引擎的車子</li>
+<li>使用 Chromium 的瀏覽器並不是只有 Chrome 一個。雖然 Chome 和其他使用 Chromium 的瀏覽器都是使用一樣的架構，但不同的瀏覽器會在架構上新增不同的功能，因此即便架構一樣，在功能性、安全和隱私上還會有很大的差異</li>
+</ul>
+</li>
+<li>
+<p>更新頻率高</p>
+</li>
+<li>
+<p>支援 DNS over HTTPS</p>
+</li>
+<li>
+<p>沒有內建 HTTPS Everywhere 的功能</p>
+</li>
+<li>
+<p>隱私疑慮：背後的公司是 Google，因此使用 Chrome 就難免會被搜集一些資訊</p>
+</li>
+<li>
+<p>沒有內建阻擋廣告、追蹤器、和阻擋瀏覽器指紋追蹤的功能</p>
+</li>
+<li>
+<p>Chrome 擴充套件商城：套件數量很多，選擇也很多元，上面有許多可以幫我們增加隱私和安全性的套件</p>
+</li>
+</ul>
+<h4 id="apple-safari" style="position:relative;"><a href="#apple-safari" aria-label="apple safari permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Apple Safari</h4>
+<ul>
+<li>
+<p>Apple 在 2003 年推出的瀏覽器，支援 Apple 的作業系統（Mac、iOS）</p>
+<ul>
+<li>Apple 曾在 2007 年推出了 Windows 版的 Safari，但因為種種因素，他們在 2012 就取消了這個計畫不再推出更新了</li>
+</ul>
+</li>
+<li>
+<p>目前的市佔率是第二高，有 17.24%</p>
+</li>
+<li>
+<p>建立在<a href="https://apps.kde.org/en/konqueror" target="_blank" rel="nofollow noopener noreferrer">Konqueror</a> 開源瀏覽器之上</p>
+</li>
+<li>
+<p>主要排版引擎 Webkit 是開源的，但 Safari 本身不是</p>
+<ul>
+<li>Chromium 其實是 Safari 的一個分支，Chromium 也是使用 Webkit 做為底層的排版引擎</li>
+</ul>
+</li>
+<li>
+<p>更新是跟隨著系統一起的，因此更新的頻率相比之下沒有那麼高</p>
+</li>
+<li>
+<p>沒有內建 HTTPS Everywhere 的功能</p>
+</li>
+<li>
+<p>在 DNS over HTTPS 的部分，Apple 先前公布在最新的 Mac 作業系統 Big Sur 中會支援，目前 Big Sur 正式版推出兩個多禮拜了，但還沒有看到有這個功能。</p>
+</li>
+<li>
+<p>內建智慧防追蹤功能，會透過機器學習的方式去分析和阻擋上網時的追蹤器以及避免網頁追蹤我們的瀏覽器指紋</p>
+</li>
+<li>
+<p>在擴充套件的部分，Safari 是透過 Apple 的 App Store，上面的套件數量與 Chrome 相比少很多，使用者的選擇比較少</p>
+</li>
+<li>
+<p>Apple 的系統較封閉，限制較多，可以客製化和自訂的內容比較少想要自己加強 Safari 的安全性的話是比較難的</p>
+</li>
+</ul>
+<h4 id="microsoft-edge" style="position:relative;"><a href="#microsoft-edge" aria-label="microsoft edge permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Microsoft Edge</h4>
+<ul>
+<li>
+<p>微軟在推出，為了取代 IE 成為 Windows 電腦的預設瀏覽器</p>
+</li>
+<li>
+<p>支援 Windows、Mac、Android、iOS</p>
+</li>
+<li>
+<p>舊版 Edge</p>
+<ul>
+<li>Edge 第一版在 2015 年推出的</li>
+<li>繼承了 IE 的架構，並移除了一些過時和不安全的技術，讓 Edge 變得更安全。</li>
+<li>雖然改善了許多 IE 原本的問題，但效果並沒有很好，民眾的接受率也不高，</li>
+<li>微軟在 2018 年底決定要放棄舊版 Edge，開發新版的 Edge</li>
+</ul>
+</li>
+<li>
+<p>使用 Chromium 架構</p>
+</li>
+<li>
+<p>原始碼開源，開放社群檢視</p>
+</li>
+<li>
+<p>更新頻率高</p>
+</li>
+<li>
+<p>支援 DNS over HTTPS</p>
+</li>
+<li>
+<p>沒有內建 HTTPS Everywhere</p>
+</li>
+<li>
+<p>內建阻擋追蹤器的功能</p>
+</li>
+<li>
+<p>隱私問題：研究發現預設會在我們瀏覽網頁的過程中，回傳一些電腦的資訊給微軟的伺服器，這些資訊是可以被用來辨識和追蹤我們，且無法輕易更改的，因此那篇研究對 Edge 的隱私評價十分低</p>
+</li>
+<li>
+<p>除了 Chrome 的擴充套件商城以外，還多了 Microsoft 商城的選擇，</p>
+<ul>
+<li>Microsoft 商城上的擴充套件與 Chrome 套件商城上的重複性很高，在 Microsoft 商城上有的在 Chrome 套件商城幾乎都會有，因此這一點跟 Chrome 比並沒有帶給 Edge 太多優勢。</li>
+</ul>
+</li>
+</ul>
+<p>研究：<a href="https://www.scss.tcd.ie/Doug.Leith/pubs/browser_privacy.pdf" target="_blank" rel="nofollow noopener noreferrer">Web Browser Privacy: What Do Browsers Say When They Phone Home?</a></p>
+<h4 id="mozilla-firefox" style="position:relative;"><a href="#mozilla-firefox" aria-label="mozilla firefox permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mozilla Firefox</h4>
+<ul>
+<li>
+<p>老牌，很知名的瀏覽器</p>
+</li>
+<li>
+<p>由非營利組織 Mozilla 開發，，支援 Windows、Mac、Android、iOS 等各大作業系統</p>
+</li>
+<li>
+<p>市佔率只剩 3.98%，曾為市佔率第二高的瀏覽器</p>
+</li>
+<li>
+<p>更新頻率高</p>
+</li>
+<li>
+<p>內建了 DNS over HTTPS</p>
+</li>
+<li>
+<p>內建 HTTPS Everywhere</p>
+</li>
+<li>
+<p>內建了阻擋挖礦程式的功能</p>
+</li>
+<li>
+<p>內建阻擋追蹤器和瀏覽器指紋追蹤的功能。</p>
+</li>
+<li>
+<p>Firefox 有自己的擴充套件商城，上面的擴充套件數量跟豐富度不輸給 Google</p>
+</li>
+<li>
+<p>Mozilla 一直不斷的有在推動許多技術和隱私相關的議題，因為這樣，Firefox 才會有那麼多內建的追蹤阻擋器和保護隱私的功能，也因此大家在討論瀏覽器時通常會認為 Firefox 是個比較隱私和安全的瀏覽器。</p>
+</li>
+<li>
+<p>爭議：因為 Mozilla 是非營利組織的緣故，他們需要靠其他公司的贊助和金援，而他們有超過 90%的收入都是來自於 Google，每年 Google 會付好幾億美金給 Mozilla 來讓 Firefox 的預設搜尋引擎是 Google，這件事引起了許多爭議和討論，許多人認為這個行為牴觸了 Firefox 的隱私宗旨</p>
+<ul>
+<li>相關新聞：<a href="https://www.cnet.com/news/google-firefox-search-deal-gives-mozilla-more-money-to-push-privacy/" target="_blank" rel="nofollow noopener noreferrer">Google-Firefox search deal gives Mozilla more money to push privacy</a></li>
+</ul>
+</li>
+<li>
+<p>Firefox 進階隱私設定： <a href="https://privacytools.twngo.xyz/browsers/#about_config" target="_blank" rel="nofollow noopener noreferrer">FireFox: “about:config” 的隱私設定調整</a></p>
+</li>
+</ul>
+<h4 id="brave" style="position:relative;"><a href="#brave" aria-label="brave permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Brave</h4>
+<ul>
+<li>
+<p>2016 年才推出，以安全和隱私為主打項目的瀏覽器</p>
+</li>
+<li>
+<p>由 Brave 公司開發，，支援 Windows、Mac、Android、iOS 等各大作業系統</p>
+<ul>
+<li>Brave 公司創辦人 Brendan Eich 原本是 Mozilla 基金會的共同創辦人，但他認為在 Firefox 這樣的大公司無法快速和創新的開發出他想要的產品，因此自己創立並推出了 Brave。</li>
+</ul>
+</li>
+<li>
+<p>開源軟體</p>
+</li>
+<li>
+<p>建立在 Chromium 架構上</p>
+</li>
+<li>
+<p>更新頻率高</p>
+</li>
+<li>
+<p>內建 DNS over HTTPS</p>
+</li>
+<li>
+<p>內建 HTTPS EveryWhere</p>
+</li>
+<li>
+<p>內建阻擋追蹤器、挖礦程式和瀏覽器指紋追蹤外</p>
+</li>
+<li>
+<p>內建了廣告阻擋的功能</p>
+</li>
+<li>
+<p>在前面提到將 Edge 評為隱私表現最差的報告中，Brave 的隱私表現被評為最好的</p>
+</li>
+<li>
+<p>廣告機制 Brave Reward （與資安和隱私無直接關聯）</p>
+<ul>
+<li>透過允許這些廣告的顯示來賺取數位貨幣 BAT</li>
+<li>掌控看到的廣告數量</li>
+<li>概念：與其讓廣告商付錢給 Google 這類型的公司來幫他們投放廣告，還不如直接付錢給觀看這些廣告的使用者</li>
+<li>賺取的 BAT 可以透過瀏覽器內建的功能來贊助許多網路上的創作者，讓他們不需要透過置入廣告的方式來維持生計</li>
+<li>有一些人認為這只是 Brave 的創辦人想出來新的投放廣告讓自己賺錢的方式而已</li>
+</ul>
+</li>
+<li>
+<p>Brave 爭議</p>
+<ul>
+<li><a href="https://www.ithome.com.tw/news/138121" target="_blank" rel="nofollow noopener noreferrer">隱私瀏覽器 Brave 遭爆私自為用戶填入推薦代碼</a></li>
+<li><a href="https://spyware.neocities.org/articles/brave.html#s7" target="_blank" rel="nofollow noopener noreferrer">Whitelisting spyware from Facebook and Twitter</a>、<a href="https://brave.com/script-blocking-exceptions-update/" target="_blank" rel="nofollow noopener noreferrer">Script Blocking Exceptions Update</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="瀏覽器資安與隱私評比" style="position:relative;"><a href="#%E7%80%8F%E8%A6%BD%E5%99%A8%E8%B3%87%E5%AE%89%E8%88%87%E9%9A%B1%E7%A7%81%E8%A9%95%E6%AF%94" aria-label="瀏覽器資安與隱私評比 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>瀏覽器資安與隱私評比</strong></h3>
+<p><img src="/media/ie_browsercomparisonchart.png" alt=""></p>
+<p>[1] Safari 的主要排版引擎 Webkit 是開源的，但 Safari 本身不是</p>
+<p>[2] Chrome 是建立於 Chromium 這個開源的瀏覽器專案上</p>
+<p>[3] 只透過 Google Safe Browsing 阻擋惡意廣告</p>
+<p>[4] Microsoft Edge 和 Brave 不允許完全關閉 WebRTC，但在設定上可以避免洩漏使用者 IP 位置</p>
+<p>[5] 表格中的自動使用 HTTPS 指的是像 HTTPS Everywhere 這種會將未加密連線都轉為 HTTPS 連線的功能</p>
+<h3 id="你還需要知道的事" style="position:relative;"><a href="#%E4%BD%A0%E9%82%84%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B" aria-label="你還需要知道的事 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>你還需要知道的事</h3>
+<p>總結來說，我認為 Brave 有最豐富的安全和隱私內建功能，緊追在後的是 Firefox。而相比之下，最多人使用的 Chrome 反而在內建功能中是最缺乏的。但大家不要忘了 Brave 是建立在 Chromium 上的，許多架構上的安全性和維護是需要仰賴 Google 團隊的，因此 Brave 的安全性一定程度上也是要歸功於 Google 的。</p>
+<p>Firefox 雖然被我排在 Brave 之後，但 Firefox 許多細部的設定是可以調整的，如果正確修改那些設定的話是可以比 Brave 更安全的，但設定上比較不容易，一不小心弄錯了也會影響到正常運作，因此被我排在 Brave 之後。（Firefox 進階隱私設定： <a href="https://privacytools.twngo.xyz/browsers/#about_config" target="_blank" rel="nofollow noopener noreferrer">FireFox: “about:config” 的隱私設定調整</a> ）</p>
+<p>今天的比較都是以內建的功能為主，許多安全和隱私的漏洞都可以透過擴充套件來進行修補的，因此不管你使用的是哪個瀏覽器，如果搭配正確的套件事都可以達到一定的安全性的，只是相對的可能會比較複雜和麻煩而已。</p>
+<p>除了今天提到的五個瀏覽器以外，還有許多有著很好的隱私和安全性的瀏覽器，像是 <a href="https://www.torproject.org/" target="_blank" rel="nofollow noopener noreferrer">Tor</a> 、<a href="https://ungoogled-software.github.io/" target="_blank" rel="nofollow noopener noreferrer">Ungoogled Chromium</a>、<a href="https://iridiumbrowser.de/" target="_blank" rel="nofollow noopener noreferrer">Iridium Browser</a>和<a href="https://www.palemoon.org/" target="_blank" rel="nofollow noopener noreferrer">Pale Moon</a>等等的，但在比較過後，我覺得這些瀏覽對一般使用者來說使用上比較不容易，因此沒有將他們列入今天的討論中。如果想要追求更進階的隱私和願意嘗試與學習的人可以試試這些瀏覽器。</p></div></div></div><div class="Post-module--footer--f8705"><div class="Meta-module--meta--dae0a"><p class="Meta-module--date--4d30d">發佈於<!-- --> <!-- -->2020年11月29日</p></div><div class="Tags-module--tags--18589"><ul class="Tags-module--list--82ae6"><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/browsers/">browsers</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/chrome/">Chrome</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/edge/">Edge</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/safari/">Safari</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/firefox/">Firefox</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/brave/">Brave</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/https/">https</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/dns-over-https/">DNS over https</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/open-source/">open source</a></li></ul></div><div class="Author-module--author--1c58d"><center><p class="Author-module--bio--08950">資安解壓縮網站內容除特別註記外皆以<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer">CC BY-SA 4.0</a>方式授權<br/>對於這個節目有什麼想法，或想要聽什麼內容都歡迎到<a href="/pages/contacts" rel="noopener noreferrer">聯絡資訊</a>告訴我們</p></center></div></div><div class="Post-module--comments--d3b99"><div id="disqus_thread"></div></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/ep27_browsers_comparison/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-2e055fef0012943a2ca5.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-d07e5195e6d3cb321b89.js\"],\"component---src-templates-categories-template-categories-template-tsx\":[\"/component---src-templates-categories-template-categories-template-tsx-582420eaaf9cdb7c6051.js\"],\"component---src-templates-category-template-category-template-tsx\":[\"/component---src-templates-category-template-category-template-tsx-156c4d53d45260ea6484.js\"],\"component---src-templates-index-template-index-template-tsx\":[\"/component---src-templates-index-template-index-template-tsx-f6369a7214c3272b9df2.js\"],\"component---src-templates-not-found-template-not-found-template-tsx\":[\"/component---src-templates-not-found-template-not-found-template-tsx-c56e313a8dad717d19ed.js\"],\"component---src-templates-page-template-page-template-tsx\":[\"/component---src-templates-page-template-page-template-tsx-7c091e207be2d21dfed1.js\"],\"component---src-templates-post-template-post-template-tsx\":[\"/component---src-templates-post-template-post-template-tsx-9d0467df317753963ba3.js\"],\"component---src-templates-tag-template-tag-template-tsx\":[\"/component---src-templates-tag-template-tag-template-tsx-8dbf97b667ac269a01c8.js\"],\"component---src-templates-tags-template-tags-template-tsx\":[\"/component---src-templates-tags-template-tags-template-tsx-2e3c0d28070bf8cb8df3.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="82671c92a8254fb15292";</script><script src="/webpack-runtime-cdb915f0ad40ebdf8bbd.js" async></script><script src="/framework-c10892c832a0f0abb2be.js" async></script><script src="/app-2e055fef0012943a2ca5.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
