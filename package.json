@@ -56,7 +56,7 @@
     "@sentry/react": "^10.40.0",
     "@sentry/tracing": "^7.120.4",
     "abab": "^2.0.6",
-    "axios": "^1.13.5",
+    "axios": "^1.13.6",
     "classnames": "^2.5.1",
     "disqus-react": "^1.1.7",
     "gatsby": "^5.16.1",
