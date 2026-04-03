@@ -9,7 +9,6 @@
     "plugin:import/typescript",
     "plugin:import/errors",
     "airbnb-typescript",
-    "@alxshelepenok/eslint-config",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",

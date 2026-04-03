@@ -291,7 +291,6 @@ export default {
     {
       resolve: "gatsby-plugin-sass",
       options: {
-        api: "modern",
         sassOptions: {
           loadPaths: [path.resolve(__dirname)],
         },
