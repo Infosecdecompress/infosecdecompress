@@ -28,11 +28,11 @@ const Search = () => {
 
   const itemList = useMemo(
     () =>
-      data.allMarkdownRemark.edges.map(({ node }) => ({
+      (data?.allMarkdownRemark?.edges ?? []).map(({ node }) => ({
         id: node.frontmatter.slug,
         url: node.frontmatter.slug,
         title: node.frontmatter.title,
-        content: node.rawMarkdownBody
+        content: (node.rawMarkdownBody ?? "")
           .replace(/(\((.*?)\))|(\#)|(\*)|(\[)|(\])/g, " ")
           .replace(/(?:\\[rn]|[\r\n]+)|(\\)+/g, " ")
           .replace(/\s\s+/g, " "),
