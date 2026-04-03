@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": "Jeffrey Hung <jeff@infosecdecompress.com>",
   "scripts": {
-    "build": "npm run clean && gatsby build",
+    "build": "npm run clean && GATSBY_CPU_COUNT=1 gatsby build",
     "clean": "rimraf .cache public",
     "cleandeploy": "npm run clean && gatsby build",
     "deploy": " gatsby build && gh-pages -d public -b gh-pages",
