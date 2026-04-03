@@ -157,7 +157,7 @@
   },
   "overrides": {
     "gatsby-plugin-sass": {
-      "sass-loader": "^13.3.0"
+      "sass-loader": "^13.3.3"
     }
   }
 }
