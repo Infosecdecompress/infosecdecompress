@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PostTemplate renders correctly 1`] = `
 <div>
@@ -30,7 +30,7 @@ exports[`PostTemplate renders correctly 1`] = `
         <p>
           發佈於
            
-          2016年8月31日
+          2016年9月1日
         </p>
       </div>
       <div>

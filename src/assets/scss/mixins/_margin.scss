@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../variables" as *;
 
 @mixin margin-auto($number: 0) {
   margin: #{$number * $typographic-leading + "px"} auto;

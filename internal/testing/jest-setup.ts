@@ -1,3 +1,5 @@
+process.env.TZ = "UTC";
+
 import { localStorageMock, matchMediaMock } from "@/mocks";
 
 Object.defineProperty(window, "localStorage", {

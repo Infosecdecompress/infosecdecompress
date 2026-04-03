@@ -8,7 +8,7 @@ const Fallback = ({ error, resetError }) => (
     <p>Something went wrong</p>
     <pre>{error.message}</pre>
     <Link to="/" onClick={resetError}>
-      <a>Try again</a>
+      Try again
     </Link>
   </div>
 );

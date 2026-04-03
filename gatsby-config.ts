@@ -288,7 +288,15 @@ export default {
     "gatsby-plugin-image",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-optimize-svgs",
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        api: "modern",
+        sassOptions: {
+          loadPaths: [path.resolve(__dirname)],
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-csp`,
       options: {

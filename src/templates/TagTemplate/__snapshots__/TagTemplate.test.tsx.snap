@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`TagTemplate renders correctly 1`] = `
 <div>
@@ -122,9 +122,9 @@ exports[`TagTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                dateTime="August 31, 2016"
+                dateTime="September 1, 2016"
               >
-                August 2016
+                September 2016
               </time>
               <span />
               <span>
@@ -154,9 +154,9 @@ exports[`TagTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                dateTime="August 31, 2016"
+                dateTime="September 1, 2016"
               >
-                August 2016
+                September 2016
               </time>
               <span />
               <span>
@@ -186,9 +186,9 @@ exports[`TagTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                dateTime="August 31, 2017"
+                dateTime="September 1, 2017"
               >
-                August 2017
+                September 2017
               </time>
               <span />
               <span>

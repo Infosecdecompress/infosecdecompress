@@ -1,6 +1,6 @@
 {
   "name": "infosecdecompress",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "資安解壓縮的家 Website of Infosec Decompress",
   "keywords": [
     "gatsby",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": "Jeffrey Hung <jeff@infosecdecompress.com>",
   "scripts": {
-    "build": "npm run clean && gatsby build",
+    "build": "npm run clean && GATSBY_CPU_COUNT=1 gatsby build",
     "clean": "rimraf .cache public",
     "cleandeploy": "npm run clean && gatsby build",
     "deploy": " gatsby build && gh-pages -d public -b gh-pages",
@@ -32,7 +32,7 @@
     "lint:ts": "eslint \"src\" --ext .tsx,.ts && prettier --check .",
     "serve": "gatsby serve",
     "start": "npm run clean && gatsby develop",
-    "test": "jest --config ./internal/testing/jest-config.ts",
+    "test": "TZ=UTC jest --config ./internal/testing/jest-config.ts",
     "test:update-snapshot": "jest --updateSnapshot --config ./internal/testing/jest-config.ts",
     "test:watch": "jest --watch --config ./internal/testing/jest-config.ts"
   },
@@ -133,7 +133,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "^30.3.0",
     "jest-cli": "^30.3.0",
-    "jest-environment-jsdom": "^29.7.0",
+    "jest-environment-jsdom": "^30.3.0",
     "jest-svg-transformer": "^1.0.0",
     "lint-staged": "^16.4.0",
     "lost": "9.0.2",
@@ -154,5 +154,10 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "overrides": {
+    "gatsby-plugin-sass": {
+      "sass-loader": "^13.3.0"
+    }
   }
 }
