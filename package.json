@@ -154,5 +154,10 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "overrides": {
+    "gatsby-plugin-sass": {
+      "sass-loader": "^13.3.0"
+    }
   }
 }

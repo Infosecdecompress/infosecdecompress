@@ -1,7 +1,7 @@
 @use "sass:color";
 
-@import "../../../assets/scss/variables";
-@import "../../../assets/scss/mixins";
+@use "../../../assets/scss/variables" as *;
+@use "../../../assets/scss/mixins" as *;
 
 .copyright {
   color: $color-gray;
