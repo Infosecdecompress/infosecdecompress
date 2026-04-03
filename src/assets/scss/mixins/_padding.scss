@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../variables" as *;
 
 @mixin padding-left($number) {
   padding-left: #{$number * $typographic-leading + "px"};

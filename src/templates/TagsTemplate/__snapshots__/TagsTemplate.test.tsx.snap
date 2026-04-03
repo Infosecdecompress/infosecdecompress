@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`TagsTemplate renders correctly 1`] = `
 <div>
@@ -102,7 +102,49 @@ exports[`TagsTemplate renders correctly 1`] = `
                 }
               }
             >
-              <tbody />
+              <tbody>
+                <tr>
+                  <td
+                    style={
+                      {
+                        "fontSize": "14px",
+                      }
+                    }
+                  >
+                    <a>
+                      Perfecting the Art of Perfection
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={
+                      {
+                        "fontSize": "14px",
+                      }
+                    }
+                  >
+                    <a
+                      href="/posts/johannes-gutenberg"
+                    >
+                      Johannes Gutenberg: The Birth of Movable Type
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={
+                      {
+                        "fontSize": "14px",
+                      }
+                    }
+                  >
+                    <a>
+                      Humane Typography in the Digital Age
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

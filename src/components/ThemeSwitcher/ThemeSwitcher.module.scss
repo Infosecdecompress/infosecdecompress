@@ -1,6 +1,6 @@
 @use "sass:color";
-@import "src/assets/scss/mixins";
-@import "src/assets/scss/variables";
+@use "src/assets/scss/mixins" as *;
+@use "src/assets/scss/variables" as *;
 
 .themeSwitcher {
   --color: var(--color-theme-switcher);

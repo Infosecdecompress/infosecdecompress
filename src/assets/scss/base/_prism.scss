@@ -8,6 +8,7 @@ pre[class*="language-"] {
   -webkit-hyphens: none;
   hyphens: none;
   line-height: 1.5;
+  overflow-wrap: normal;
   -o-tab-size: 4;
   -moz-tab-size: 4;
   tab-size: 4;
@@ -15,7 +16,6 @@ pre[class*="language-"] {
   white-space: pre;
   word-break: normal;
   word-spacing: normal;
-  word-wrap: normal;
 }
 
 pre[class*="language-"] {

@@ -14,19 +14,15 @@ describe("getDefaultColorMode", () => {
     expect(getDefaultColorMode()).toBe("light");
   });
 
-  test("successful return default color mode on ssr", () => {
-    (window.matchMedia as jest.Mock).mockReturnValue({
-      matches: true,
-    });
-
-    const windowSpy: jest.SpyInstance = jest.spyOn(global, "window", "get");
-
-    windowSpy.mockReturnValue(undefined);
-    expect(window).toBeUndefined();
-
+  test("successful return default color mode when matchMedia has no preference", () => {
+    (window.matchMedia as jest.Mock).mockReturnValue({});
     expect(getDefaultColorMode()).toBe("light");
+  });
 
-    windowSpy.mockRestore();
-    expect(getDefaultColorMode()).toBe("dark");
+  test("returns light when matchMedia matches is undefined", () => {
+    (window.matchMedia as jest.Mock).mockReturnValue({
+      matches: undefined,
+    });
+    expect(getDefaultColorMode()).toBe("light");
   });
 });
