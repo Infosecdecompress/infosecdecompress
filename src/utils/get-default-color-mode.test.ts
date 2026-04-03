@@ -18,4 +18,11 @@ describe("getDefaultColorMode", () => {
     (window.matchMedia as jest.Mock).mockReturnValue({});
     expect(getDefaultColorMode()).toBe("light");
   });
+
+  test("returns light when matchMedia matches is undefined", () => {
+    (window.matchMedia as jest.Mock).mockReturnValue({
+      matches: undefined,
+    });
+    expect(getDefaultColorMode()).toBe("light");
+  });
 });
