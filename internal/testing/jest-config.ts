@@ -1,6 +1,6 @@
 import type { Config } from "@jest/types";
 
-import swc from "./swc-config";
+import swc from "./swc-config.ts";
 
 const jestConfig: Config.InitialOptions = {
   testEnvironment: "jsdom",
