@@ -204,6 +204,3 @@ jobs:
           path: coverage
           key: coverage-${{ runner.os }}-${{hashFiles('coverage/lcov.info')}}
           restore-keys: coverage-${{ runner.os }}-
-
-      - name: Send coverage report
-        run: npx codecov
