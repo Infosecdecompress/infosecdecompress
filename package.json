@@ -91,7 +91,7 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.0",
+    "@commitlint/cli": "^20.5.2",
     "@commitlint/config-conventional": "^20.5.0",
     "@jest/globals": "^30.3.0",
     "@swc/core": "^1.15.30",
