@@ -92,7 +92,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^21.0.0",
-    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/config-conventional": "^21.0.0",
     "@jest/globals": "^30.4.1",
     "@swc/core": "^1.15.33",
     "@swc/jest": "^0.2.39",
