@@ -24,7 +24,7 @@ jobs:
           node-version-file: ".nvmrc"
 
       - name: Cache npm
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: ~/.npm
@@ -35,7 +35,7 @@ jobs:
 
       - name: Cache modules
         id: npm-modules-cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -65,7 +65,7 @@ jobs:
 
       - name: Restore modules
         id: npm-modules-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -94,7 +94,7 @@ jobs:
 
       - name: Restore modules
         id: npm-modules-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -123,7 +123,7 @@ jobs:
 
       - name: Restore modules
         id: npm-modules-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -152,7 +152,7 @@ jobs:
 
       - name: Restore modules
         id: npm-modules-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -166,7 +166,7 @@ jobs:
 
       - name: Cache coverage
         id: coverage-cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: coverage
           key: coverage-${{ runner.os }}-${{hashFiles('coverage/lcov.info')}}
@@ -188,7 +188,7 @@ jobs:
 
       - name: Restore modules
         id: npm-modules-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -199,7 +199,7 @@ jobs:
 
       - name: Restore coverage
         id: coverage-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: coverage
           key: coverage-${{ runner.os }}-${{hashFiles('coverage/lcov.info')}}
