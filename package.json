@@ -24,12 +24,12 @@
     "develop": "npm run clean && gatsby develop",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
-    "format:ts": "eslint \"src\" --ext .tsx,.ts --fix && prettier --write .",
+    "format:ts": "eslint \"src\" --fix && prettier --write .",
     "lint": "npm run lint:ts && npm run lint:scss",
     "lint:commit": "commitlint",
     "lint:scss": "stylelint \"src/**/*.scss\"",
     "lint:staged": "lint-staged",
-    "lint:ts": "eslint \"src\" --ext .tsx,.ts && prettier --check .",
+    "lint:ts": "eslint \"src\" && prettier --check .",
     "serve": "gatsby serve",
     "start": "npm run clean && gatsby develop",
     "test": "TZ=UTC jest --config ./internal/testing/jest-config.ts",
@@ -93,6 +93,8 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
+    "@eslint/eslintrc": "^3.3.6",
+    "@eslint/js": "^9.39.5",
     "@jest/globals": "^30.4.1",
     "@swc/core": "^1.15.47",
     "@swc/jest": "^0.2.39",
@@ -114,7 +116,7 @@
     "codecov": "^3.8.3",
     "concurrently": "^10.0.4",
     "conventional-changelog-conventionalcommits": "10.2.1",
-    "eslint": "^10.8.0",
+    "eslint": "^9.39.5",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^10.1.8",
@@ -150,7 +152,7 @@
     "stylelint-order": "^8.1.1",
     "stylelint-scss": "^7.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=20"
