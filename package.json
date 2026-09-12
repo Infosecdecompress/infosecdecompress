@@ -111,7 +111,7 @@
     "@typescript-eslint/parser": "^8.65.0",
     "autoprefixer": "^10.5.4",
     "browserslist": "^4.28.8",
-    "concurrently": "^10.0.4",
+    "concurrently": "^10.0.5",
     "conventional-changelog-conventionalcommits": "10.2.1",
     "eslint": "^10.8.0",
     "eslint-config-airbnb": "^19.0.4",
