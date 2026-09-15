@@ -134,7 +134,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "^30.5.1",
     "jest-cli": "^30.5.1",
-    "jest-environment-jsdom": "^30.5.0",
+    "jest-environment-jsdom": "^30.5.1",
     "jest-svg-transformer": "^1.0.0",
     "lint-staged": "^17.4.1",
     "lost": "9.0.2",
