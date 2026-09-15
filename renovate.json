@@ -14,6 +14,14 @@
       "automerge": true
     },
     {
+      "description": "Block major bumps of the lint/type toolchain. eslint 10 is unsupported by eslint-plugin-react (caps at eslint ^9.7, still uses removed context.getFilename), and typescript 7 breaks @typescript-eslint (<6.1) and ts-node. Re-enable once the plugin ecosystem catches up.",
+      "matchPackageNames": ["eslint", "typescript"],
+      "matchPackagePatterns": ["^eslint-", "^@typescript-eslint/"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "enabled": false
+    },
+    {
       "matchDepTypes": ["devDependencies"],
       "automerge": true
     },
