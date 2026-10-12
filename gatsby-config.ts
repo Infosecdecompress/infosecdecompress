@@ -278,13 +278,7 @@ export default {
         },
       },
     },
-    {
-      resolve: "@sentry/gatsby",
-      options: {
-        dsn: "https://e813e5e7c9304c2ba68e33f9eb206dca@o1129413.ingest.sentry.io/6196807",
-        tracesSampleRate: 1,
-      },
-    },
+    "@sentry/gatsby",
     "gatsby-plugin-image",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-optimize-svgs",
@@ -310,15 +304,16 @@ export default {
             "'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com",
           "style-src":
             "'self' blob: 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com c.disquscdn.com",
-          "img-src": "'self' disqus.com",
+          "img-src": "'self' data: disqus.com",
           "font-src": "'self' fonts.gstatic.com fonts.googleapis.com",
           "object-src": "'self' blob:",
           "manifest-src": "'self'",
+          "worker-src": "'self' blob:",
           "connect-src":
             "'self' blob: data: wss://infosecdecompress.com o1129413.ingest.sentry.io",
           "frame-src": "'self' www.youtube-nocookie.com disqus.com twitter.com",
-          "report-uri":
-            "https://o1129413.ingest.sentry.io/api/6196807/security/?sentry_key=e813e5e7c9304c2ba68e33f9eb206dca",
+          // report-uri is ignored in a <meta> CSP; violation reporting to Sentry is
+          // configured as a response header in Cloudflare instead.
         },
       },
     },
