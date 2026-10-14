@@ -95,7 +95,7 @@
     "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^10.0.1",
     "@jest/globals": "^30.5.2",
-    "@swc/core": "^1.16.12",
+    "@swc/core": "^1.16.13",
     "@swc/jest": "^0.2.39",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
