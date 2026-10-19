@@ -2,17 +2,15 @@
 
 exports[`ThemeSwitcher renders correctly 1`] = `
 <div
-  className=""
+  class=""
 >
-  <button
-    onClick={[Function]}
-  >
+  <button>
     <svg
       fill="none"
       height="24"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
       viewBox="0 0 24 24"
       width="24"
     >

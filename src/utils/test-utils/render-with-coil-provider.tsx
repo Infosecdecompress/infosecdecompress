@@ -1,11 +1,7 @@
-import React, { act, ReactElement } from "react";
-import renderer, {
-  ReactTestRenderer,
-  TestRendererOptions,
-} from "react-test-renderer";
+import React, { ReactElement } from "react";
 
 import { CoilProvider } from "@alxshelepenok/diesel";
-import { render, RenderOptions } from "@testing-library/react";
+import { render, RenderOptions, RenderResult } from "@testing-library/react";
 
 interface Props {
   children: React.ReactNode;
@@ -20,19 +16,32 @@ const renderWithCoilProvider = (
   options?: RenderOptions,
 ) => render(ui, { wrapper: WithCoilProvider, ...options });
 
+export type SnapshotsRenderer = RenderResult & {
+  /**
+   * Returns the rendered DOM for snapshotting: the single root node when the
+   * element renders exactly one, the list of nodes when it renders several,
+   * and null when it renders nothing.
+   */
+  toJSON: () => ChildNode | ChildNode[] | null;
+};
+
 export const createSnapshotsRenderer = (
   nextElement: ReactElement,
-  options?: TestRendererOptions,
-): ReactTestRenderer => {
-  let tree!: ReactTestRenderer;
+  options?: RenderOptions,
+): SnapshotsRenderer => {
+  const result = renderWithCoilProvider(nextElement, options);
 
-  // React 19 no longer flushes the initial render synchronously inside
-  // renderer.create(), so toJSON() would return null without act().
-  act(() => {
-    tree = renderer.create(<CoilProvider>{nextElement}</CoilProvider>, options);
-  });
+  const toJSON = () => {
+    const nodes = Array.from(result.container.childNodes);
 
-  return tree;
+    if (nodes.length === 0) {
+      return null;
+    }
+
+    return nodes.length === 1 ? nodes[0] : nodes;
+  };
+
+  return { ...result, toJSON };
 };
 
 export default renderWithCoilProvider;

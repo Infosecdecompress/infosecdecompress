@@ -17,17 +17,15 @@ exports[`CategoryTemplate renders correctly 1`] = `
             </a>
           </h2>
           <div
-            className=""
+            class=""
           >
-            <button
-              onClick={[Function]}
-            >
+            <button>
               <svg
                 fill="none"
                 height="24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
                 viewBox="0 0 24 24"
                 width="24"
               >
@@ -134,44 +132,19 @@ exports[`CategoryTemplate renders correctly 1`] = `
         </ul>
       </nav>
       <div
-        style={
-          {
-            "margin": "5px auto",
-          }
-        }
+        style="margin: 5px auto;"
       >
         <div
-          style={
-            {
-              "margin": "0 auto",
-            }
-          }
+          style="margin: 0px auto;"
         >
-          <form
-            onSubmit={[Function]}
-          >
+          <form>
             <div
-              style={
-                {
-                  "margin": "0 auto",
-                }
-              }
+              style="margin: 0px auto;"
             >
               <input
                 id="Search"
-                onChange={[Function]}
                 placeholder="搜尋文章"
-                style={
-                  {
-                    "border": "1px solid #ccc",
-                    "borderRadius": "4px",
-                    "boxSizing": "border-box",
-                    "display": "inline-block",
-                    "margin": "0 auto",
-                    "padding": "5px 5px",
-                    "width": "250px",
-                  }
-                }
+                style="margin: 0px auto; width: 250px; padding: 5px 5px; display: inline-block; border: 1px solid rgb(204, 204, 204); border-radius: 4px; box-sizing: border-box;"
                 value=""
               />
             </div>
@@ -179,15 +152,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           <div>
             <table
               id="result"
-              style={
-                {
-                  "border": "1px solid #ccc",
-                  "borderCollapse": "collapse",
-                  "borderRadius": "4px",
-                  "display": "none",
-                  "width": "250px",
-                }
-              }
+              style="width: 250px; border-collapse: collapse; border-radius: 4px; border: 1px solid rgb(204, 204, 204); display: none;"
             >
               <tbody />
             </table>
@@ -199,13 +164,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <div
-    ref={
-      {
-        "current": null,
-      }
-    }
-  >
+  <div>
     <div>
       <h1>
         Typography
@@ -215,7 +174,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                dateTime="September 1, 2016"
+                datetime="September 1, 2016"
               >
                 September 2016
               </time>
@@ -247,7 +206,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                dateTime="September 1, 2016"
+                datetime="September 1, 2016"
               >
                 September 2016
               </time>
@@ -279,7 +238,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                dateTime="September 1, 2017"
+                datetime="September 1, 2017"
               >
                 September 2017
               </time>
@@ -310,7 +269,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
         <div>
           <div>
             <a
-              className=""
+              class=""
               href="/typography/page/1"
               rel="prev"
             >
@@ -319,7 +278,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           </div>
           <div>
             <a
-              className=""
+              class=""
               href="/typography/page/3"
               rel="next"
             >
