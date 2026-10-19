@@ -1,9 +1,9 @@
 import { GatsbyNode } from "gatsby";
 import { createFilePath } from "gatsby-source-filesystem";
 
+import toKebabCase from "../../src/utils/to-kebab-case";
 import * as constants from "./constants";
 import * as types from "./types";
-import * as utils from "./utils";
 
 const onCreateNode: GatsbyNode["onCreateNode"] = ({
   node,
@@ -12,46 +12,43 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
 }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === "MarkdownRemark") {
-    const { frontmatter, parent }: types.Edge["node"] = node;
-    const { tags, category, slug } = frontmatter || {};
+  if (node.internal.type !== "MarkdownRemark") {
+    return;
+  }
 
-    if (slug) {
-      const dirname = parent && getNode(parent)?.relativeDirectory;
-      const value =
-        typeof dirname === "string"
-          ? utils.concat("/", dirname, "/", slug)
-          : utils.concat("/", slug);
+  const { frontmatter, parent }: types.Edge["node"] = node;
+  const { tags, category, slug } = frontmatter ?? {};
 
-      createNodeField({ node, name: "slug", value });
-    } else {
-      const value = createFilePath({ node, getNode });
-      createNodeField({ node, name: "slug", value });
-    }
+  if (slug) {
+    const dirname = parent ? getNode(parent)?.relativeDirectory : undefined;
+    const value =
+      typeof dirname === "string" ? `/${dirname}/${slug}` : `/${slug}`;
 
-    if (tags) {
-      const value = tags.map((tag) =>
-        utils.concat(
-          constants.routes.tagRoute,
-          "/",
-          utils.toKebabCase(tag),
-          "/",
-        ),
-      );
+    createNodeField({ node, name: "slug", value });
+  } else {
+    createNodeField({
+      node,
+      name: "slug",
+      value: createFilePath({ node, getNode }),
+    });
+  }
 
-      createNodeField({ node, name: "tagSlugs", value });
-    }
+  if (tags) {
+    createNodeField({
+      node,
+      name: "tagSlugs",
+      value: tags.map(
+        (tag) => `${constants.routes.tagRoute}/${toKebabCase(tag)}/`,
+      ),
+    });
+  }
 
-    if (category) {
-      const value = utils.concat(
-        constants.routes.categoryRoute,
-        "/",
-        utils.toKebabCase(category),
-        "/",
-      );
-
-      createNodeField({ node, name: "categorySlug", value });
-    }
+  if (category) {
+    createNodeField({
+      node,
+      name: "categorySlug",
+      value: `${constants.routes.categoryRoute}/${toKebabCase(category)}/`,
+    });
   }
 };
 

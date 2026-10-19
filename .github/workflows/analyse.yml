@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -29,8 +27,7 @@ jobs:
         with:
           path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-          restore-keys:
-            npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
             npm-${{ runner.os }}-
 
       - name: Cache modules
@@ -39,9 +36,6 @@ jobs:
         with:
           path: node_modules
           key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-          restore-keys:
-            npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-            npm-modules-${{ runner.os }}-
 
       - name: Install modules
         if: steps.npm-modules-cache.outputs.cache-hit != 'true'
@@ -84,8 +78,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -113,8 +105,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -132,7 +122,7 @@ jobs:
         if: steps.npm-modules-cache.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Run linting
+      - name: Run linting and type checking
         run: npm run lint
 
   test:
@@ -142,8 +132,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -162,45 +150,4 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: npm run test -- --coverage --runInBand --no-cache
-
-      - name: Cache coverage
-        id: coverage-cache
-        uses: actions/cache/save@v6
-        with:
-          path: coverage
-          key: coverage-${{ runner.os }}-${{hashFiles('coverage/lcov.info')}}
-
-  coverage:
-    name: Coverage
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version-file: ".nvmrc"
-
-      - name: Restore modules
-        id: npm-modules-cache
-        uses: actions/cache/restore@v6
-        with:
-          path: node_modules
-          key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-
-      - name: Install modules
-        if: steps.npm-modules-cache.outputs.cache-hit != 'true'
-        run: npm ci
-
-      - name: Restore coverage
-        id: coverage-cache
-        uses: actions/cache/restore@v6
-        with:
-          path: coverage
-          key: coverage-${{ runner.os }}-${{hashFiles('coverage/lcov.info')}}
-          restore-keys: coverage-${{ runner.os }}-
+        run: npm run test -- --runInBand --no-cache

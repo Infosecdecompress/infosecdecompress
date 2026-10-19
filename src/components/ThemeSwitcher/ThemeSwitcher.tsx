@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import cn from "classnames";
 
@@ -6,7 +6,7 @@ import { useTheme } from "@/hooks";
 
 import * as styles from "./ThemeSwitcher.module.scss";
 
-const ThemeSwitcher: React.FC = () => {
+const ThemeSwitcher = () => {
   const [{ mode }, toggleTheme] = useTheme();
   const [isClient, setIsClient] = useState<boolean>(false);
 

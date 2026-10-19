@@ -33,10 +33,12 @@
       }
 
       .link {
+        background: none;
         border: 0;
         color: var(--color-typographic-base-font);
         cursor: pointer;
         display: flex;
+        padding: 0;
 
         &:hover,
         &:focus {

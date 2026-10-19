@@ -1,21 +1,15 @@
-import React from "react";
-
 import { screen } from "@testing-library/react";
-import { StaticQuery, useStaticQuery } from "gatsby";
+import { useStaticQuery } from "gatsby";
 
 import { Post } from "@/components/Post";
 import * as mocks from "@/mocks";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 import { renderWithCoilProvider } from "@/utils/test-utils";
 
-const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 
 describe("Post", () => {
   beforeEach(() => {
-    mockedStaticQuery.mockImplementationOnce(({ render }) =>
-      render(mocks.siteMetadata),
-    );
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 

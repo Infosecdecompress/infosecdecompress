@@ -1,17 +1,14 @@
-import React from "react";
-
 import { Link } from "gatsby";
+
+import type { MenuItem } from "@/types";
 
 import * as styles from "./Menu.module.scss";
 
-type Props = {
-  menu: Array<{
-    label: string;
-    path: string;
-  }>;
-};
+interface Props {
+  menu: Array<MenuItem>;
+}
 
-const Menu: React.FC<Props> = ({ menu }: Props) => (
+const Menu = ({ menu }: Props) => (
   <nav className={styles.menu}>
     <ul className={styles.list}>
       {menu.map((item) => (

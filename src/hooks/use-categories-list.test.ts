@@ -1,10 +1,9 @@
 import { renderHook } from "@testing-library/react";
-import { StaticQuery, useStaticQuery } from "gatsby";
+import { useStaticQuery } from "gatsby";
 
 import { useCategoriesList } from "@/hooks";
 import * as mocks from "@/mocks";
 
-const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 
 describe("useCategories", () => {
@@ -14,7 +13,6 @@ describe("useCategories", () => {
       allMarkdownRemark: mocks.allMarkdownRemark,
     };
 
-    mockedStaticQuery.mockImplementationOnce(({ render }) => render(props));
     mockedUseStaticQuery.mockReturnValue(props);
   });
 
@@ -35,7 +33,6 @@ describe("useCategories", () => {
       },
     };
 
-    mockedStaticQuery.mockImplementationOnce(({ render }) => render(props));
     mockedUseStaticQuery.mockReturnValue(props);
 
     const { result } = renderHook(() => useCategoriesList());

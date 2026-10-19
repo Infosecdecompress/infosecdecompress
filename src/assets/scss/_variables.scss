@@ -1,16 +1,6 @@
 @use "sass:math";
-@use "sass:color";
-/** 
- * Variables
- */
 
- //Google Noto Sans
- @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-
- // Google Noto Sans TC
- // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
- @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
- 
+// Colors
 $color-dark: hsl(220, 17%, 17%);
 $color-dark-cloud: hsl(220, 17%, 30%);
 $color-dark-paper: hsl(220, 17%, 12%);

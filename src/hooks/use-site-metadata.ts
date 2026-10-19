@@ -1,7 +1,15 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useSiteMetadata = () => {
-  const { site } = useStaticQuery(graphql`
+import type { SiteMetadata } from "@/types";
+
+interface SiteMetadataQueryResult {
+  site?: {
+    siteMetadata?: SiteMetadata;
+  };
+}
+
+const useSiteMetadata = (): SiteMetadata => {
+  const { site } = useStaticQuery<SiteMetadataQueryResult>(graphql`
     query SiteMetaData {
       site {
         siteMetadata {
@@ -19,6 +27,7 @@ const useSiteMetadata = () => {
               facebook
               instagram
               twitter
+              bluesky
               linkedin
               rss
               email
@@ -42,7 +51,7 @@ const useSiteMetadata = () => {
     }
   `);
 
-  return site?.siteMetadata || {};
+  return site?.siteMetadata ?? ({} as SiteMetadata);
 };
 
 export default useSiteMetadata;

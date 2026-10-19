@@ -37,7 +37,7 @@ const onRenderBody = ({
     }),
   ]);
 
-  setHtmlAttributes({ lang: "en" });
+  setHtmlAttributes({ lang: "zh-TW" });
 };
 
 export { onRenderBody };

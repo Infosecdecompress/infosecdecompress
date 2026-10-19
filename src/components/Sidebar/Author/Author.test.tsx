@@ -1,16 +1,16 @@
-import React from "react";
-
-import { StaticQuery } from "gatsby";
+import { useStaticQuery } from "gatsby";
 
 import { Author } from "@/components/Sidebar/Author";
 import * as mocks from "@/mocks";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
-const mockedStaticQuery = StaticQuery as jest.Mock;
+const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 
 describe("Author", () => {
   beforeEach(() => {
-    mockedStaticQuery.mockImplementationOnce(() => null);
+    // No image data: the avatar renders nothing, which keeps the snapshot
+    // focused on this component's own markup.
+    mockedUseStaticQuery.mockReturnValue({});
   });
 
   test("renders correctly", () => {

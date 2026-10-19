@@ -131,33 +131,18 @@ exports[`CategoryTemplate renders correctly 1`] = `
           </li>
         </ul>
       </nav>
-      <div
-        style="margin: 5px auto;"
-      >
-        <div
-          style="margin: 0px auto;"
+      <div>
+        <form
+          role="search"
         >
-          <form>
-            <div
-              style="margin: 0px auto;"
-            >
-              <input
-                id="Search"
-                placeholder="搜尋文章"
-                style="margin: 0px auto; width: 250px; padding: 5px 5px; display: inline-block; border: 1px solid rgb(204, 204, 204); border-radius: 4px; box-sizing: border-box;"
-                value=""
-              />
-            </div>
-          </form>
-          <div>
-            <table
-              id="result"
-              style="width: 250px; border-collapse: collapse; border-radius: 4px; border: 1px solid rgb(204, 204, 204); display: none;"
-            >
-              <tbody />
-            </table>
-          </div>
-        </div>
+          <input
+            aria-label="搜尋文章"
+            id="search"
+            placeholder="搜尋文章"
+            type="search"
+            value=""
+          />
+        </form>
       </div>
       <div>
         Content is licensed under CC BY-SA 4.0
@@ -174,7 +159,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                datetime="September 1, 2016"
+                datetime="2016-09-01"
               >
                 September 2016
               </time>
@@ -206,7 +191,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                datetime="September 1, 2016"
+                datetime="2016-09-01"
               >
                 September 2016
               </time>
@@ -238,7 +223,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           <div>
             <div>
               <time
-                datetime="September 1, 2017"
+                datetime="2017-09-01"
               >
                 September 2017
               </time>

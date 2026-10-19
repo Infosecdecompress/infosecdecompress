@@ -1,14 +1,11 @@
-import React from "react";
-
 import { render as reactTestingLibraryRender } from "@testing-library/react";
-import { StaticQuery, useStaticQuery } from "gatsby";
+import { useStaticQuery } from "gatsby";
 
 import * as mocks from "@/mocks";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 import TagTemplate, { Head as GatsbyHead } from "./TagTemplate";
 
-const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
 
 describe("TagTemplate", () => {
@@ -20,9 +17,6 @@ describe("TagTemplate", () => {
   };
 
   beforeEach(() => {
-    mockedStaticQuery.mockImplementationOnce(({ render }) =>
-      render(mocks.siteMetadata),
-    );
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 

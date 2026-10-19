@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "react-jsx",
     "target": "es2019",
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
     "lib": ["esnext", "dom"],
-    "moduleResolution": "node",
     "paths": {
-      "@/utils": ["./src/utils"],
-      "@/types": ["./src/types"],
-      "@/hooks": ["./src/hooks"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/internal/*": ["./internal/*"],
-      "@/constants": ["./src/constants"],
       "@/components": ["./src/components"],
       "@/components/*": ["./src/components/*"],
+      "@/constants": ["./src/constants"],
+      "@/hooks": ["./src/hooks"],
+      "@/types": ["./src/types"],
+      "@/utils": ["./src/utils"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/internal/*": ["./internal/*"],
       "@/mocks": ["./internal/testing/__mocks__"]
     },
     "noEmit": true,
+    "allowImportingTsExtensions": true,
     "strict": true,
     "allowJs": false,
     "sourceMap": true,
@@ -31,6 +31,6 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.mts", "**/*.tsx"],
+  "exclude": ["node_modules", "public", ".cache", ".claude"]
 }

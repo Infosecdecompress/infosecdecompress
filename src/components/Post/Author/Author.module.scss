@@ -1,25 +1,14 @@
-@use "../../../assets/scss/variables" as *;
-@use "../../../assets/scss/mixins" as *;
+@use "src/assets/scss/variables" as *;
+@use "src/assets/scss/mixins" as *;
 
 .author {
   border-top: 1px solid var(--color-page-border);
   max-width: $layout-post-width;
+  text-align: center;
   @include padding-top(1);
   @include line-height(1);
   @include margin-top(1);
   @include margin-bottom(2);
-
-  .bio {
-    .twitter {
-      display: block;
-      text-decoration: underline;
-
-      &:hover,
-      &:focus {
-        color: var(--color-typographic-link-s-font);
-      }
-    }
-  }
 }
 
 @include breakpoint-sm {

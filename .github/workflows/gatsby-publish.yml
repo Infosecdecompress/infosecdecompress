@@ -6,9 +6,9 @@ on:
       - main
   workflow_dispatch:
     inputs:
-        git-ref:
-          description: Git Ref (Optional)    
-          required: false
+      git-ref:
+        description: Git Ref (Optional)
+        required: false
 
 jobs:
   build:

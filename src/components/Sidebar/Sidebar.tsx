@@ -1,8 +1,6 @@
-import React from "react";
-
+import { Search } from "@/components/Search";
 import { useSiteMetadata } from "@/hooks";
 
-import Search from "../SearchContainer";
 import { Author } from "./Author";
 import { Contacts } from "./Contacts";
 import { Copyright } from "./Copyright";
@@ -10,9 +8,9 @@ import { Menu } from "./Menu";
 
 import * as styles from "./Sidebar.module.scss";
 
-type Props = {
+interface Props {
   isIndex?: boolean;
-};
+}
 
 const Sidebar = ({ isIndex }: Props) => {
   const { author, copyright, menu } = useSiteMetadata();

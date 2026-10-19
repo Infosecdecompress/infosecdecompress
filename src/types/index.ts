@@ -1,7 +1,13 @@
-export type { default as Edge } from "./edge";
-export type { default as Node } from "./node";
+export type { default as AllMarkdownRemark } from "./all-markdown-remark";
 export type { default as Dictionary } from "./dictionary";
+export type { default as Edge } from "./edge";
+export type { default as Group } from "./group";
+export type { default as Node } from "./node";
 export type { default as Nullable } from "./nullable";
 export type { default as PageContext } from "./page-context";
 export type { default as Pagination } from "./pagination";
-export type { default as AllMarkdownRemark } from "./all-markdown-remark";
+export type {
+  default as SiteMetadata,
+  Author,
+  MenuItem,
+} from "./site-metadata";

@@ -1,8 +1,6 @@
-import React from "react";
-
 import { Meta } from "@/components/Post/Meta";
 import * as mocks from "@/mocks";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 describe("Meta", () => {
   test("renders correctly", () => {

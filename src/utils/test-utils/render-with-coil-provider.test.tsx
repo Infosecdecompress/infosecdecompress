@@ -1,5 +1,3 @@
-import React from "react";
-
 import { createSnapshotsRenderer } from "@/utils/test-utils";
 
 describe("createSnapshotsRenderer", () => {

@@ -2,7 +2,7 @@ import { CreatePagesArgs } from "gatsby";
 
 import * as types from "../types";
 
-export interface PagesQueryResult {
+interface PagesQueryResult {
   allMarkdownRemark: {
     edges?: Array<types.Edge>;
   };

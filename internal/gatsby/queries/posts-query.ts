@@ -2,7 +2,7 @@ import { CreatePagesArgs } from "gatsby";
 
 import * as types from "../types";
 
-export interface PostsQueryResult {
+interface PostsQueryResult {
   allMarkdownRemark: {
     edges?: Array<types.Edge>;
   };
@@ -31,7 +31,7 @@ const postsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
     }
   `);
 
-  return result?.data?.allMarkdownRemark;
+  return result?.data?.allMarkdownRemark?.edges ?? [];
 };
 
 export default postsQuery;

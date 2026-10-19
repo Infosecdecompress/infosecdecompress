@@ -1,4 +1,7 @@
 *.*
 !*.css
 !*.scss
+/.cache/
+/.claude/
+/node_modules/
 /public/

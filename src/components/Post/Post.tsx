@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Button } from "@/components/Button";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import type { Node } from "@/types";
@@ -12,11 +10,11 @@ import { Tags } from "./Tags";
 
 import * as styles from "./Post.module.scss";
 
-type Props = {
+interface Props {
   post: Node;
-};
+}
 
-const Post: React.FC<Props> = ({ post }) => {
+const Post = ({ post }: Props) => {
   const { html } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date } = post.frontmatter;
@@ -39,7 +37,7 @@ const Post: React.FC<Props> = ({ post }) => {
       </div>
 
       <div className={styles.comments}>
-        <Comments postSlug={slug} postTitle={post.frontmatter.title} />
+        <Comments postSlug={slug} postTitle={title} />
       </div>
     </div>
   );

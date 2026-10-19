@@ -1,21 +1,17 @@
-import React, { useEffect, useRef } from "react";
-
-import type { Nullable } from "@/types";
+import { ReactNode, useEffect, useRef } from "react";
 
 import * as styles from "./Page.module.scss";
 
 interface Props {
   title?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Page: React.FC<Props> = ({ title, children }: Props) => {
-  const pageRef = useRef<Nullable<HTMLDivElement>>(null);
+const Page = ({ title, children }: Props) => {
+  const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (pageRef.current) {
-      pageRef.current.scrollIntoView();
-    }
+    pageRef.current?.scrollIntoView();
   }, []);
 
   return (

@@ -1,63 +1,60 @@
-import React from "react";
-
-import { atob } from "abab";
-
 import { Icon } from "@/components/Icon";
 import { ICONS } from "@/constants";
-import { Dictionary } from "@/types";
+import type { Dictionary } from "@/types";
 import { getContactHref, getIcon } from "@/utils";
 
 import * as styles from "./Contacts.module.scss";
 
-type Props = {
+interface Props {
   contacts: Dictionary<string>;
-};
+}
 
-const Contacts: React.FC<Props> = ({ contacts }: Props) => {
-  const contactsEntered: Dictionary<string> = Object.keys(contacts).reduce(
-    (acc, key) =>
-      contacts[key] && contacts[key] !== "" && contacts[key] !== "#"
-        ? { ...acc, [key]: contacts[key] }
-        : acc,
-    {},
-  );
+type ContactName = keyof typeof ICONS;
+
+const isConfigured = (value: string | undefined): value is string =>
+  Boolean(value) && value !== "#";
+
+const Contacts = ({ contacts }: Props) => {
+  const entries = (
+    Object.entries(contacts) as Array<[ContactName, string]>
+  ).filter(([, value]) => isConfigured(value));
+
+  if (entries.length === 0) {
+    return null;
+  }
 
   return (
-    Object.keys(contactsEntered).length > 0 && (
-      <div className={styles.contacts}>
-        <ul className={styles.list}>
-          {(Object.keys(contactsEntered) as Array<keyof typeof ICONS>).map(
-            (name) => (
-              <li className={styles.item} key={name}>
-                {name === "email" ? (
-                  <span
-                    className={styles.link}
-                    onClick={() => {
-                      window.location.href =
-                        "mailto:" +
-                        atob(getContactHref(name, contactsEntered[name]));
-                    }}
-                  >
-                    <Icon name={name} icon={getIcon(name)} />
-                  </span>
-                ) : (
-                  <a
-                    className={styles.link}
-                    href={getContactHref(name, contactsEntered[name])}
-                    target="_blank"
-                    rel={`noopener noreferrer${
-                      name === "mastodon" ? " me" : ""
-                    }`}
-                  >
-                    <Icon name={name} icon={getIcon(name)} />
-                  </a>
-                )}
-              </li>
-            ),
-          )}
-        </ul>
-      </div>
-    )
+    <div className={styles.contacts}>
+      <ul className={styles.list}>
+        {entries.map(([name, value]) => (
+          <li className={styles.item} key={name}>
+            {name === "email" ? (
+              // The address is resolved on click so it never appears in the
+              // static HTML for scrapers to harvest.
+              <button
+                type="button"
+                className={styles.link}
+                aria-label={name}
+                onClick={() => {
+                  window.location.href = getContactHref(name, value);
+                }}
+              >
+                <Icon name={name} icon={getIcon(name)} />
+              </button>
+            ) : (
+              <a
+                className={styles.link}
+                href={getContactHref(name, value)}
+                target="_blank"
+                rel={`noopener noreferrer${name === "mastodon" ? " me" : ""}`}
+              >
+                <Icon name={name} icon={getIcon(name)} />
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

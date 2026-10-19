@@ -3,8 +3,13 @@
 !*.md
 !*.mdx
 !*.ts
+!*.mts
 !*.tsx
 !*.yml
 !*.js
+/.cache/
+/.claude/
 /coverage/
+/node_modules/
 /public/
+package-lock.json

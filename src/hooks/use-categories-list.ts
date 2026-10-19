@@ -1,15 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 
+import type { Group } from "@/types";
+
 interface CategoriesQueryResult {
   allMarkdownRemark: {
-    group: Array<{
-      fieldValue: string;
-      totalCount: number;
-    }>;
+    group?: Array<Group>;
   };
 }
 
-const useCategoriesList = () => {
+const useCategoriesList = (): Array<Group> => {
   const { allMarkdownRemark } = useStaticQuery<CategoriesQueryResult>(graphql`
     query CategoriesListQuery {
       allMarkdownRemark(
