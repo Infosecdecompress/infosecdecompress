@@ -1,0 +1,22 @@
+name: Setup Node and dependencies
+description: Install the Node.js version from .nvmrc and restore or install node_modules
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+      with:
+        node-version-file: ".nvmrc"
+
+    - name: Restore modules
+      id: npm-modules-cache
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
+      with:
+        path: node_modules
+        key: npm-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+    - name: Install modules
+      if: steps.npm-modules-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: npm ci
