@@ -2,7 +2,7 @@ import React from "react";
 
 import { act, render, screen } from "@testing-library/react";
 
-import ErrorBoundaryContainer from "@/components/ErrorBoundary";
+import { ErrorBoundary as ErrorBoundaryContainer } from "@/components/ErrorBoundary";
 
 // Mock @sentry/react ErrorBoundary to test the fallback rendering
 jest.mock("@sentry/react", () => ({

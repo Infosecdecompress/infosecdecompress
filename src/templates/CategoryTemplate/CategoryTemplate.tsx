@@ -1,6 +1,4 @@
-import React from "react";
-
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 
 import { Feed } from "@/components/Feed";
 import { Layout } from "@/components/Layout";
@@ -9,19 +7,16 @@ import { Page } from "@/components/Page";
 import { Pagination } from "@/components/Pagination";
 import { Sidebar } from "@/components/Sidebar";
 import { useSiteMetadata } from "@/hooks";
-import { AllMarkdownRemark, PageContext } from "@/types";
+import type { AllMarkdownRemark, PageContext } from "@/types";
 
-interface Props {
-  data: {
-    allMarkdownRemark: AllMarkdownRemark;
-  };
-  pageContext: PageContext;
+interface Data {
+  allMarkdownRemark: AllMarkdownRemark;
 }
 
-const CategoryTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
-  const { group, pagination } = pageContext;
-  const { prevPagePath, nextPagePath, hasPrevPage, hasNextPage } = pagination;
+type Props = Pick<PageProps<Data, PageContext>, "data" | "pageContext">;
 
+const CategoryTemplate = ({ data, pageContext }: Props) => {
+  const { group, pagination } = pageContext;
   const { edges } = data.allMarkdownRemark;
 
   return (
@@ -29,12 +24,7 @@ const CategoryTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
       <Sidebar />
       <Page title={group}>
         <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
+        <Pagination {...pagination} />
       </Page>
     </Layout>
   );
@@ -73,14 +63,12 @@ export const query = graphql`
   }
 `;
 
-export const Head: React.FC<Props> = ({ pageContext }) => {
+export const Head = ({ pageContext }: Props) => {
   const { title, subtitle } = useSiteMetadata();
-
   const {
     group,
     pagination: { currentPage: page },
   } = pageContext;
-
   const pageTitle =
     page > 0 ? `${group} - Page ${page} - ${title}` : `${group} - ${title}`;
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "gatsby";
 
 import { Layout } from "@/components/Layout";
@@ -9,7 +7,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { useCategoriesList, useSiteMetadata, useTagsList } from "@/hooks";
 import { toKebabCase } from "@/utils";
 
-const CategoriesTemplate: React.FC = () => {
+const CategoriesTemplate = () => {
   const categories = useCategoriesList();
   const tags = useTagsList();
 
@@ -42,11 +40,10 @@ const CategoriesTemplate: React.FC = () => {
   );
 };
 
-export const Head: React.FC = () => {
+export const Head = () => {
   const { title, subtitle } = useSiteMetadata();
-  const pageTitle = `Categories - ${title}`;
 
-  return <Meta title={pageTitle} description={subtitle} />;
+  return <Meta title={`Categories - ${title}`} description={subtitle} />;
 };
 
 export default CategoriesTemplate;

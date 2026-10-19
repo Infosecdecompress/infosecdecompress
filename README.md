@@ -1,5 +1,23 @@
 [![Gatsby Publish](https://github.com/Infosecdecompress/infosecdecompress/actions/workflows/gatsby-publish.yml/badge.svg)](https://github.com/Infosecdecompress/infosecdecompress/actions/workflows/gatsby-publish.yml) [![CodeQL](https://github.com/Infosecdecompress/infosecdecompress/actions/workflows/CodeQL-analysis.yml/badge.svg)](https://github.com/Infosecdecompress/infosecdecompress/actions/workflows/CodeQL-analysis.yml) ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m786602063-54f5b9ac689e721a6e20fa26?label=Uptime) ![GitHub last commit](https://img.shields.io/github/last-commit/infosecdecompress/infosecdecompress?label=Last%20Commit) [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
+## Development
+
+Requires the Node.js version in [`.nvmrc`](.nvmrc) (`nvm use`) and npm.
+
+```bash
+npm ci            # install dependencies (also installs the git hooks)
+npm run develop   # start the Gatsby dev server
+npm run build     # production build into public/
+npm run lint      # eslint + prettier + stylelint + tsc
+npm test          # jest
+```
+
+Posts and pages live in [`content/`](content/); site-wide settings (title, menu, contacts, posts per page) live in [`content/config.json`](content/config.json).
+
+The Gatsby build hooks (`createPages`, `onCreateNode`, …) live in [`internal/gatsby/`](internal/gatsby/) and the React UI in [`src/`](src/). Import aliases (`@/components`, `@/hooks`, …) are defined once in [`tsconfig.json`](tsconfig.json) and read from there by webpack and Jest.
+
+Commits must follow [Conventional Commits](https://www.conventionalcommits.org/); a `commit-msg` hook enforces it and a `pre-commit` hook runs the linters on staged files.
+
 ## Credits
 
 Great thanks to Contributors of the [Lumen Theme](https://github.com/alxshelepenok/gatsby-starter-lumen/) for the awesome theme, [Simple Icons](https://simpleicons.org/) and [IconFinder](https://www.iconfinder.com/) for the great icons

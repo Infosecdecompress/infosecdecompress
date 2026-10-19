@@ -1,11 +1,11 @@
-import React from "react";
+import type { ReactElement } from "react";
 
 import { CoilProvider } from "@alxshelepenok/diesel";
 import { WrapRootElementBrowserArgs } from "gatsby";
 
 const wrapRootElement = ({
   element,
-}: WrapRootElementBrowserArgs): React.ReactElement => (
+}: WrapRootElementBrowserArgs): ReactElement => (
   <CoilProvider>{element}</CoilProvider>
 );
 

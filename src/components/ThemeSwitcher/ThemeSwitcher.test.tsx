@@ -1,9 +1,7 @@
-import React from "react";
-
 import { fireEvent } from "@testing-library/dom";
 
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 describe("ThemeSwitcher", () => {
   test("renders correctly", () => {

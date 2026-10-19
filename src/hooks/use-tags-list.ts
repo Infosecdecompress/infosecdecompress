@@ -1,15 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 
+import type { Group } from "@/types";
+
 interface TagsQueryResult {
   allMarkdownRemark: {
-    group: Array<{
-      fieldValue: string;
-      totalCount: number;
-    }>;
+    group?: Array<Group>;
   };
 }
 
-const useTagsList = () => {
+const useTagsList = (): Array<Group> => {
   const { allMarkdownRemark } = useStaticQuery<TagsQueryResult>(graphql`
     query TagsListQuery {
       allMarkdownRemark(
@@ -25,7 +24,7 @@ const useTagsList = () => {
     }
   `);
 
-  return allMarkdownRemark.group || [];
+  return allMarkdownRemark.group ?? [];
 };
 
 export default useTagsList;

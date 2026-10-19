@@ -1,12 +1,10 @@
-import React from "react";
-
 interface Props {
   description: string;
   image?: string;
   title: string;
 }
 
-const Meta: React.FC<Props> = ({ description, title, image }: Props) => (
+const Meta = ({ description, title, image }: Props) => (
   <>
     <title>{title}</title>
     <meta name="description" content={description} />

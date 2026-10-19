@@ -1,20 +1,18 @@
-import React, { ReactElement } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 import { CoilProvider } from "@alxshelepenok/diesel";
 import { render, RenderOptions, RenderResult } from "@testing-library/react";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const WithCoilProvider: React.FC<Props> = ({ children }) => (
+const WithCoilProvider = ({ children }: Props) => (
   <CoilProvider>{children}</CoilProvider>
 );
 
-const renderWithCoilProvider = (
-  ui: React.ReactElement,
-  options?: RenderOptions,
-) => render(ui, { wrapper: WithCoilProvider, ...options });
+const renderWithCoilProvider = (ui: ReactElement, options?: RenderOptions) =>
+  render(ui, { wrapper: WithCoilProvider, ...options });
 
 export type SnapshotsRenderer = RenderResult & {
   /**

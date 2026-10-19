@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "gatsby";
 
 import { Layout } from "@/components/Layout";
@@ -9,7 +7,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { useSiteMetadata, useTagsList } from "@/hooks";
 import { toKebabCase } from "@/utils";
 
-const TagsTemplate: React.FC = () => {
+const TagsTemplate = () => {
   const tags = useTagsList();
 
   return (
@@ -30,11 +28,10 @@ const TagsTemplate: React.FC = () => {
   );
 };
 
-export const Head: React.FC = () => {
+export const Head = () => {
   const { title, subtitle } = useSiteMetadata();
-  const pageTitle = `Tags - ${title}`;
 
-  return <Meta title={pageTitle} description={subtitle} />;
+  return <Meta title={`Tags - ${title}`} description={subtitle} />;
 };
 
 export default TagsTemplate;

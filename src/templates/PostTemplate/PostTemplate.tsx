@@ -1,20 +1,18 @@
-import React from "react";
-
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 
 import { Layout } from "@/components/Layout";
 import { Meta } from "@/components/Meta";
 import { Post } from "@/components/Post";
 import { useSiteMetadata } from "@/hooks";
-import { Node } from "@/types";
+import type { Node } from "@/types";
 
-interface Props {
-  data: {
-    markdownRemark: Node;
-  };
+interface Data {
+  markdownRemark: Node;
 }
 
-const PostTemplate: React.FC<Props> = ({ data: { markdownRemark } }: Props) => (
+type Props = Pick<PageProps<Data>, "data">;
+
+const PostTemplate = ({ data: { markdownRemark } }: Props) => (
   <Layout>
     <Post post={markdownRemark} />
   </Layout>
@@ -40,24 +38,17 @@ export const query = graphql`
   }
 `;
 
-export const Head: React.FC<Props> = ({ data }) => {
+export const Head = ({ data }: Props) => {
   const { title, subtitle, url } = useSiteMetadata();
-
   const {
-    frontmatter: {
-      title: postTitle,
-      description: postDescription = "",
-      socialImage,
-    },
+    frontmatter: { title: postTitle, description, socialImage },
   } = data.markdownRemark;
-
-  const description = postDescription || subtitle;
-  const image = socialImage?.publicURL && url.concat(socialImage?.publicURL);
+  const image = socialImage?.publicURL && url.concat(socialImage.publicURL);
 
   return (
     <Meta
       title={`${postTitle} - ${title}`}
-      description={description}
+      description={description || subtitle}
       image={image}
     />
   );

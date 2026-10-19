@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "minimumReleaseAge": "14 days",
   "internalChecksFilter": "strict",
   "lockFileMaintenance": {
@@ -14,9 +15,13 @@
       "automerge": true
     },
     {
-      "description": "Block major bumps of the lint/type toolchain. eslint 10 is unsupported by eslint-plugin-react (caps at eslint ^9.7, still uses removed context.getFilename), and typescript 7 breaks @typescript-eslint (<6.1) and ts-node. Re-enable once the plugin ecosystem catches up.",
-      "matchPackageNames": ["eslint", "typescript"],
-      "matchPackagePatterns": ["^eslint-", "^@typescript-eslint/"],
+      "description": "Block major bumps of the lint/type toolchain. eslint 10 is unsupported by eslint-plugin-react (caps at eslint ^9.7, still uses removed context.getFilename), and typescript 7 breaks @typescript-eslint (<6.1). Re-enable once the plugin ecosystem catches up.",
+      "matchPackageNames": [
+        "eslint",
+        "typescript",
+        "/^eslint-/",
+        "/^@typescript-eslint\\//"
+      ],
       "matchUpdateTypes": ["major"],
       "automerge": false,
       "enabled": false
@@ -26,20 +31,20 @@
       "automerge": true
     },
     {
-      "packagePatterns": ["^eslint"],
+      "matchPackageNames": ["/^eslint/"],
       "groupName": "eslint"
     },
     {
-      "packagePatterns": ["gatsby"],
+      "matchPackageNames": ["/gatsby/"],
       "groupName": "gatsby"
     },
     {
-      "packageNames": ["react", "react-dom", "react-test-renderer"],
+      "matchPackageNames": ["react", "react-dom"],
       "groupName": "react"
     },
     {
-      "groupName": "node",
       "matchPackageNames": ["node"],
+      "groupName": "node",
       "enabled": false
     }
   ],

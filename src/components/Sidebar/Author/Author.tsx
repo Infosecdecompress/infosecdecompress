@@ -1,45 +1,36 @@
-import React from "react";
-
 import { Link } from "gatsby";
 
 import { Image } from "@/components/Image";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import type { Author as AuthorMetadata } from "@/types";
 
 import * as styles from "./Author.module.scss";
 
-type Props = {
-  author: {
-    name: string;
-    bio: string;
-    photo: string;
-  };
+interface Props {
+  author: Pick<AuthorMetadata, "name" | "bio" | "photo">;
   isIndex?: boolean;
-};
+}
 
-const Author = ({ author, isIndex }: Props) => (
-  <div className={styles.author}>
-    <Link to="/">
-      <Image alt={author.name} path={author.photo} className={styles.photo} />
-    </Link>
+const Author = ({ author, isIndex }: Props) => {
+  const Heading = isIndex ? "h1" : "h2";
 
-    <div className={styles.titleContainer}>
-      {isIndex ? (
-        <h1 className={styles.title}>
+  return (
+    <div className={styles.author}>
+      <Link to="/">
+        <Image alt={author.name} path={author.photo} className={styles.photo} />
+      </Link>
+
+      <div className={styles.titleContainer}>
+        <Heading className={styles.title}>
           <Link className={styles.link} to="/">
             {author.name}
           </Link>
-        </h1>
-      ) : (
-        <h2 className={styles.title}>
-          <Link className={styles.link} to="/">
-            {author.name}
-          </Link>
-        </h2>
-      )}
-      <ThemeSwitcher />
+        </Heading>
+        <ThemeSwitcher />
+      </div>
+      <p className={styles.subtitle}>{author.bio}</p>
     </div>
-    <p className={styles.subtitle}>{author.bio}</p>
-  </div>
-);
+  );
+};
 
 export default Author;

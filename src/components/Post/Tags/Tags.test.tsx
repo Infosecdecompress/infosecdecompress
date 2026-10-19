@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   render as reactTestingLibraryRender,
   screen,
@@ -7,7 +5,7 @@ import {
 
 import { Tags } from "@/components/Post/Tags";
 import * as mocks from "@/mocks";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 describe("Tags", () => {
   test("renders correctly", () => {

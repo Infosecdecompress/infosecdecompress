@@ -1,7 +1,5 @@
-import React from "react";
-
 import { Meta } from "@/components/Meta";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 describe("Meta", () => {
   test("should contain correct metadata", async () => {

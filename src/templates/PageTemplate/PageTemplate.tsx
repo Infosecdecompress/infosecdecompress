@@ -1,30 +1,26 @@
-import React from "react";
-
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 
 import { Layout } from "@/components/Layout";
 import { Meta } from "@/components/Meta";
 import { Page } from "@/components/Page";
 import { Sidebar } from "@/components/Sidebar";
 import { useSiteMetadata } from "@/hooks";
-import { Node } from "@/types";
+import type { Node } from "@/types";
 
-interface Props {
-  data: {
-    markdownRemark: Node;
-  };
+interface Data {
+  markdownRemark: Node;
 }
 
-const PageTemplate: React.FC<Props> = ({ data }: Props) => {
-  const { html: body } = data.markdownRemark;
-  const { frontmatter } = data.markdownRemark;
-  const { title } = frontmatter;
+type Props = Pick<PageProps<Data>, "data">;
+
+const PageTemplate = ({ data }: Props) => {
+  const { html, frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <Sidebar />
-      <Page title={title}>
-        <div dangerouslySetInnerHTML={{ __html: body }} />
+      <Page title={frontmatter.title}>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </Page>
     </Layout>
   );
@@ -45,23 +41,17 @@ export const query = graphql`
   }
 `;
 
-export const Head: React.FC<Props> = ({ data }) => {
+export const Head = ({ data }: Props) => {
   const { title, subtitle, url } = useSiteMetadata();
-
   const {
-    frontmatter: {
-      title: pageTitle,
-      description: pageDescription = "",
-      socialImage,
-    },
+    frontmatter: { title: pageTitle, description, socialImage },
   } = data.markdownRemark;
-  const description = pageDescription || subtitle;
-  const image = socialImage?.publicURL && url.concat(socialImage?.publicURL);
+  const image = socialImage?.publicURL && url.concat(socialImage.publicURL);
 
   return (
     <Meta
       title={`${pageTitle} - ${title}`}
-      description={description}
+      description={description || subtitle}
       image={image}
     />
   );

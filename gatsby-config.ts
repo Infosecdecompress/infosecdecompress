@@ -1,12 +1,52 @@
 import path from "path";
 
-import config from "./content/config.json";
-const siteUrl = `https://infosecdecompress.com`;
+import type { GatsbyConfig } from "gatsby";
 
-export default {
+import config from "./content/config.json";
+import type { Edge } from "./internal/gatsby/types";
+import toPlainText from "./src/utils/to-plain-text";
+
+const postsQuery = `
+  {
+    allMarkdownRemark(
+      limit: 1000
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+    ) {
+      edges {
+        node {
+          html
+          rawMarkdownBody
+          frontmatter {
+            title
+            slug
+            date
+            template
+            draft
+            description
+          }
+        }
+      }
+    }
+  }
+`;
+
+interface SearchNode {
+  rawMarkdownBody: string;
+  frontmatter: {
+    slug: string;
+    title: string;
+  };
+}
+
+const gatsbyConfig: GatsbyConfig = {
   pathPrefix: config.pathPrefix,
+  // Match tsconfig ("jsx": "react-jsx") and the swc test transform so
+  // components never need a manual `import React`.
+  jsxRuntime: "automatic",
   siteMetadata: {
     url: config.url,
+    siteUrl: config.url,
     menu: config.menu,
     title: config.title,
     author: config.author,
@@ -40,99 +80,42 @@ export default {
         `,
         feeds: [
           {
-            serialize: ({
-              query: { site, allMarkdownRemark },
-            }: {
-              query: {
-                site: {
-                  siteMetadata: {
-                    url: string;
-                  };
-                };
-                allMarkdownRemark: {
-                  edges: Array<types.Edge>;
-                };
-              };
-            }) =>
-              allMarkdownRemark.edges.map(({ node }) => ({
-                ...node.frontmatter,
-                date: node?.frontmatter?.date,
-                description: node?.frontmatter?.description,
-                url:
-                  site.siteMetadata.url +
-                  (node.frontmatter?.slug || node.fields?.slug),
-                guid:
-                  site.siteMetadata.url +
-                  (node.frontmatter?.slug || node.fields?.slug),
-                custom_elements: [{ "content:encoded": node.html }],
-              })),
-            query: `
-              {
-                site {
-                  siteMetadata {
-                    url
-                  }
-                }
-                allMarkdownRemark(
-                  limit: 1000
-                  sort: {frontmatter: {date: DESC}}
-                  filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
-                ) {
-                  edges {
-                    node {
-                      html
-                      frontmatter {
-                        title
-                        slug
-                        date
-                        template
-                        draft
-                        description
-                      }
-                    }
-                  }
-                }
-              }
-            `,
+            query: postsQuery,
             output: "/rss.xml",
             title: config.title,
+            serialize: ({
+              query: { allMarkdownRemark },
+            }: {
+              query: { allMarkdownRemark: { edges: Array<Edge> } };
+            }) =>
+              allMarkdownRemark.edges.map(({ node }) => {
+                const url =
+                  config.url + (node.frontmatter?.slug || node.fields?.slug);
+
+                return {
+                  ...node.frontmatter,
+                  url,
+                  guid: url,
+                  custom_elements: [{ "content:encoded": node.html }],
+                };
+              }),
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-json-output`,
+      resolve: "gatsby-plugin-json-output",
       options: {
-        siteUrl: siteUrl,
-        graphQLQuery: `
-          {
-            allMarkdownRemark(
-              limit: 1000
-              sort: {frontmatter: {date: DESC}}
-              filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
-            ) {
-              edges {
-                node {
-                  rawMarkdownBody
-                  frontmatter {
-                    slug
-                    title
-                  }
-                }
-              }
-            }
-          }
-        `,
-        serializeFeed: (results) =>
+        siteUrl: config.url,
+        graphQLQuery: postsQuery,
+        serializeFeed: (results: {
+          data: { allMarkdownRemark: { edges: Array<{ node: SearchNode }> } };
+        }) =>
           results.data.allMarkdownRemark.edges.map(({ node }) => ({
             id: node.frontmatter.slug,
             url: node.frontmatter.slug,
             title: node.frontmatter.title,
-            // content: node.rawMarkdownBody.replace(/(\\r\\n)*|(\((.*?)\))|(\#*|\**)/g, ``)
-            content: node.rawMarkdownBody
-              .replace(/(\((.*?)\))|(\#)|(\*)|(\[)|(\])/g, " ")
-              .replace(/(?:\\[rn]|[\r\n]+)|(\\)+/g, " ")
-              .replace(/\s\s+/g, " "),
+            content: toPlainText(node.rawMarkdownBody),
           })),
         nodesPerFeedFile: 500,
       },
@@ -165,72 +148,18 @@ export default {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl: url
-              }
-            }
-            allSitePage(
-              filter: {
-                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
-              }
-            ) {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-          }
-        `,
         output: "/",
-        serialize: (page, { resolvePagePath }) => ({
-          url: resolvePagePath(page),
-          changefreq: `daily`,
-          priority: 0.7,
-        }),
-        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
-        resolvePagePath: (page) => {
-          if (!(page !== null && page !== void 0 && page.path)) {
-            throw Error(
-              "`path` does not exist on your page object.\nMake the page URI available at `path` or provide a custom `resolvePagePath` function.\nhttps://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/#api-reference\n      ",
-            );
-          }
-
-          return page.path;
-        },
-        resolvePages: (data) =>
-          data.allSitePage.edges.map(({ node }) => ({ path: node.path })),
         excludes: [
-          `/404`,
-          `/tag/*`,
-          `/tags`,
-          `/category/*`,
-          `/categories`,
-          `/pages/*`,
-          `/page/*`,
-          `/admin`,
-          `/offline-plugin-app-shell-fallback`,
+          "/404",
+          "/tag/*",
+          "/tags",
+          "/category/*",
+          "/categories",
+          "/pages/*",
+          "/page/*",
+          "/admin",
+          "/offline-plugin-app-shell-fallback",
         ],
-        filterPages: (
-          page,
-          excludedRoute,
-          { minimatch, withoutTrailingSlash, resolvePagePath },
-        ) => {
-          if (typeof excludedRoute !== "string") {
-            throw new Error(
-              "You've passed something other than string to the exclude array. This is supported, but you'll have to write a custom filter function.\nIgnoring the input for now: " +
-                JSON.stringify(excludedRoute, null, 2) +
-                "\nhttps://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/#api-reference\n      ",
-            );
-          }
-          return minimatch(
-            withoutTrailingSlash(resolvePagePath(page)),
-            withoutTrailingSlash(excludedRoute),
-          );
-        },
       },
     },
     {
@@ -239,7 +168,7 @@ export default {
         name: config.title,
         short_name: config.title,
         description: config.description,
-        lang: `zh-tw`,
+        lang: "zh-TW",
         start_url: "/",
         background_color: "#FFF",
         theme_color: "#CDD9D9",
@@ -247,8 +176,8 @@ export default {
         orientation: "portrait",
         icon: "content/maskable_icon.png",
         icon_options: {
-          type: `image/png`,
-          purpose: `any maskable`,
+          type: "image/png",
+          purpose: "any maskable",
         },
       },
     },
@@ -291,12 +220,12 @@ export default {
       },
     },
     {
-      resolve: `gatsby-plugin-csp`,
+      resolve: "gatsby-plugin-csp",
       options: {
         disableOnDev: false,
-        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
-        mergeScriptHashes: false, // you can disable scripts sha256 hashes
-        mergeStyleHashes: false, // you can disable styles sha256 hashes
+        reportOnly: false,
+        mergeScriptHashes: false,
+        mergeStyleHashes: false,
         mergeDefaultDirectives: true,
         directives: {
           "default-src": "'self'",
@@ -327,3 +256,5 @@ export default {
     },
   ],
 };
+
+export default gatsbyConfig;

@@ -1,0 +1,4 @@
+// Web fonts must be the very first CSS emitted, so this module is loaded first
+// from main.scss. Keep it free of anything but plain CSS @import rules.
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");

@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
 import { useTheme } from "@/hooks";
 
 import * as styles from "./Layout.module.scss";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Layout: React.FC<Props> = ({ children }: Props) => {
+const Layout = ({ children }: Props) => {
   const [{ mode }] = useTheme();
 
   useEffect(() => {

@@ -1,6 +1,4 @@
-import React from "react";
-
-import { StaticQuery } from "gatsby";
+import { useStaticQuery } from "gatsby";
 
 import { Image } from "@/components/Image";
 import { createSnapshotsRenderer } from "@/utils/test-utils";
@@ -56,9 +54,7 @@ const mockImageData = {
 
 describe("Image", () => {
   beforeEach(() => {
-    (StaticQuery as jest.Mock).mockImplementation(({ render }) =>
-      render(mockImageData),
-    );
+    (useStaticQuery as jest.Mock).mockReturnValue(mockImageData);
   });
 
   test("renders correctly when image is found", () => {

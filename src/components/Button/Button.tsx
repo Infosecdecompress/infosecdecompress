@@ -1,5 +1,3 @@
-import React from "react";
-
 import cn from "classnames";
 import { Link } from "gatsby";
 
@@ -11,7 +9,7 @@ interface Props {
   to: string;
 }
 
-const Button: React.FC<Props> = ({ className, title, to }: Props) => (
+const Button = ({ className, title, to }: Props) => (
   <Link className={cn(styles.button, className)} to={to}>
     {title}
   </Link>

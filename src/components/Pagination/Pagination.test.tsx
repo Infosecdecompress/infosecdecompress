@@ -1,8 +1,6 @@
-import React from "react";
-
 import { Pagination } from "@/components/Pagination";
 import * as mocks from "@/mocks";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 describe("Pagination", () => {
   test("renders correctly", () => {

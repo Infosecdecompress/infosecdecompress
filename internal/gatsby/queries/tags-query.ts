@@ -1,11 +1,10 @@
 import { CreatePagesArgs } from "gatsby";
 
+import * as types from "../types";
+
 interface TagsQueryResult {
   allMarkdownRemark: {
-    group: Array<{
-      fieldValue: string;
-      totalCount: number;
-    }>;
+    group?: Array<types.Group>;
   };
 }
 
@@ -25,7 +24,7 @@ const tagsQuery = async (graphql: CreatePagesArgs["graphql"]) => {
     }
   `);
 
-  return result?.data?.allMarkdownRemark?.group || [];
+  return result?.data?.allMarkdownRemark?.group ?? [];
 };
 
 export default tagsQuery;

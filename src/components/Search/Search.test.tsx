@@ -1,9 +1,7 @@
-import React from "react";
-
 import { fireEvent, render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
 
-import Search from "@/components/SearchContainer";
+import { Search } from "@/components/Search";
 
 const mockSearchData = {
   allMarkdownRemark: {
@@ -39,47 +37,48 @@ const mockSearchData = {
   },
 };
 
-describe("SearchContainer", () => {
+const getInput = () => screen.getByPlaceholderText("搜尋文章");
+const queryResults = () => screen.queryByRole("table");
+
+describe("Search", () => {
   beforeEach(() => {
     (useStaticQuery as jest.Mock).mockReturnValue(mockSearchData);
   });
 
   test("renders search input", () => {
     render(<Search />);
-    const input = screen.getByPlaceholderText("搜尋文章");
-    expect(input).toBeInTheDocument();
+    expect(getInput()).toBeInTheDocument();
   });
 
-  test("results table is hidden by default", () => {
+  test("results are hidden by default", () => {
     render(<Search />);
-    const table = document.getElementById("result");
-    expect(table).toHaveStyle({ display: "none" });
+    expect(queryResults()).not.toBeInTheDocument();
   });
 
-  test("shows results when typing a query", () => {
+  test("shows matching results when typing a query", () => {
     render(<Search />);
-    const input = screen.getByPlaceholderText("搜尋文章");
 
-    fireEvent.change(input, { target: { value: "Network" } });
+    fireEvent.change(getInput(), { target: { value: "Network" } });
 
-    const table = document.getElementById("result");
-    expect(table).toHaveStyle({ display: "block" });
+    expect(queryResults()).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: "Network Security Basics" }),
+    ).toHaveAttribute("href", "/posts/network-security");
+    expect(screen.queryByText("VPN Guide")).not.toBeInTheDocument();
   });
 
   test("hides results when query is cleared", () => {
     render(<Search />);
-    const input = screen.getByPlaceholderText("搜尋文章");
 
-    fireEvent.change(input, { target: { value: "Network" } });
-    fireEvent.change(input, { target: { value: "" } });
+    fireEvent.change(getInput(), { target: { value: "Network" } });
+    fireEvent.change(getInput(), { target: { value: "" } });
 
-    const table = document.getElementById("result");
-    expect(table).toHaveStyle({ display: "none" });
+    expect(queryResults()).not.toBeInTheDocument();
   });
 
   test("form submit does not reload the page", () => {
     render(<Search />);
-    const form = document.querySelector("form")!;
+    const form = screen.getByRole("search");
     const event = new Event("submit", { bubbles: true, cancelable: true });
     const prevented = !form.dispatchEvent(event);
     expect(prevented).toBe(true);
@@ -91,18 +90,16 @@ describe("SearchContainer", () => {
     });
 
     render(<Search />);
-    const input = screen.getByPlaceholderText("搜尋文章");
-    expect(input).toBeInTheDocument();
+    fireEvent.change(getInput(), { target: { value: "test" } });
 
-    fireEvent.change(input, { target: { value: "test" } });
-    // Should not crash with empty data
+    expect(queryResults()).toBeInTheDocument();
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });
 
   test("handles null data gracefully", () => {
     (useStaticQuery as jest.Mock).mockReturnValue({});
 
     render(<Search />);
-    const input = screen.getByPlaceholderText("搜尋文章");
-    expect(input).toBeInTheDocument();
+    expect(getInput()).toBeInTheDocument();
   });
 });

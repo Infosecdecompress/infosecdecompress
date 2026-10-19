@@ -1,6 +1,4 @@
-import React from "react";
-
-import { ICONS } from "@/constants";
+import type { ICONS } from "@/constants";
 
 import * as styles from "./Icon.module.scss";
 
@@ -12,7 +10,7 @@ interface Props {
   };
 }
 
-const Icon: React.FC<Props> = ({ name, icon }: Props) => (
+const Icon = ({ name, icon }: Props) => (
   <svg className={styles.icon} viewBox={icon.viewBox}>
     <title>{name}</title>
     <path d={icon.path} />

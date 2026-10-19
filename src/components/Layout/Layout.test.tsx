@@ -1,7 +1,5 @@
-import React from "react";
-
 import { Layout } from "@/components/Layout";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 describe("Layout", () => {
   const LayoutWithChildren = () => <Layout>test</Layout>;

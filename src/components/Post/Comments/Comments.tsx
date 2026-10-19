@@ -1,5 +1,3 @@
-import React from "react";
-
 import { DiscussionEmbed } from "disqus-react";
 
 import { useSiteMetadata } from "@/hooks";
@@ -9,7 +7,7 @@ interface Props {
   postSlug: string;
 }
 
-const Comments: React.FC<Props> = ({ postTitle, postSlug }: Props) => {
+const Comments = ({ postTitle, postSlug }: Props) => {
   const { url, disqusShortname } = useSiteMetadata();
 
   if (!disqusShortname) {

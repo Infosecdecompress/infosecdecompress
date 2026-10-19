@@ -1,8 +1,6 @@
-import React from "react";
-
 import { Content } from "@/components/Post/Content";
 import * as mocks from "@/mocks";
-import { testUtils } from "@/utils";
+import * as testUtils from "@/utils/test-utils";
 
 describe("Content", () => {
   test("renders correctly", () => {

@@ -23,6 +23,5 @@ export default {
           href: to,
         }),
     ),
-  StaticQuery: jest.fn(),
   useStaticQuery: jest.fn(),
 };

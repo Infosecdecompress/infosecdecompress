@@ -23,3 +23,10 @@ test("getContactHref", () => {
     "https://podcasts.apple.com/tw/podcast/#",
   );
 });
+
+test("getContactHref falls back to the raw value for unknown services", () => {
+  expect(getContactHref("bluesky", "#")).toBe("https://bsky.app/profile/#");
+  expect(getContactHref("mastodon", "https://example.social/@me")).toBe(
+    "https://example.social/@me",
+  );
+});

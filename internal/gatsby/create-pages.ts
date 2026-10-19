@@ -1,23 +1,52 @@
 import { GatsbyNode } from "gatsby";
 
+import toKebabCase from "../../src/utils/to-kebab-case";
 import * as constants from "./constants";
 import * as queries from "./queries";
-import * as utils from "./utils";
 
-type CreateWithPagination = (parameters: {
-  limit: number;
+interface PaginatedPagesOptions {
   group?: string;
   template: string;
-  total: number;
-  page: number;
-  path: string;
-}) => void;
+  basePath: string;
+  totalItems: number;
+  limit: number;
+}
 
 const getPaginationPath = (basePath: string, page: number): string =>
   [basePath === "/" ? "" : basePath, "page", page].join("/");
 
 const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
   const { createPage } = actions;
+
+  const createPaginatedPages = ({
+    group,
+    template,
+    basePath,
+    totalItems,
+    limit,
+  }: PaginatedPagesOptions) => {
+    const totalPages = Math.ceil(totalItems / limit);
+
+    for (let page = 0; page < totalPages; page += 1) {
+      createPage({
+        component: template,
+        path: page === 0 ? basePath : getPaginationPath(basePath, page),
+        context: {
+          group,
+          limit,
+          offset: page * limit,
+          pagination: {
+            currentPage: page,
+            prevPagePath:
+              page <= 1 ? basePath : getPaginationPath(basePath, page - 1),
+            nextPagePath: getPaginationPath(basePath, page + 1),
+            hasNextPage: page !== totalPages - 1,
+            hasPrevPage: page !== 0,
+          },
+        },
+      });
+    }
+  };
 
   createPage({
     path: constants.routes.notFoundRoute,
@@ -39,112 +68,63 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
 
   const pages = await queries.pagesQuery(graphql);
 
-  pages.forEach((edge) => {
-    const { node } = edge;
+  pages.forEach(({ node }) => {
+    const slug = node.fields?.slug;
 
-    if (node?.frontmatter?.template === "page" && node?.fields?.slug) {
+    if (!slug) {
+      return;
+    }
+
+    const templateByType: Record<string, string> = {
+      page: constants.templates.pageTemplate,
+      post: constants.templates.postTemplate,
+    };
+    const component = templateByType[node.frontmatter?.template ?? ""];
+
+    if (component) {
       createPage({
-        path: node?.frontmatter?.slug || node.fields.slug,
-        component: constants.templates.pageTemplate,
-        context: { slug: node.fields.slug },
-      });
-    } else if (node?.frontmatter?.template === "post" && node?.fields?.slug) {
-      createPage({
-        path: node?.frontmatter?.slug || node.fields.slug,
-        component: constants.templates.postTemplate,
-        context: { slug: node.fields.slug },
+        path: node.frontmatter?.slug || slug,
+        component,
+        context: { slug },
       });
     }
   });
 
-  const createWithPagination: CreateWithPagination = ({
-    group,
-    template,
-    page,
-    path,
-    total,
-    limit,
-  }) => {
-    createPage({
-      component: template,
-      path: page === 0 ? path : getPaginationPath(path, page),
-      context: {
-        group,
-        limit,
-        offset: page * limit,
-        pagination: {
-          currentPage: page,
-          prevPagePath:
-            page <= 1 ? path : getPaginationPath(path, utils.decrement(page)),
-          nextPagePath: getPaginationPath(path, utils.increment(page)),
-          hasNextPage: page !== utils.decrement(total),
-          hasPrevPage: page !== 0,
-        },
-      },
-    });
-  };
+  const metadata = await queries.metadataQuery(graphql);
+  const limit = metadata.postsLimit ?? 1;
 
   const categories = await queries.categoriesQuery(graphql);
-  const metadata = await queries.metadataQuery(graphql);
-  const postsLimit = metadata?.postsLimit ?? 1;
 
   categories.forEach((category) => {
-    const total = Math.ceil(category.totalCount / postsLimit);
-    const path = utils.concat(
-      constants.routes.categoryRoute,
-      "/",
-      utils.toKebabCase(category.fieldValue),
-    );
-
-    for (let page = 0; page < total; page += 1) {
-      createWithPagination({
-        limit: postsLimit,
-        group: category.fieldValue,
-        template: constants.templates.categoryTemplate,
-        total,
-        page,
-        path,
-      });
-    }
+    createPaginatedPages({
+      group: category.fieldValue,
+      template: constants.templates.categoryTemplate,
+      basePath: `${constants.routes.categoryRoute}/${toKebabCase(category.fieldValue)}`,
+      totalItems: category.totalCount,
+      limit,
+    });
   });
 
   const tags = await queries.tagsQuery(graphql);
 
   tags.forEach((tag) => {
-    const path = utils.concat(
-      constants.routes.tagRoute,
-      "/",
-      utils.toKebabCase(tag.fieldValue),
-    );
-
-    const total = Math.ceil(tag.totalCount / postsLimit);
-
-    for (let page = 0; page < total; page += 1) {
-      createWithPagination({
-        limit: postsLimit,
-        group: tag.fieldValue,
-        template: constants.templates.tagTemplate,
-        total,
-        page,
-        path,
-      });
-    }
+    createPaginatedPages({
+      group: tag.fieldValue,
+      template: constants.templates.tagTemplate,
+      basePath: `${constants.routes.tagRoute}/${toKebabCase(tag.fieldValue)}`,
+      totalItems: tag.totalCount,
+      limit,
+    });
   });
 
-  const path = constants.routes.indexRoute;
-  const template = constants.templates.indexTemplate;
   const posts = await queries.postsQuery(graphql);
-  const total = Math.ceil((posts?.edges?.length ?? 0) / postsLimit);
 
-  for (let page = 0; page < total; page += 1) {
-    createWithPagination({
-      limit: postsLimit,
-      template,
-      total,
-      page,
-      path,
-    });
-  }
+  createPaginatedPages({
+    template: constants.templates.indexTemplate,
+    basePath: constants.routes.indexRoute,
+    totalItems: posts.length,
+    limit,
+  });
 };
 
 export { createPages };
