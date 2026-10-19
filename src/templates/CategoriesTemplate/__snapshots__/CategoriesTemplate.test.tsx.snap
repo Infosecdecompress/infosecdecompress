@@ -17,17 +17,15 @@ exports[`CategoriesTemplate renders correctly 1`] = `
             </a>
           </h2>
           <div
-            className=""
+            class=""
           >
-            <button
-              onClick={[Function]}
-            >
+            <button>
               <svg
                 fill="none"
                 height="24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
                 viewBox="0 0 24 24"
                 width="24"
               >
@@ -134,44 +132,19 @@ exports[`CategoriesTemplate renders correctly 1`] = `
         </ul>
       </nav>
       <div
-        style={
-          {
-            "margin": "5px auto",
-          }
-        }
+        style="margin: 5px auto;"
       >
         <div
-          style={
-            {
-              "margin": "0 auto",
-            }
-          }
+          style="margin: 0px auto;"
         >
-          <form
-            onSubmit={[Function]}
-          >
+          <form>
             <div
-              style={
-                {
-                  "margin": "0 auto",
-                }
-              }
+              style="margin: 0px auto;"
             >
               <input
                 id="Search"
-                onChange={[Function]}
                 placeholder="搜尋文章"
-                style={
-                  {
-                    "border": "1px solid #ccc",
-                    "borderRadius": "4px",
-                    "boxSizing": "border-box",
-                    "display": "inline-block",
-                    "margin": "0 auto",
-                    "padding": "5px 5px",
-                    "width": "250px",
-                  }
-                }
+                style="margin: 0px auto; width: 250px; padding: 5px 5px; display: inline-block; border: 1px solid rgb(204, 204, 204); border-radius: 4px; box-sizing: border-box;"
                 value=""
               />
             </div>
@@ -179,24 +152,12 @@ exports[`CategoriesTemplate renders correctly 1`] = `
           <div>
             <table
               id="result"
-              style={
-                {
-                  "border": "1px solid #ccc",
-                  "borderCollapse": "collapse",
-                  "borderRadius": "4px",
-                  "display": "none",
-                  "width": "250px",
-                }
-              }
+              style="width: 250px; border-collapse: collapse; border-radius: 4px; border: 1px solid rgb(204, 204, 204); display: none;"
             >
               <tbody>
                 <tr>
                   <td
-                    style={
-                      {
-                        "fontSize": "14px",
-                      }
-                    }
+                    style="font-size: 14px;"
                   >
                     <a>
                       Perfecting the Art of Perfection
@@ -205,11 +166,7 @@ exports[`CategoriesTemplate renders correctly 1`] = `
                 </tr>
                 <tr>
                   <td
-                    style={
-                      {
-                        "fontSize": "14px",
-                      }
-                    }
+                    style="font-size: 14px;"
                   >
                     <a
                       href="/posts/johannes-gutenberg"
@@ -220,11 +177,7 @@ exports[`CategoriesTemplate renders correctly 1`] = `
                 </tr>
                 <tr>
                   <td
-                    style={
-                      {
-                        "fontSize": "14px",
-                      }
-                    }
+                    style="font-size: 14px;"
                   >
                     <a>
                       Humane Typography in the Digital Age
@@ -241,13 +194,7 @@ exports[`CategoriesTemplate renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <div
-    ref={
-      {
-        "current": null,
-      }
-    }
-  >
+  <div>
     <div>
       <h1>
         分類 標籤

@@ -4,7 +4,7 @@ exports[`Pagination renders correctly 1`] = `
 <div>
   <div>
     <a
-      className=""
+      class=""
       href="/typography/page/1"
       rel="prev"
     >
@@ -13,7 +13,7 @@ exports[`Pagination renders correctly 1`] = `
   </div>
   <div>
     <a
-      className=""
+      class=""
       href="/typography/page/3"
       rel="next"
     >
