@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { act, ReactElement } from "react";
 import renderer, {
   ReactTestRenderer,
   TestRendererOptions,
@@ -23,7 +23,16 @@ const renderWithCoilProvider = (
 export const createSnapshotsRenderer = (
   nextElement: ReactElement,
   options?: TestRendererOptions,
-): ReactTestRenderer =>
-  renderer.create(<CoilProvider>{nextElement}</CoilProvider>, options);
+): ReactTestRenderer => {
+  let tree!: ReactTestRenderer;
+
+  // React 19 no longer flushes the initial render synchronously inside
+  // renderer.create(), so toJSON() would return null without act().
+  act(() => {
+    tree = renderer.create(<CoilProvider>{nextElement}</CoilProvider>, options);
+  });
+
+  return tree;
+};
 
 export default renderWithCoilProvider;

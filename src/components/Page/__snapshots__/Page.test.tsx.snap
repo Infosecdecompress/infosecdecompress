@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Page renders correctly 1`] = `
-<div>
+<div
+  ref={
+    {
+      "current": null,
+    }
+  }
+>
   <div>
     <h1>
       Perfecting the Art of Perfection
