@@ -4,10 +4,10 @@ import { Layout } from "@/components/Layout";
 import { Meta } from "@/components/Meta";
 import { Post } from "@/components/Post";
 import { useSiteMetadata } from "@/hooks";
-import type { Node } from "@/types";
+import type { MarkdownRemark } from "@/types";
 
 interface Data {
-  markdownRemark: Node;
+  markdownRemark: MarkdownRemark;
 }
 
 type Props = Pick<PageProps<Data>, "data">;

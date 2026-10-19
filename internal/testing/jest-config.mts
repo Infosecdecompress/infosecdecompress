@@ -21,9 +21,21 @@ const pathAliases = Object.entries(tsconfig.compilerOptions.paths).reduce<
   return { ...aliases, [pattern]: destination };
 }, {});
 
+// Date snapshots must not depend on the developer's timezone. Setting it here
+// (in the parent process) is inherited by every test worker.
+process.env.TZ = "UTC";
+
 const jestConfig: Config.InitialOptions = {
   testEnvironment: "jsdom",
   rootDir: "../../",
+  collectCoverageFrom: [
+    "src/**/*.{ts,tsx}",
+    "internal/gatsby/**/*.{ts,tsx}",
+    "!**/*.test.{ts,tsx}",
+    "!**/index.ts",
+    "!src/utils/test-utils/**",
+    "!src/types/**",
+  ],
   moduleNameMapper: {
     ...pathAliases,
     ".+\\.(css|sass|scss)$": "identity-obj-proxy",

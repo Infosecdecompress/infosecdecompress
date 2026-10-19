@@ -1,7 +1,7 @@
-import Node from "./node";
+import MarkdownRemark from "./markdown-remark";
 
 interface Edge {
-  node: Node;
+  node: MarkdownRemark;
 }
 
 export default Edge;

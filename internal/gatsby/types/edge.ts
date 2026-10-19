@@ -15,13 +15,13 @@ interface Fields {
   tagSlugs?: Array<string>;
 }
 
-interface Node extends GatsbyNode {
+interface MarkdownRemarkNode extends GatsbyNode {
   fields?: Fields;
   frontmatter?: Frontmatter;
 }
 
 interface Edge {
-  node: Node;
+  node: MarkdownRemarkNode;
 }
 
 export default Edge;
