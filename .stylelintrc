@@ -13,7 +13,6 @@
     "no-duplicate-selectors": true,
     "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": true,
-    "property-no-unknown": [true, { "ignoreProperties": ["/^lost-/"] }],
     "value-keyword-case": "lower"
   }
 }

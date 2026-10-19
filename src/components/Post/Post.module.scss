@@ -31,6 +31,12 @@
   }
 }
 
+@include breakpoint-sm {
+  .post {
+    grid-column: 1 / -1;
+  }
+}
+
 @include breakpoint-md {
   .post {
     .footer {
