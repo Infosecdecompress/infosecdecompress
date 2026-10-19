@@ -24,7 +24,7 @@ const ThemeSwitcher = () => {
         [styles.dark]: mode === "dark",
       })}
     >
-      <button className={styles.button} onClick={toggleTheme}>
+      <button type="button" className={styles.button} onClick={toggleTheme}>
         <svg
           width="24"
           height="24"
@@ -56,7 +56,7 @@ const ThemeSwitcher = () => {
             y1="21"
             x2="12"
             y2="23"
-          ></line>
+          />
           <line
             pathLength="1"
             className={styles.sun}

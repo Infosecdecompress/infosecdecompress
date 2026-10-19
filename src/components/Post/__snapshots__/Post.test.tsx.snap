@@ -12,7 +12,9 @@ exports[`Post renders correctly 1`] = `
     <div
       class=""
     >
-      <button>
+      <button
+        type="button"
+      >
         <svg
           fill="none"
           height="24"
@@ -110,8 +112,7 @@ exports[`Post renders correctly 1`] = `
   <div>
     <div>
       <p>
-        發佈於
-         
+        發佈於 
         2016年9月1日
       </p>
     </div>
