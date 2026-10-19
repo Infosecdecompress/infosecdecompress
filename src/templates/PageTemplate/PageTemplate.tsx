@@ -5,10 +5,10 @@ import { Meta } from "@/components/Meta";
 import { Page } from "@/components/Page";
 import { Sidebar } from "@/components/Sidebar";
 import { useSiteMetadata } from "@/hooks";
-import type { Node } from "@/types";
+import type { MarkdownRemark } from "@/types";
 
 interface Data {
-  markdownRemark: Node;
+  markdownRemark: MarkdownRemark;
 }
 
 type Props = Pick<PageProps<Data>, "data">;
@@ -20,6 +20,8 @@ const PageTemplate = ({ data }: Props) => {
     <Layout>
       <Sidebar />
       <Page title={frontmatter.title}>
+        {/* Markdown rendered at build time by gatsby-transformer-remark. */}
+        {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Page>
     </Layout>

@@ -4,40 +4,6 @@ import type { GatsbyConfig } from "gatsby";
 
 import config from "./content/config.json";
 import type { Edge } from "./internal/gatsby/types";
-import toPlainText from "./src/utils/to-plain-text";
-
-const postsQuery = `
-  {
-    allMarkdownRemark(
-      limit: 1000
-      sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-    ) {
-      edges {
-        node {
-          html
-          rawMarkdownBody
-          frontmatter {
-            title
-            slug
-            date
-            template
-            draft
-            description
-          }
-        }
-      }
-    }
-  }
-`;
-
-interface SearchNode {
-  rawMarkdownBody: string;
-  frontmatter: {
-    slug: string;
-    title: string;
-  };
-}
 
 const gatsbyConfig: GatsbyConfig = {
   pathPrefix: config.pathPrefix,
@@ -80,7 +46,31 @@ const gatsbyConfig: GatsbyConfig = {
         `,
         feeds: [
           {
-            query: postsQuery,
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000
+                  sort: { frontmatter: { date: DESC } }
+                  filter: {
+                    frontmatter: { template: { eq: "post" }, draft: { ne: true } }
+                  }
+                ) {
+                  edges {
+                    node {
+                      html
+                      frontmatter {
+                        title
+                        slug
+                        date
+                        template
+                        draft
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
             output: "/rss.xml",
             title: config.title,
             serialize: ({
@@ -89,8 +79,7 @@ const gatsbyConfig: GatsbyConfig = {
               query: { allMarkdownRemark: { edges: Array<Edge> } };
             }) =>
               allMarkdownRemark.edges.map(({ node }) => {
-                const url =
-                  config.url + (node.frontmatter?.slug || node.fields?.slug);
+                const url = `${config.url}${node.frontmatter?.slug ?? node.fields?.slug ?? ""}`;
 
                 return {
                   ...node.frontmatter,
@@ -101,23 +90,6 @@ const gatsbyConfig: GatsbyConfig = {
               }),
           },
         ],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-json-output",
-      options: {
-        siteUrl: config.url,
-        graphQLQuery: postsQuery,
-        serializeFeed: (results: {
-          data: { allMarkdownRemark: { edges: Array<{ node: SearchNode }> } };
-        }) =>
-          results.data.allMarkdownRemark.edges.map(({ node }) => ({
-            id: node.frontmatter.slug,
-            url: node.frontmatter.slug,
-            title: node.frontmatter.title,
-            content: toPlainText(node.rawMarkdownBody),
-          })),
-        nodesPerFeedFile: 500,
       },
     },
     {
@@ -222,15 +194,21 @@ const gatsbyConfig: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-csp",
       options: {
-        disableOnDev: false,
+        // `gatsby develop` relies on eval-based source maps, so the policy is
+        // only emitted for production builds.
+        disableOnDev: true,
         reportOnly: false,
+        // Inline scripts are allow-listed by sha256 hash instead of
+        // 'unsafe-inline'. The plugin's own hashes go stale (Gatsby rewrites
+        // its bootstrap scripts after rendering), so they are recomputed from
+        // the final HTML in internal/gatsby/on-post-build.ts.
         mergeScriptHashes: false,
         mergeStyleHashes: false,
         mergeDefaultDirectives: true,
         directives: {
           "default-src": "'self'",
           "script-src":
-            "'self' 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com",
+            "'self' www.googletagmanager.com fonts.googleapis.com fonts.gstatic.com ajax.cloudflare.com static.cloudflareinsights.com infoseczip.disqus.com disqus.com c.disquscdn.com twitter.com",
           "style-src":
             "'self' blob: 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com c.disquscdn.com",
           "img-src": "'self' data: disqus.com",

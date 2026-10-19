@@ -1,3 +1,4 @@
+export { default as formatDate } from "./format-date";
 export { default as getContactHref } from "./get-contact-href";
 export { default as getDefaultColorMode } from "./get-default-color-mode";
 export { default as getIcon } from "./get-icon";

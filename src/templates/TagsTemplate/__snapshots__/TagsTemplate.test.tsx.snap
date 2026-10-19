@@ -19,7 +19,9 @@ exports[`TagsTemplate renders correctly 1`] = `
           <div
             class=""
           >
-            <button>
+            <button
+              type="button"
+            >
               <svg
                 fill="none"
                 height="24"

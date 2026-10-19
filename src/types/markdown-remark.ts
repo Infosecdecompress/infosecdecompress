@@ -1,11 +1,11 @@
 import Fields from "./fields";
 import Frontmatter from "./frontmatter";
 
-interface Node {
+interface MarkdownRemark {
   id: string;
   fields: Fields;
   frontmatter: Frontmatter;
   html: string;
 }
 
-export default Node;
+export default MarkdownRemark;

@@ -2,5 +2,15 @@
 @use "src/assets/scss/mixins" as *;
 
 .layout {
-  lost-center: $layout-width;
+  margin: 0 auto;
+  max-width: $layout-width;
+}
+
+@include breakpoint-sm {
+  // Twelve-column grid; Sidebar and Page pick their spans, Post spans all.
+  .layout {
+    column-gap: $layout-gutter;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
 }

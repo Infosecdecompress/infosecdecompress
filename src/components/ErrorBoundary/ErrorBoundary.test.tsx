@@ -29,7 +29,12 @@ jest.mock("@sentry/react", () => ({
 
     return (
       <div>
-        <button data-testid="trigger-error" onClick={() => setHasError(true)} />
+        <button
+          type="button"
+          aria-label="trigger error"
+          data-testid="trigger-error"
+          onClick={() => setHasError(true)}
+        />
         {children}
       </div>
     );

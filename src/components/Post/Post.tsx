@@ -1,6 +1,6 @@
 import { Button } from "@/components/Button";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-import type { Node } from "@/types";
+import type { MarkdownRemark } from "@/types";
 
 import { Author } from "./Author";
 import { Comments } from "./Comments";
@@ -11,7 +11,7 @@ import { Tags } from "./Tags";
 import * as styles from "./Post.module.scss";
 
 interface Props {
-  post: Node;
+  post: MarkdownRemark;
 }
 
 const Post = ({ post }: Props) => {

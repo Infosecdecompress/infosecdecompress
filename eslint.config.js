@@ -40,9 +40,11 @@ module.exports = [
         "jest/globals": true,
       },
       extends: [
+        "airbnb",
+        "airbnb/hooks",
+        "airbnb-typescript",
         "plugin:import/typescript",
         "plugin:import/errors",
-        "airbnb-typescript",
         "plugin:prettier/recommended",
       ],
       parser: "@typescript-eslint/parser",
@@ -92,6 +94,22 @@ module.exports = [
         ],
         "react/static-property-placement": "off",
         "react/prop-types": "off",
+        // Automatic JSX runtime (gatsby-config `jsxRuntime`, tsconfig `react-jsx`).
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
+        // Components are arrow functions throughout the codebase.
+        "react/function-component-definition": [
+          "error",
+          {
+            namedComponents: "arrow-function",
+            unnamedComponents: "arrow-function",
+          },
+        ],
+        // Optional props are typed explicitly in TypeScript; defaults are
+        // applied where they matter.
+        "react/require-default-props": "off",
+        // Forwarding typed props (`<Pagination {...pagination} />`) is idiomatic.
+        "react/jsx-props-no-spreading": "off",
         "simple-import-sort/imports": [
           "error",
           {

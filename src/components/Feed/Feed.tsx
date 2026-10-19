@@ -1,18 +1,14 @@
 import { Link } from "gatsby";
 
+import { DATE_FORMATS } from "@/constants";
 import type { Edge } from "@/types";
+import { formatDate } from "@/utils";
 
 import * as styles from "./Feed.module.scss";
 
 interface Props {
   edges: Array<Edge>;
 }
-
-const formatMonth = (date: string) =>
-  new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-  });
 
 const Feed = ({ edges }: Props) => (
   <div className={styles.feed}>
@@ -23,7 +19,7 @@ const Feed = ({ edges }: Props) => (
         <div className={styles.item} key={fields.slug}>
           <div className={styles.meta}>
             <time className={styles.time} dateTime={frontmatter.date}>
-              {formatMonth(frontmatter.date)}
+              {formatDate(frontmatter.date, DATE_FORMATS.feed)}
             </time>
             <span className={styles.divider} />
             <span className={styles.category}>
