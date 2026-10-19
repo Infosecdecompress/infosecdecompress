@@ -85,8 +85,8 @@
     "gatsby-transformer-sharp": "^5.16.0",
     "js-search": "^2.0.1",
     "prismjs": "^1.30.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
