@@ -182,7 +182,6 @@ const gatsbyConfig: GatsbyConfig = {
     "@sentry/gatsby",
     "gatsby-plugin-image",
     "gatsby-plugin-catch-links",
-    "gatsby-plugin-optimize-svgs",
     {
       resolve: "gatsby-plugin-sass",
       options: {
