@@ -62,7 +62,7 @@
     "gatsby": {
       "cookie": "^0.7.2",
       "path-to-regexp": "0.1.13",
-      "uuid": "^11.1.1"
+      "uuid": "^14.0.3"
     },
     "gatsby-plugin-sass": {
       "resolve-url-loader": "^5.0.0",
