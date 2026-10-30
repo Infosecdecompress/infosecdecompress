@@ -61,7 +61,7 @@
     },
     "gatsby": {
       "cookie": "^0.7.2",
-      "path-to-regexp": "0.1.13",
+      "path-to-regexp": "8.4.2",
       "uuid": "^11.1.1"
     },
     "gatsby-plugin-sass": {
