@@ -54,7 +54,7 @@
   },
   "overrides": {
     "@ardatan/relay-compiler": {
-      "immutable": "~3.8.4"
+      "immutable": "~5.1.9"
     },
     "external-editor": {
       "tmp": "^0.2.7"
